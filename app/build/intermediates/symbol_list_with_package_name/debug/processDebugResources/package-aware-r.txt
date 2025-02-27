@@ -3644,6 +3644,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_home
 layout fragment_profile
+layout fragment_saved
 layout item_chatbot_message
 layout item_user_message
 layout m3_alert_dialog

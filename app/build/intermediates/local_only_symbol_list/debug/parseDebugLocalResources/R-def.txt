@@ -24,6 +24,7 @@ id viewPager
 layout activity_main
 layout fragment_home
 layout fragment_profile
+layout fragment_saved
 layout item_chatbot_message
 layout item_user_message
 menu media_menu
