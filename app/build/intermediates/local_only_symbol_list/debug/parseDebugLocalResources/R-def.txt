@@ -13,6 +13,8 @@ drawable ic_launcher_foreground
 drawable user_message_bg
 id chatInputLayout
 id chatRecyclerView
+id chat_message
+id chat_title
 id menu_choose_image
 id menu_take_photo
 id messageText
@@ -25,12 +27,15 @@ layout activity_main
 layout fragment_home
 layout fragment_profile
 layout fragment_saved
+layout item_chat
 layout item_chatbot_message
 layout item_user_message
 menu media_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
+string chatTitle
+string lastMessagePreview
 style Theme.MyApplication
 xml backup_rules
 xml data_extraction_rules
