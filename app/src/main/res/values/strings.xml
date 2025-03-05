@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">MyApplication</string>
+    <string name="chatTitle">chatTitle</string>
+    <string name="lastMessagePreview">lastMessagePreview</string>
 </resources>

@@ -52,7 +52,6 @@ class HomeFragment : Fragment() {
 
             // Debugging
             println("Messages List: $messages")
-
             // Simulate chatbot response after 1 second
             chatRecyclerView.postDelayed({ chatbotResponse() }, 1000)
         }

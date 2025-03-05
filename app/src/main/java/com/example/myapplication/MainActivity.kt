@@ -20,8 +20,9 @@ class MainActivity : AppCompatActivity() {
         // Connect TabLayout with ViewPager2
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             when (position) {
-                0 -> tab.text = "Chat"
-                1 -> tab.text = "Draw"
+                0 -> tab.text = "Discussion"
+                1 -> tab.text = "Doodle"
+                2 -> tab.text = "Saved"
             }
         }.attach()
     }
