@@ -9,13 +9,13 @@
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">MyApplication</string>
     <string name="chatTitle">chatTitle</string>
-    <string name="gcm_defaultSenderId" translatable="false">38575892195</string>
-    <string name="google_api_key" translatable="false">AIzaSyDVdW5FC-FeEg-Gi5E_NmWqqpl9nxhRu78</string>
-    <string name="google_app_id" translatable="false">1:38575892195:android:d9171690eaf15d257f47d6</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDVdW5FC-FeEg-Gi5E_NmWqqpl9nxhRu78</string>
-    <string name="google_storage_bucket" translatable="false">ai3po-6f865.firebasestorage.app</string>
+    <string name="gcm_defaultSenderId" translatable="false">904782115661</string>
+    <string name="google_api_key" translatable="false">AIzaSyDSa4PjlGf3WwjW3abD7_GIrjrtTQ78mng</string>
+    <string name="google_app_id" translatable="false">1:904782115661:android:e61983872b01074d5fbd04</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDSa4PjlGf3WwjW3abD7_GIrjrtTQ78mng</string>
+    <string name="google_storage_bucket" translatable="false">ai3po-7e0b9.firebasestorage.app</string>
     <string name="lastMessagePreview">lastMessagePreview</string>
-    <string name="project_id" translatable="false">ai3po-6f865</string>
+    <string name="project_id" translatable="false">ai3po-7e0b9</string>
     <style name="Theme.MyApplication" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>

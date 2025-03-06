@@ -1,114 +1,110 @@
 [
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/drawable_user_message_bg.xml.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/drawable/user_message_bg.xml"
+        "merged": "com.example.myapplication.app-debug-39:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.myapplication.app-main-41:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "com.example.myapplication.app-debug-39:/layout_fragment_saved.xml.flat",
+        "source": "com.example.myapplication.app-main-41:/layout/fragment_saved.xml"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "com.example.myapplication.app-debug-39:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.myapplication.app-main-41:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/xml_data_extraction_rules.xml.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/xml/data_extraction_rules.xml"
+        "merged": "com.example.myapplication.app-debug-39:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.myapplication.app-main-41:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/layout_fragment_profile.xml.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/layout/fragment_profile.xml"
+        "merged": "com.example.myapplication.app-debug-39:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.myapplication.app-main-41:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/xml_backup_rules.xml.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/xml/backup_rules.xml"
+        "merged": "com.example.myapplication.app-debug-39:/layout_fragment_home.xml.flat",
+        "source": "com.example.myapplication.app-main-41:/layout/fragment_home.xml"
     },
     {
-        "merged": "com.example.myapplication.app-debug-33:/layout_fragment_home.xml.flat",
-        "source": "com.example.myapplication.app-main-35:/layout/fragment_home.xml"
+        "merged": "com.example.myapplication.app-debug-39:/layout_item_user_message.xml.flat",
+        "source": "com.example.myapplication.app-main-41:/layout/item_user_message.xml"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "com.example.myapplication.app-debug-39:/mipmap-anydpi-v33_ic_launcher.xml.flat",
+        "source": "com.example.myapplication.app-main-41:/mipmap-anydpi-v33/ic_launcher.xml"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/drawable_bot_message_bg.xml.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/drawable/bot_message_bg.xml"
+        "merged": "com.example.myapplication.app-debug-39:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.myapplication.app-main-41:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/layout_fragment_home.xml.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/layout/fragment_home.xml"
+        "merged": "com.example.myapplication.app-debug-39:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.myapplication.app-main-41:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/menu_media_menu.xml.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/menu/media_menu.xml"
+        "merged": "com.example.myapplication.app-debug-39:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.myapplication.app-main-41:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "com.example.myapplication.app-debug-39:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.myapplication.app-main-41:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/drawable-v24/ic_launcher_foreground.xml"
+        "merged": "com.example.myapplication.app-debug-39:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.myapplication.app-main-41:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/layout_fragment_saved.xml.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/layout/fragment_saved.xml"
+        "merged": "com.example.myapplication.app-debug-39:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.myapplication.app-main-41:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/layout_activity_main.xml.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/layout/activity_main.xml"
+        "merged": "com.example.myapplication.app-debug-39:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.myapplication.app-main-41:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "com.example.myapplication.app-debug-39:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.myapplication.app-main-41:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/layout_item_chat.xml.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/layout/item_chat.xml"
+        "merged": "com.example.myapplication.app-debug-39:/layout_item_chat.xml.flat",
+        "source": "com.example.myapplication.app-main-41:/layout/item_chat.xml"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "com.example.myapplication.app-debug-39:/layout_item_chatbot_message.xml.flat",
+        "source": "com.example.myapplication.app-main-41:/layout/item_chatbot_message.xml"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "com.example.myapplication.app-debug-39:/menu_media_menu.xml.flat",
+        "source": "com.example.myapplication.app-main-41:/menu/media_menu.xml"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/layout_item_chatbot_message.xml.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/layout/item_chatbot_message.xml"
+        "merged": "com.example.myapplication.app-debug-39:/drawable_bot_message_bg.xml.flat",
+        "source": "com.example.myapplication.app-main-41:/drawable/bot_message_bg.xml"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/layout_item_user_message.xml.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/layout/item_user_message.xml"
+        "merged": "com.example.myapplication.app-debug-39:/layout_fragment_profile.xml.flat",
+        "source": "com.example.myapplication.app-main-41:/layout/fragment_profile.xml"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/mipmap-anydpi-v33_ic_launcher.xml.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/mipmap-anydpi-v33/ic_launcher.xml"
+        "merged": "com.example.myapplication.app-debug-39:/drawable_user_message_bg.xml.flat",
+        "source": "com.example.myapplication.app-main-41:/drawable/user_message_bg.xml"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "com.example.myapplication.app-debug-39:/layout_activity_main.xml.flat",
+        "source": "com.example.myapplication.app-main-41:/layout/activity_main.xml"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "com.example.myapplication.app-debug-39:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.myapplication.app-main-41:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "com.example.myapplication.app-debug-39:/xml_backup_rules.xml.flat",
+        "source": "com.example.myapplication.app-main-41:/xml/backup_rules.xml"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "com.example.myapplication.app-debug-39:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.myapplication.app-main-41:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/drawable_ic_launcher_background.xml.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/drawable/ic_launcher_background.xml"
-    },
-    {
-        "merged": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-debug-33:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/Users/david/.gradle/daemon/8.10.2/com.example.myapplication.app-main-35:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.example.myapplication.app-debug-39:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.myapplication.app-main-41:/drawable-v24/ic_launcher_foreground.xml"
     }
 ]
