@@ -4,7 +4,26 @@
             "outputFile": "com.example.myapplication.app-mergeDebugResources-27:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\rafae\\.gradle\\caches\\8.9\\transforms\\8455bb073490d6a1f5a80d67dce043cb\\transformed\\appcompat-1.5.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "/Users/booman/AndroidStudioProjects/350-project/app/src/main/res/values-night/themes.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "100",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "802"
+                    },
+                    "to": {
+                        "startLines": "34",
+                        "startColumns": "4",
+                        "startOffsets": "3448",
+                        "endLines": "46",
+                        "endColumns": "12",
+                        "endOffsets": "4029"
+                    }
+                },
+                {
+                    "source": "/Users/booman/.gradle/caches/8.9/transforms/8455bb073490d6a1f5a80d67dce043cb/transformed/appcompat-1.5.0/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -21,26 +40,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\rafae\\AndroidStudioProjects\\350-project\\app\\src\\main\\res\\values-night\\themes.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "102",
-                        "endLines": "14",
-                        "endColumns": "12",
-                        "endOffsets": "816"
-                    },
-                    "to": {
-                        "startLines": "34",
-                        "startColumns": "4",
-                        "startOffsets": "3448",
-                        "endLines": "46",
-                        "endColumns": "12",
-                        "endOffsets": "4029"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\rafae\\.gradle\\caches\\8.9\\transforms\\b9f45ed50f30ed8f75c22423dbcfa317\\transformed\\material-1.9.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "/Users/booman/.gradle/caches/8.9/transforms/b9f45ed50f30ed8f75c22423dbcfa317/transformed/material-1.9.0/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
