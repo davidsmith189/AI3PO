@@ -18,7 +18,6 @@ id chat_title
 id menu_choose_image
 id menu_take_photo
 id messageText
-id plusButton
 id sendButton
 id tabLayout
 id userInput
