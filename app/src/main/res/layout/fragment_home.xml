@@ -1,20 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#121212">
 
-    <!-- Chat Messages RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-    android:scrollbars="vertical"
-    android:padding="8dp"/>
+        android:layout_above="@id/chatInputLayout"
+        android:layout_alignParentTop="true"
+        android:scrollbars="vertical"
+        android:padding="8dp"
+        android:visibility="visible"/>
 
-
-    <!-- Input Field, Plus Button, and Send Button -->
     <LinearLayout
         android:id="@+id/chatInputLayout"
         android:layout_width="match_parent"
@@ -24,18 +22,6 @@
         android:padding="8dp"
         android:background="#1E1E1E">
 
-        <!-- Plus Button -->
-        <ImageButton
-            android:id="@+id/plusButton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@android:drawable/ic_input_add"
-            android:contentDescription="Add Media"
-            android:tint="#FFFFFF"
-            android:padding="8dp"/>
-
-        <!-- Text Input -->
         <EditText
             android:id="@+id/userInput"
             android:layout_width="0dp"
@@ -46,9 +32,8 @@
             android:textColorHint="#AAAAAA"
             android:background="@android:color/transparent"
             android:padding="10dp"
-            android:inputType="text" />
+            android:inputType="text"/>
 
-        <!-- Send Button -->
         <Button
             android:id="@+id/sendButton"
             android:layout_width="wrap_content"
@@ -57,6 +42,4 @@
             android:backgroundTint="#6200EE"
             android:textColor="#FFFFFF"/>
     </LinearLayout>
-
 </RelativeLayout>
-

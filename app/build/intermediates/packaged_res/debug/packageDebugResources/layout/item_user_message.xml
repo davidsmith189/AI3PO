@@ -10,13 +10,9 @@
         android:id="@+id/messageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#FF0000"
+        android:background="@drawable/user_message_bg"
         android:textColor="#FFFFFF"
-    android:textSize="16sp"
-    android:padding="12dp"
-    android:visibility="visible"
-    android:gravity="end"/>
-
-
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:layout_marginBottom="4dp"/>
 </LinearLayout>
-

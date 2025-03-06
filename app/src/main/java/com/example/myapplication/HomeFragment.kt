@@ -6,64 +6,86 @@ import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.databinding.FragmentHomeBinding
+import org.json.JSONObject
+import java.io.IOException
+import java.nio.charset.Charset
+import kotlin.random.Random
 
 class HomeFragment : Fragment() {
 
-    private lateinit var chatRecyclerView: RecyclerView
+    private lateinit var binding: FragmentHomeBinding
     private lateinit var chatAdapter: ChatAdapter
-    private lateinit var userInput: EditText
-    private lateinit var sendButton: Button
-    private lateinit var plusButton: ImageButton
     private val messages = mutableListOf<ChatMessage>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_home, container, false)
+    ): View {
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        chatRecyclerView = view.findViewById(R.id.chatRecyclerView)
-        userInput = view.findViewById(R.id.userInput)
-        sendButton = view.findViewById(R.id.sendButton)
-        plusButton = view.findViewById(R.id.plusButton)
-
-        // Set up RecyclerView
         chatAdapter = ChatAdapter(messages)
-        chatRecyclerView.layoutManager = LinearLayoutManager(requireContext()).apply {
-            stackFromEnd = true // Makes messages appear at the bottom
+        binding.chatRecyclerView.layoutManager = LinearLayoutManager(requireContext()).apply {
+            stackFromEnd = true
         }
-        chatRecyclerView.adapter = chatAdapter
+        binding.chatRecyclerView.adapter = chatAdapter
 
-        sendButton.setOnClickListener { sendMessage() }
+        binding.sendButton.setOnClickListener { sendMessage() }
 
-        return view
+        return binding.root
     }
 
     private fun sendMessage() {
-        val message = userInput.text.toString().trim()
+        val message = binding.userInput.text.toString().trim()
         if (message.isNotEmpty()) {
-            messages.add(ChatMessage(message, true)) // Add user message
-            chatAdapter.notifyItemInserted(messages.size - 1) // Notify adapter
-            chatRecyclerView.scrollToPosition(messages.size - 1) // Auto-scroll
-            userInput.text.clear()
+            messages.add(ChatMessage(message, true))
+            println("User message added: $message")
 
-            // Force RecyclerView to refresh
+            binding.chatRecyclerView.post {
+                chatAdapter.notifyDataSetChanged()
+                binding.chatRecyclerView.scrollToPosition(messages.size - 1)
+            }
             chatAdapter.notifyDataSetChanged()
 
-            // Debugging
-            println("Messages List: $messages")
-            // Simulate chatbot response after 1 second
-            chatRecyclerView.postDelayed({ chatbotResponse() }, 1000)
+            binding.userInput.text.clear()
+
+            println("Current messages list: $messages")
+
+            binding.chatRecyclerView.postDelayed({ chatbotResponse() }, 1000)
+        } else {
+            println("Message was empty, not added.")
         }
     }
 
 
-
-
     private fun chatbotResponse() {
-        val response = "I'm just a bot 🤖! You said: '${messages.last().message}'"
-        messages.add(ChatMessage(response, false)) // Add bot message
-        chatAdapter.notifyItemInserted(messages.size - 1)
-        chatRecyclerView.scrollToPosition(messages.size - 1) // Auto-scroll
+        if (messages.isEmpty()) return
+
+        val response = getRandomResponse()
+        messages.add(ChatMessage(response, false))
+
+        requireActivity().runOnUiThread {
+            chatAdapter.notifyDataSetChanged()
+            binding.chatRecyclerView.scrollToPosition(messages.size - 1)
+        }
+    }
+
+
+    private fun getRandomResponse(): String {
+        val jsonString = try {
+            val inputStream = requireContext().assets.open("samples.json")
+            val size = inputStream.available()
+            val buffer = ByteArray(size)
+            inputStream.read(buffer)
+            inputStream.close()
+            String(buffer, Charset.forName("UTF-8"))
+        } catch (ex: IOException) {
+            return "Oops! No response found."
+        }
+
+        val jsonObject = JSONObject(jsonString)
+        val responsesArray = jsonObject.getJSONArray("responses")
+        val randomIndex = Random.nextInt(responsesArray.length())
+        return responsesArray.getString(randomIndex)
     }
 }
