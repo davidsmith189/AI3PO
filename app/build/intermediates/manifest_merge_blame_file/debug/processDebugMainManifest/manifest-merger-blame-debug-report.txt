@@ -8,120 +8,192 @@
 8        android:minSdkVersion="24"
 9        android:targetSdkVersion="33" />
 10
-11    <permission
-11-->[androidx.core:core:1.15.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\e51fcfab1f3cfb48f1829f15430f35f5\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
-12        android:name="com.example.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-12-->[androidx.core:core:1.15.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\e51fcfab1f3cfb48f1829f15430f35f5\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
-13        android:protectionLevel="signature" />
-13-->[androidx.core:core:1.15.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\e51fcfab1f3cfb48f1829f15430f35f5\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
-14
-15    <uses-permission android:name="com.example.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-15-->[androidx.core:core:1.15.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\e51fcfab1f3cfb48f1829f15430f35f5\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
-15-->[androidx.core:core:1.15.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\e51fcfab1f3cfb48f1829f15430f35f5\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
-16
-17    <application
-17-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:5:5-23:19
-18        android:allowBackup="true"
-18-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:6:9-35
-19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.15.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\e51fcfab1f3cfb48f1829f15430f35f5\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
-20        android:dataExtractionRules="@xml/data_extraction_rules"
-20-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:7:9-65
-21        android:debuggable="true"
-22        android:extractNativeLibs="false"
-23        android:fullBackupContent="@xml/backup_rules"
-23-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:8:9-54
-24        android:icon="@mipmap/ic_launcher"
-24-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:9:9-43
-25        android:label="@string/app_name"
-25-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:10:9-41
-26        android:supportsRtl="true"
-26-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:11:9-35
-27        android:theme="@style/Theme.MyApplication" >
-27-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:12:9-51
-28        <activity
-28-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:14:9-22:20
-29            android:name="com.example.myapplication.MainActivity"
-29-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:15:13-41
-30            android:exported="true" >
-30-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:16:13-36
-31            <intent-filter>
-31-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:17:13-21:29
-32                <action android:name="android.intent.action.MAIN" />
-32-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:18:17-69
-32-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:18:25-66
-33
-34                <category android:name="android.intent.category.LAUNCHER" />
-34-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:20:17-77
-34-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:20:27-74
-35            </intent-filter>
-36        </activity>
-37
-38        <provider
-38-->[androidx.emoji2:emoji2:1.3.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\e42e68fbb11a29b7d5d3894148415166\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
-39            android:name="androidx.startup.InitializationProvider"
-39-->[androidx.emoji2:emoji2:1.3.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\e42e68fbb11a29b7d5d3894148415166\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
-40            android:authorities="com.example.myapplication.androidx-startup"
-40-->[androidx.emoji2:emoji2:1.3.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\e42e68fbb11a29b7d5d3894148415166\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
-41            android:exported="false" >
-41-->[androidx.emoji2:emoji2:1.3.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\e42e68fbb11a29b7d5d3894148415166\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
-42            <meta-data
-42-->[androidx.emoji2:emoji2:1.3.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\e42e68fbb11a29b7d5d3894148415166\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
-43                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-43-->[androidx.emoji2:emoji2:1.3.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\e42e68fbb11a29b7d5d3894148415166\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
-44                android:value="androidx.startup" />
-44-->[androidx.emoji2:emoji2:1.3.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\e42e68fbb11a29b7d5d3894148415166\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
-45            <meta-data
-45-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\rafae\.gradle\caches\8.10.2\transforms\0de9efb4ed207f659b2199d8c116fd9e\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
-46                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-46-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\rafae\.gradle\caches\8.10.2\transforms\0de9efb4ed207f659b2199d8c116fd9e\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
-47                android:value="androidx.startup" />
-47-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\rafae\.gradle\caches\8.10.2\transforms\0de9efb4ed207f659b2199d8c116fd9e\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
-48            <meta-data
-48-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\5d41b754c4e2144cd478b444d50738a2\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
-49                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-49-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\5d41b754c4e2144cd478b444d50738a2\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
-50                android:value="androidx.startup" />
-50-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\5d41b754c4e2144cd478b444d50738a2\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
-51        </provider>
-52
-53        <receiver
-53-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\5d41b754c4e2144cd478b444d50738a2\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
-54            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-54-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\5d41b754c4e2144cd478b444d50738a2\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
-55            android:directBootAware="false"
-55-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\5d41b754c4e2144cd478b444d50738a2\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
-56            android:enabled="true"
-56-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\5d41b754c4e2144cd478b444d50738a2\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
-57            android:exported="true"
-57-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\5d41b754c4e2144cd478b444d50738a2\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
-58            android:permission="android.permission.DUMP" >
-58-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\5d41b754c4e2144cd478b444d50738a2\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
-59            <intent-filter>
-59-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\5d41b754c4e2144cd478b444d50738a2\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
-60                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-60-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\5d41b754c4e2144cd478b444d50738a2\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
-60-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\5d41b754c4e2144cd478b444d50738a2\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
-61            </intent-filter>
-62            <intent-filter>
-62-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\5d41b754c4e2144cd478b444d50738a2\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
-63                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-63-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\5d41b754c4e2144cd478b444d50738a2\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
-63-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\5d41b754c4e2144cd478b444d50738a2\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
-64            </intent-filter>
-65            <intent-filter>
-65-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\5d41b754c4e2144cd478b444d50738a2\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
-66                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-66-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\5d41b754c4e2144cd478b444d50738a2\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
-66-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\5d41b754c4e2144cd478b444d50738a2\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
-67            </intent-filter>
-68            <intent-filter>
-68-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\5d41b754c4e2144cd478b444d50738a2\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
-69                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-69-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\5d41b754c4e2144cd478b444d50738a2\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
-69-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\5d41b754c4e2144cd478b444d50738a2\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
-70            </intent-filter>
-71        </receiver>
-72    </application>
-73
-74</manifest>
+11    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+12    <!-- <uses-sdk android:minSdkVersion="21" /> -->
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\rafae\.gradle\caches\8.10.2\transforms\43bd96a613c8c75a1beda3ff97681416\transformed\firebase-firestore-25.1.2\AndroidManifest.xml:10:5-79
+13-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\rafae\.gradle\caches\8.10.2\transforms\43bd96a613c8c75a1beda3ff97681416\transformed\firebase-firestore-25.1.2\AndroidManifest.xml:10:22-76
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\rafae\.gradle\caches\8.10.2\transforms\43bd96a613c8c75a1beda3ff97681416\transformed\firebase-firestore-25.1.2\AndroidManifest.xml:11:5-67
+14-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\rafae\.gradle\caches\8.10.2\transforms\43bd96a613c8c75a1beda3ff97681416\transformed\firebase-firestore-25.1.2\AndroidManifest.xml:11:22-64
+15
+16    <permission
+16-->[androidx.core:core:1.15.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\54ba909d5bfcea57e824eb8cfa058fe3\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+17        android:name="com.example.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+17-->[androidx.core:core:1.15.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\54ba909d5bfcea57e824eb8cfa058fe3\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+18        android:protectionLevel="signature" />
+18-->[androidx.core:core:1.15.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\54ba909d5bfcea57e824eb8cfa058fe3\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+19
+20    <uses-permission android:name="com.example.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+20-->[androidx.core:core:1.15.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\54ba909d5bfcea57e824eb8cfa058fe3\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+20-->[androidx.core:core:1.15.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\54ba909d5bfcea57e824eb8cfa058fe3\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+21
+22    <application
+22-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:5:5-23:19
+23        android:allowBackup="true"
+23-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:6:9-35
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.15.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\54ba909d5bfcea57e824eb8cfa058fe3\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
+25        android:dataExtractionRules="@xml/data_extraction_rules"
+25-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:7:9-65
+26        android:debuggable="true"
+27        android:extractNativeLibs="false"
+28        android:fullBackupContent="@xml/backup_rules"
+28-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:8:9-54
+29        android:icon="@mipmap/ic_launcher"
+29-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:9:9-43
+30        android:label="@string/app_name"
+30-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:10:9-41
+31        android:supportsRtl="true"
+31-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:11:9-35
+32        android:theme="@style/Theme.MyApplication" >
+32-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:12:9-51
+33        <activity
+33-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:14:9-22:20
+34            android:name="com.example.myapplication.MainActivity"
+34-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:15:13-41
+35            android:exported="true" >
+35-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:16:13-36
+36            <intent-filter>
+36-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:17:13-21:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:18:17-69
+37-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:18:25-66
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:20:17-77
+39-->C:\Users\rafae\AndroidStudioProjects\350-project\app\src\main\AndroidManifest.xml:20:27-74
+40            </intent-filter>
+41        </activity>
+42
+43        <service
+43-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\rafae\.gradle\caches\8.10.2\transforms\43bd96a613c8c75a1beda3ff97681416\transformed\firebase-firestore-25.1.2\AndroidManifest.xml:14:9-23:19
+44            android:name="com.google.firebase.components.ComponentDiscoveryService"
+44-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\rafae\.gradle\caches\8.10.2\transforms\43bd96a613c8c75a1beda3ff97681416\transformed\firebase-firestore-25.1.2\AndroidManifest.xml:15:13-84
+45            android:directBootAware="true"
+45-->[com.google.firebase:firebase-common:21.0.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\36ad72bf6e205f89b65843e1c9723114\transformed\firebase-common-21.0.0\AndroidManifest.xml:32:13-43
+46            android:exported="false" >
+46-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\rafae\.gradle\caches\8.10.2\transforms\43bd96a613c8c75a1beda3ff97681416\transformed\firebase-firestore-25.1.2\AndroidManifest.xml:16:13-37
+47            <meta-data
+47-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\rafae\.gradle\caches\8.10.2\transforms\43bd96a613c8c75a1beda3ff97681416\transformed\firebase-firestore-25.1.2\AndroidManifest.xml:17:13-19:85
+48                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+48-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\rafae\.gradle\caches\8.10.2\transforms\43bd96a613c8c75a1beda3ff97681416\transformed\firebase-firestore-25.1.2\AndroidManifest.xml:18:17-122
+49                android:value="com.google.firebase.components.ComponentRegistrar" />
+49-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\rafae\.gradle\caches\8.10.2\transforms\43bd96a613c8c75a1beda3ff97681416\transformed\firebase-firestore-25.1.2\AndroidManifest.xml:19:17-82
+50            <meta-data
+50-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\rafae\.gradle\caches\8.10.2\transforms\43bd96a613c8c75a1beda3ff97681416\transformed\firebase-firestore-25.1.2\AndroidManifest.xml:20:13-22:85
+51                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+51-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\rafae\.gradle\caches\8.10.2\transforms\43bd96a613c8c75a1beda3ff97681416\transformed\firebase-firestore-25.1.2\AndroidManifest.xml:21:17-111
+52                android:value="com.google.firebase.components.ComponentRegistrar" />
+52-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\rafae\.gradle\caches\8.10.2\transforms\43bd96a613c8c75a1beda3ff97681416\transformed\firebase-firestore-25.1.2\AndroidManifest.xml:22:17-82
+53            <meta-data
+53-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\52f9346802a5808c86d4870576c5e55f\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:12:13-14:85
+54                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+54-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\52f9346802a5808c86d4870576c5e55f\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:13:17-116
+55                android:value="com.google.firebase.components.ComponentRegistrar" />
+55-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\52f9346802a5808c86d4870576c5e55f\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:14:17-82
+56            <meta-data
+56-->[com.google.firebase:firebase-common:21.0.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\36ad72bf6e205f89b65843e1c9723114\transformed\firebase-common-21.0.0\AndroidManifest.xml:35:13-37:85
+57                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+57-->[com.google.firebase:firebase-common:21.0.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\36ad72bf6e205f89b65843e1c9723114\transformed\firebase-common-21.0.0\AndroidManifest.xml:36:17-109
+58                android:value="com.google.firebase.components.ComponentRegistrar" />
+58-->[com.google.firebase:firebase-common:21.0.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\36ad72bf6e205f89b65843e1c9723114\transformed\firebase-common-21.0.0\AndroidManifest.xml:37:17-82
+59        </service>
+60
+61        <activity
+61-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\6cfbf347809d57b63b44cd0b8247731e\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+62            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+62-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\6cfbf347809d57b63b44cd0b8247731e\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+63            android:exported="false"
+63-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\6cfbf347809d57b63b44cd0b8247731e\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+64            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+64-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\6cfbf347809d57b63b44cd0b8247731e\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+65
+66        <provider
+66-->[com.google.firebase:firebase-common:21.0.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\36ad72bf6e205f89b65843e1c9723114\transformed\firebase-common-21.0.0\AndroidManifest.xml:23:9-28:39
+67            android:name="com.google.firebase.provider.FirebaseInitProvider"
+67-->[com.google.firebase:firebase-common:21.0.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\36ad72bf6e205f89b65843e1c9723114\transformed\firebase-common-21.0.0\AndroidManifest.xml:24:13-77
+68            android:authorities="com.example.myapplication.firebaseinitprovider"
+68-->[com.google.firebase:firebase-common:21.0.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\36ad72bf6e205f89b65843e1c9723114\transformed\firebase-common-21.0.0\AndroidManifest.xml:25:13-72
+69            android:directBootAware="true"
+69-->[com.google.firebase:firebase-common:21.0.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\36ad72bf6e205f89b65843e1c9723114\transformed\firebase-common-21.0.0\AndroidManifest.xml:26:13-43
+70            android:exported="false"
+70-->[com.google.firebase:firebase-common:21.0.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\36ad72bf6e205f89b65843e1c9723114\transformed\firebase-common-21.0.0\AndroidManifest.xml:27:13-37
+71            android:initOrder="100" />
+71-->[com.google.firebase:firebase-common:21.0.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\36ad72bf6e205f89b65843e1c9723114\transformed\firebase-common-21.0.0\AndroidManifest.xml:28:13-36
+72
+73        <meta-data
+73-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\096914d9cea2a89147a10c947b2de06d\transformed\play-services-basement-18.3.0\AndroidManifest.xml:21:9-23:69
+74            android:name="com.google.android.gms.version"
+74-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\096914d9cea2a89147a10c947b2de06d\transformed\play-services-basement-18.3.0\AndroidManifest.xml:22:13-58
+75            android:value="@integer/google_play_services_version" />
+75-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\096914d9cea2a89147a10c947b2de06d\transformed\play-services-basement-18.3.0\AndroidManifest.xml:23:13-66
+76
+77        <provider
+77-->[androidx.emoji2:emoji2:1.3.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\3b858c1cca51b52571060894605fdc8d\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+78            android:name="androidx.startup.InitializationProvider"
+78-->[androidx.emoji2:emoji2:1.3.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\3b858c1cca51b52571060894605fdc8d\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+79            android:authorities="com.example.myapplication.androidx-startup"
+79-->[androidx.emoji2:emoji2:1.3.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\3b858c1cca51b52571060894605fdc8d\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+80            android:exported="false" >
+80-->[androidx.emoji2:emoji2:1.3.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\3b858c1cca51b52571060894605fdc8d\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+81            <meta-data
+81-->[androidx.emoji2:emoji2:1.3.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\3b858c1cca51b52571060894605fdc8d\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+82                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+82-->[androidx.emoji2:emoji2:1.3.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\3b858c1cca51b52571060894605fdc8d\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+83                android:value="androidx.startup" />
+83-->[androidx.emoji2:emoji2:1.3.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\3b858c1cca51b52571060894605fdc8d\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+84            <meta-data
+84-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\rafae\.gradle\caches\8.10.2\transforms\f3895ba2a635a635d098ed8ed799d6e0\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+85                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+85-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\rafae\.gradle\caches\8.10.2\transforms\f3895ba2a635a635d098ed8ed799d6e0\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+86                android:value="androidx.startup" />
+86-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\rafae\.gradle\caches\8.10.2\transforms\f3895ba2a635a635d098ed8ed799d6e0\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+87            <meta-data
+87-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\34375a293c5da4ef370485cc73f02d73\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+88                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+88-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\34375a293c5da4ef370485cc73f02d73\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+89                android:value="androidx.startup" />
+89-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\34375a293c5da4ef370485cc73f02d73\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+90        </provider>
+91
+92        <receiver
+92-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\34375a293c5da4ef370485cc73f02d73\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+93            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+93-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\34375a293c5da4ef370485cc73f02d73\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+94            android:directBootAware="false"
+94-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\34375a293c5da4ef370485cc73f02d73\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+95            android:enabled="true"
+95-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\34375a293c5da4ef370485cc73f02d73\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+96            android:exported="true"
+96-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\34375a293c5da4ef370485cc73f02d73\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+97            android:permission="android.permission.DUMP" >
+97-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\34375a293c5da4ef370485cc73f02d73\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+98            <intent-filter>
+98-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\34375a293c5da4ef370485cc73f02d73\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+99                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+99-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\34375a293c5da4ef370485cc73f02d73\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+99-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\34375a293c5da4ef370485cc73f02d73\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+100            </intent-filter>
+101            <intent-filter>
+101-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\34375a293c5da4ef370485cc73f02d73\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+102                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+102-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\34375a293c5da4ef370485cc73f02d73\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+102-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\34375a293c5da4ef370485cc73f02d73\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+103            </intent-filter>
+104            <intent-filter>
+104-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\34375a293c5da4ef370485cc73f02d73\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+105                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+105-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\34375a293c5da4ef370485cc73f02d73\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+105-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\34375a293c5da4ef370485cc73f02d73\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+106            </intent-filter>
+107            <intent-filter>
+107-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\34375a293c5da4ef370485cc73f02d73\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+108                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+108-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\34375a293c5da4ef370485cc73f02d73\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+108-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\rafae\.gradle\caches\8.10.2\transforms\34375a293c5da4ef370485cc73f02d73\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+109            </intent-filter>
+110        </receiver>
+111    </application>
+112
+113</manifest>
