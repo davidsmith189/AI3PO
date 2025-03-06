@@ -3217,6 +3217,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnAttach
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3280,6 +3281,8 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id documentIcon
+id documentName
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -3345,6 +3348,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id immediateStop
 id included
 id indeterminate
@@ -3392,7 +3396,10 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id matrix
+id menu_camera
 id menu_choose_image
+id menu_document
+id menu_gallery
 id menu_take_photo
 id message
 id messageText
@@ -3772,6 +3779,8 @@ layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_chat
 layout item_chatbot_message
+layout item_user_document
+layout item_user_image
 layout item_user_message
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -3834,6 +3843,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu attachment_menu
 menu media_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
