@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.Manifest
+import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -73,7 +74,7 @@ class HomeFragment : Fragment() {
     }
 
     private val cameraLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-        if (result.resultCode == requireActivity().RESULTS_OK) {
+        if (result.resultCode == Activity.RESULT_OK) {
             val uri: Uri? = result.data?.data
             messages.add(ChatMessage(attachmentUri = uri.toString(), isUser = true))
             chatAdapter.notifyDataSetChanged()
@@ -81,7 +82,7 @@ class HomeFragment : Fragment() {
     }
 
     private val galleryLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-        if (result.resultCode == requireActivity().RESULTS_OK) {
+        if (result.resultCode == Activity.RESULT_OK) {
             val uri: Uri? = result.data?.data
             messages.add(ChatMessage(attachmentUri = uri.toString(), isUser = true))
             chatAdapter.notifyDataSetChanged()
@@ -89,7 +90,7 @@ class HomeFragment : Fragment() {
     }
 
     private val documentLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-        if (result.resultCode == requireActivity().RESULTS_OK) {
+        if (result.resultCode == Activity.RESULT_OK) {
             val uri: Uri? = result.data?.data
             messages.add(ChatMessage(attachmentUri = uri.toString(), isUser = true))
             chatAdapter.notifyDataSetChanged()
