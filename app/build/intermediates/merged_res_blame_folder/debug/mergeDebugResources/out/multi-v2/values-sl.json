@@ -4,7 +4,7 @@
             "outputFile": "com.example.myapplication.app-mergeDebugResources-31:/values-sl/values-sl.xml",
             "map": [
                 {
-                    "source": "/Users/david/.gradle/caches/8.10.2/transforms/1df84d8dc72ff18048d7eda2781de98f/transformed/appcompat-1.7.0/res/values-sl/values-sl.xml",
+                    "source": "C:\\Users\\agveg\\.gradle\\caches\\8.10.2\\transforms\\6ae0b44a459effbcab2d38238b75bcd7\\transformed\\appcompat-1.7.0\\res\\values-sl\\values-sl.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/david/.gradle/caches/8.10.2/transforms/e51fcfab1f3cfb48f1829f15430f35f5/transformed/core-1.15.0/res/values-sl/values-sl.xml",
+                    "source": "C:\\Users\\agveg\\.gradle\\caches\\8.10.2\\transforms\\65c8cd2e0805d12d355835ba2a7fecc9\\transformed\\core-1.15.0\\res\\values-sl\\values-sl.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/Users/david/.gradle/caches/8.10.2/transforms/1a2891b8f7eb02d4d0ba214cec71e84b/transformed/material-1.12.0/res/values-sl/values-sl.xml",
+                    "source": "C:\\Users\\agveg\\.gradle\\caches\\8.10.2\\transforms\\d0c91b4c791680babece8bdb6b22ddb1\\transformed\\material-1.12.0\\res\\values-sl\\values-sl.xml",
                     "from": {
                         "startLines": "2,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
