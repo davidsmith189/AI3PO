@@ -1,10 +1,10 @@
-#Mon Mar 10 11:44:04 PDT 2025
-base.0=C\:\\Users\\rafae\\AndroidStudioProjects\\350-project\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Users\\rafae\\AndroidStudioProjects\\350-project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\Users\\rafae\\AndroidStudioProjects\\350-project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
-base.3=C\:\\Users\\rafae\\AndroidStudioProjects\\350-project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
-base.4=C\:\\Users\\rafae\\AndroidStudioProjects\\350-project\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.5=C\:\\Users\\rafae\\AndroidStudioProjects\\350-project\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
+#Thu Mar 13 01:36:40 PDT 2025
+base.0=C\:\\Users\\esqes\\AndroidStudioProjects\\AI3PO\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\esqes\\AndroidStudioProjects\\AI3PO\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\esqes\\AndroidStudioProjects\\AI3PO\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+base.3=C\:\\Users\\esqes\\AndroidStudioProjects\\AI3PO\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
+base.4=C\:\\Users\\esqes\\AndroidStudioProjects\\AI3PO\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.5=C\:\\Users\\esqes\\AndroidStudioProjects\\AI3PO\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=2/classes.dex

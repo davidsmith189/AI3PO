@@ -1,12 +1,15 @@
 R_DEF: Internal format may change without notice
 local
+color azure
 color black
 color purple_200
-color purple_500
 color purple_700
+color richGold
 color teal_200
 color teal_700
 color white
+drawable baseline_save_as_24
+drawable baseline_settings_24
 drawable bot_message_bg
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -16,17 +19,22 @@ id chatInputLayout
 id chatRecyclerView
 id chat_message
 id chat_title
+id custom_toolbar
+id descriptionText
 id documentIcon
 id documentName
 id imageView
+id include_toolbar
 id menu_camera
 id menu_choose_image
 id menu_document
 id menu_gallery
 id menu_take_photo
 id messageText
+id save
 id sendButton
 id tabLayout
+id titleText
 id userInput
 id viewPager
 layout activity_main
@@ -38,6 +46,7 @@ layout item_chatbot_message
 layout item_user_document
 layout item_user_image
 layout item_user_message
+layout toolbar
 menu attachment_menu
 menu media_menu
 mipmap ic_launcher
