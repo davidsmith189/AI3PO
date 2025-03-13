@@ -1376,6 +1376,7 @@ color accent_material_dark
 color accent_material_light
 color androidx_core_ripple_material_light
 color androidx_core_secondary_text_default_material_light
+color azure
 color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
@@ -2119,8 +2120,8 @@ color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
 color purple_200
-color purple_500
 color purple_700
+color richGold
 color ripple_material_dark
 color ripple_material_light
 color secondary_text_default_material_dark
@@ -3022,6 +3023,8 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable baseline_save_as_24
+drawable baseline_settings_24
 drawable bot_message_bg
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -3309,6 +3312,7 @@ id decor_content_parent
 id default_activity_button
 id deltaRelative
 id dependency_ordering
+id descriptionText
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -3392,6 +3396,7 @@ id ignoreRequest
 id image
 id imageView
 id immediateStop
+id include_toolbar
 id included
 id indeterminate
 id info
@@ -3570,6 +3575,7 @@ id select_dialog_listview
 id selected
 id selection_type
 id sendButton
+id setting
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3642,6 +3648,7 @@ id textinput_suffix_text
 id time
 id title
 id titleDividerNoCustom
+id titleText
 id title_template
 id toggle
 id top
@@ -3888,6 +3895,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout toolbar
 menu attachment_menu
 menu media_menu
 mipmap ic_launcher
