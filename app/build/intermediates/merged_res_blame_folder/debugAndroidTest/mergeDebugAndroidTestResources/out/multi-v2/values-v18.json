@@ -4,7 +4,7 @@
             "outputFile": "com.example.myapplication.test.app-mergeDebugAndroidTestResources-3:/values-v18/values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\rafae\\.gradle\\caches\\8.10.2\\transforms\\7bee401c34eb6d6beda052318c8a998e\\transformed\\core-1.6.1\\res\\values-v18\\values.xml",
+                    "source": "C:\\Users\\rafae\\.gradle\\caches\\8.10.2\\transforms\\0b5fa94965f6caacb45d6fe794a82437\\transformed\\core-1.6.1\\res\\values-v18\\values.xml",
                     "from": {
                         "startLines": "4,12",
                         "startColumns": "0,0",

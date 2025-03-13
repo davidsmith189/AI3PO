@@ -1,8 +1,14 @@
 package com.example.myapplication
 
+import android.Manifest
+import android.app.Activity
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.*
 import android.widget.*
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -31,8 +37,64 @@ class HomeFragment : Fragment() {
         binding.chatRecyclerView.adapter = chatAdapter
 
         binding.sendButton.setOnClickListener { sendMessage() }
+        binding.btnAttach.setOnClickListener { showAttachmentMenu() }
 
         return binding.root
+    }
+
+    private fun showAttachmentMenu() {
+        val popupMenu = PopupMenu(requireContext(), binding.btnAttach)
+        popupMenu.menuInflater.inflate(R.menu.attachment_menu, popupMenu.menu)
+
+        popupMenu.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.menu_camera -> openCamera()
+                R.id.menu_gallery -> openGallery()
+                R.id.menu_document -> openDocuments()
+            }
+            true
+        }
+        popupMenu.show()
+    }
+
+    private fun openCamera() {
+        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        cameraLauncher.launch(intent)
+    }
+
+    private fun openGallery() {
+        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        galleryLauncher.launch(intent)
+    }
+
+    private fun openDocuments() {
+        val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
+        intent.type = "*/*"
+        documentLauncher.launch(intent)
+    }
+
+    private val cameraLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            val uri: Uri? = result.data?.data
+            messages.add(ChatMessage(attachmentUri = uri.toString(), isUser = true))
+            chatAdapter.notifyDataSetChanged()
+        }
+    }
+
+    private val galleryLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            val uri: Uri? = result.data?.data
+            messages.add(ChatMessage(attachmentUri = uri.toString(), isUser = true))
+            chatAdapter.notifyDataSetChanged()
+        }
+    }
+
+    private val documentLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            val uri: Uri? = result.data?.data
+            messages.add(ChatMessage(attachmentUri = uri.toString(), isUser = true))
+            chatAdapter.notifyDataSetChanged()
+        }
     }
 
     private fun sendMessage() {

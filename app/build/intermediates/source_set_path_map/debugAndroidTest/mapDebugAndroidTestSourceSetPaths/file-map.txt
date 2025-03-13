@@ -1,5 +1,5 @@
-com.example.myapplication.test.app-core-1.6.1-0 C:\Users\rafae\.gradle\caches\8.10.2\transforms\7bee401c34eb6d6beda052318c8a998e\transformed\core-1.6.1\res
-com.example.myapplication.test.app-tracing-1.2.0-1 C:\Users\rafae\.gradle\caches\8.10.2\transforms\a7e56dc3ddfba097a9aa3fe05458d710\transformed\tracing-1.2.0\res
+com.example.myapplication.test.app-core-1.6.1-0 C:\Users\rafae\.gradle\caches\8.10.2\transforms\0b5fa94965f6caacb45d6fe794a82437\transformed\core-1.6.1\res
+com.example.myapplication.test.app-tracing-1.2.0-1 C:\Users\rafae\.gradle\caches\8.10.2\transforms\d97055814dada71bc06c17354a879623\transformed\tracing-1.2.0\res
 com.example.myapplication.test.app-androidTest-2 C:\Users\rafae\AndroidStudioProjects\350-project\app\build\generated\res\resValues\androidTest\debug
 com.example.myapplication.test.app-mergeDebugAndroidTestResources-3 C:\Users\rafae\AndroidStudioProjects\350-project\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
 com.example.myapplication.test.app-mergeDebugAndroidTestResources-4 C:\Users\rafae\AndroidStudioProjects\350-project\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir

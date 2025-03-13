@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#121212">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -21,6 +22,15 @@
         android:orientation="horizontal"
         android:padding="8dp"
         android:background="#1E1E1E">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnAttach"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_input_add"
+            android:contentDescription="Attach Files"
+            android:backgroundTint="@color/teal_700"
+            android:tint="@android:color/white"/>
 
         <EditText
             android:id="@+id/userInput"
