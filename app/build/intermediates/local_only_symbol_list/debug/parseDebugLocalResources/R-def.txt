@@ -19,6 +19,7 @@ id chatInputLayout
 id chatRecyclerView
 id chat_message
 id chat_title
+id custom_toolbar
 id descriptionText
 id documentIcon
 id documentName
@@ -30,8 +31,8 @@ id menu_document
 id menu_gallery
 id menu_take_photo
 id messageText
+id save
 id sendButton
-id setting
 id tabLayout
 id titleText
 id userInput

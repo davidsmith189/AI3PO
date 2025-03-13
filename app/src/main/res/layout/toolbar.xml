@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/custom_toolbar"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="?attr/actionBarSize"
     android:background="@color/richGold">
 
     <!-- App Name -->
@@ -12,8 +14,9 @@
         android:text="@string/app_name"
         android:textSize="20sp"
         android:textColor="@android:color/white"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="8dp"/>
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:textStyle="bold"/>
 
     <!-- user -->
     <TextView
@@ -25,25 +28,26 @@
         android:textColor="@color/azure"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="16dp"/>
+        android:layout_marginStart="16dp"
+        android:textStyle="bold"/>
 
-    <!-- ImageView -->
+    <!-- Settings Cog, will incorporate later
+
     <ImageView
         android:id="@+id/setting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/baseline_settings_24"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
+        android:layout_gravity="end|center"
         android:layout_marginStart="16dp"/>
-
+    -->
     <ImageView
+        android:id="@+id/save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/baseline_save_as_24"
-        android:layout_toLeftOf="@id/setting"
-        android:layout_centerVertical="true"/>
+        android:layout_gravity="end|center"/>
 
 
 
-</RelativeLayout>
+</androidx.appcompat.widget.Toolbar>

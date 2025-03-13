@@ -3302,6 +3302,7 @@ int id cradle 0x7f08008e
 int id currentState 0x7f08008f
 int id custom 0x7f080090
 int id customPanel 0x7f080091
+int id custom_toolbar 0x7f080217
 int id cut 0x7f080092
 int id dark 0x7f080093
 int id date_picker_actions 0x7f080094
@@ -3550,6 +3551,7 @@ int id right_icon 0x7f080185
 int id right_side 0x7f080186
 int id rounded 0x7f080187
 int id row_index_key 0x7f080188
+int id save 0x7f080218
 int id save_non_transition_alpha 0x7f080189
 int id save_overlay_view 0x7f08018a
 int id sawtooth 0x7f08018b
@@ -3574,7 +3576,6 @@ int id select_dialog_listview 0x7f08019d
 int id selected 0x7f08019e
 int id selection_type 0x7f08019f
 int id sendButton 0x7f0801a0
-int id setting 0x7f080216
 int id sharedValueSet 0x7f0801a1
 int id sharedValueUnset 0x7f0801a2
 int id shortcut 0x7f0801a3
