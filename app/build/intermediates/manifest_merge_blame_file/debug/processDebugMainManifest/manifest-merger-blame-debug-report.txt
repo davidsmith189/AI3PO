@@ -27,20 +27,20 @@
 18-->[com.google.firebase:firebase-firestore:25.1.2] /Users/booman/.gradle/caches/8.11.1/transforms/b5f01e11d53048de1f212b0bb5e4204e/transformed/firebase-firestore-25.1.2/AndroidManifest.xml:11:5-67
 18-->[com.google.firebase:firebase-firestore:25.1.2] /Users/booman/.gradle/caches/8.11.1/transforms/b5f01e11d53048de1f212b0bb5e4204e/transformed/firebase-firestore-25.1.2/AndroidManifest.xml:11:22-64
 19    <uses-permission android:name="android.permission.WAKE_LOCK" />
-19-->[com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:24:5-68
-19-->[com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:24:22-65
-20    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
-20-->[com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:25:5-79
-20-->[com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:25:22-76
-21    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
-21-->[com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:26:5-88
-21-->[com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:26:22-85
-22    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" />
-22-->[com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:27:5-82
-22-->[com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:27:22-79
-23    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-23-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:26:5-110
-23-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:26:22-107
+19-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:25:5-68
+19-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:25:22-65
+20    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+20-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:26:5-110
+20-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:26:22-107
+21    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+21-->[com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:25:5-79
+21-->[com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:25:22-76
+22    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
+22-->[com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:26:5-88
+22-->[com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:26:22-85
+23    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" />
+23-->[com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:27:5-82
+23-->[com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:27:22-79
 24
 25    <permission
 25-->[androidx.core:core:1.15.0] /Users/booman/.gradle/caches/8.11.1/transforms/f7246ccf52525722c3d1a95234a003d4/transformed/core-1.15.0/AndroidManifest.xml:22:5-24:47
@@ -171,47 +171,47 @@
 91-->[com.google.firebase:firebase-common:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/dca8c4d10e22a5a1ef0f3764f1108002/transformed/firebase-common-21.0.0/AndroidManifest.xml:37:17-82
 92        </service>
 93
-94        <provider
-94-->[com.google.firebase:firebase-common:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/dca8c4d10e22a5a1ef0f3764f1108002/transformed/firebase-common-21.0.0/AndroidManifest.xml:23:9-28:39
-95            android:name="com.google.firebase.provider.FirebaseInitProvider"
-95-->[com.google.firebase:firebase-common:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/dca8c4d10e22a5a1ef0f3764f1108002/transformed/firebase-common-21.0.0/AndroidManifest.xml:24:13-77
-96            android:authorities="com.example.myapplication.firebaseinitprovider"
-96-->[com.google.firebase:firebase-common:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/dca8c4d10e22a5a1ef0f3764f1108002/transformed/firebase-common-21.0.0/AndroidManifest.xml:25:13-72
-97            android:directBootAware="true"
-97-->[com.google.firebase:firebase-common:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/dca8c4d10e22a5a1ef0f3764f1108002/transformed/firebase-common-21.0.0/AndroidManifest.xml:26:13-43
-98            android:exported="false"
-98-->[com.google.firebase:firebase-common:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/dca8c4d10e22a5a1ef0f3764f1108002/transformed/firebase-common-21.0.0/AndroidManifest.xml:27:13-37
-99            android:initOrder="100" />
-99-->[com.google.firebase:firebase-common:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/dca8c4d10e22a5a1ef0f3764f1108002/transformed/firebase-common-21.0.0/AndroidManifest.xml:28:13-36
-100
-101        <receiver
-101-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:29:9-33:20
-102            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-102-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:30:13-85
-103            android:enabled="true"
-103-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:31:13-35
-104            android:exported="false" >
-104-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:32:13-37
-105        </receiver>
-106
-107        <service
-107-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:35:9-38:40
-108            android:name="com.google.android.gms.measurement.AppMeasurementService"
-108-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:36:13-84
-109            android:enabled="true"
-109-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:37:13-35
-110            android:exported="false" />
-110-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:38:13-37
-111        <service
-111-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:39:9-43:72
-112            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-112-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:40:13-87
-113            android:enabled="true"
-113-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:41:13-35
+94        <receiver
+94-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:29:9-33:20
+95            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+95-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:30:13-85
+96            android:enabled="true"
+96-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:31:13-35
+97            android:exported="false" >
+97-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:32:13-37
+98        </receiver>
+99
+100        <service
+100-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:35:9-38:40
+101            android:name="com.google.android.gms.measurement.AppMeasurementService"
+101-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:36:13-84
+102            android:enabled="true"
+102-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:37:13-35
+103            android:exported="false" />
+103-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:38:13-37
+104        <service
+104-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:39:9-43:72
+105            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+105-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:40:13-87
+106            android:enabled="true"
+106-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:41:13-35
+107            android:exported="false"
+107-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:42:13-37
+108            android:permission="android.permission.BIND_JOB_SERVICE" />
+108-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:43:13-69
+109
+110        <provider
+110-->[com.google.firebase:firebase-common:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/dca8c4d10e22a5a1ef0f3764f1108002/transformed/firebase-common-21.0.0/AndroidManifest.xml:23:9-28:39
+111            android:name="com.google.firebase.provider.FirebaseInitProvider"
+111-->[com.google.firebase:firebase-common:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/dca8c4d10e22a5a1ef0f3764f1108002/transformed/firebase-common-21.0.0/AndroidManifest.xml:24:13-77
+112            android:authorities="com.example.myapplication.firebaseinitprovider"
+112-->[com.google.firebase:firebase-common:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/dca8c4d10e22a5a1ef0f3764f1108002/transformed/firebase-common-21.0.0/AndroidManifest.xml:25:13-72
+113            android:directBootAware="true"
+113-->[com.google.firebase:firebase-common:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/dca8c4d10e22a5a1ef0f3764f1108002/transformed/firebase-common-21.0.0/AndroidManifest.xml:26:13-43
 114            android:exported="false"
-114-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:42:13-37
-115            android:permission="android.permission.BIND_JOB_SERVICE" />
-115-->[com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:43:13-69
+114-->[com.google.firebase:firebase-common:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/dca8c4d10e22a5a1ef0f3764f1108002/transformed/firebase-common-21.0.0/AndroidManifest.xml:27:13-37
+115            android:initOrder="100" />
+115-->[com.google.firebase:firebase-common:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/dca8c4d10e22a5a1ef0f3764f1108002/transformed/firebase-common-21.0.0/AndroidManifest.xml:28:13-36
 116
 117        <activity
 117-->[com.google.android.gms:play-services-base:18.5.0] /Users/booman/.gradle/caches/8.11.1/transforms/11c0a5dcc6a1a84c2892ca0c7558d7d4/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:9-173

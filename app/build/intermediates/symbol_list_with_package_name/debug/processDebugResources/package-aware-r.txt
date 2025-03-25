@@ -3081,6 +3081,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
 drawable indeterminate_static
+drawable lock_icon
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
 drawable m3_bottom_sheet_drag_handle
@@ -3153,6 +3154,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable profile_icon
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3419,6 +3421,8 @@ id line3
 id linear
 id listMode
 id list_item
+id loginButton
+id loginText
 id m3_side_sheet
 id marquee
 id masked
@@ -3529,6 +3533,7 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id password
 id password_toggle
 id path
 id pathRelative
@@ -3672,6 +3677,7 @@ id unlabeled
 id up
 id useLogo
 id userInput
+id username
 id vertical
 id vertical_only
 id viewPager
@@ -3835,6 +3841,7 @@ layout item_chatbot_message
 layout item_user_document
 layout item_user_image
 layout item_user_message
+layout login_screen
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

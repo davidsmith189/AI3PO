@@ -14,14 +14,14 @@ MERGED from [androidx.viewpager2:viewpager2:1.1.0] /Users/booman/.gradle/caches/
 MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/e1553a540196c4f86d074d0ccfd523c9/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/22fa847643120b5f1e311bf733a9bc7a/transformed/emoji2-1.3.0/AndroidManifest.xml:17:1-35:12
 MERGED from [com.google.firebase:firebase-firestore:25.1.2] /Users/booman/.gradle/caches/8.11.1/transforms/b5f01e11d53048de1f212b0bb5e4204e/transformed/firebase-firestore-25.1.2/AndroidManifest.xml:2:1-26:12
-MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/booman/.gradle/caches/8.11.1/transforms/660e8cae5e6bdc893ecfb84057e7b3c1/transformed/firebase-auth-interop-19.0.2/AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-analytics:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/5950e294a1133e1728195c3b4ccfe2d2/transformed/firebase-analytics-22.3.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:17:1-46:12
 MERGED from [com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:17:1-39:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/b2bc6d105a4192f061b9c45618d56119/transformed/play-services-measurement-sdk-22.3.0/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/booman/.gradle/caches/8.11.1/transforms/660e8cae5e6bdc893ecfb84057e7b3c1/transformed/firebase-auth-interop-19.0.2/AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-installations:18.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/84c1e3fe3d775dacfe0f6ca835fdd41a/transformed/firebase-installations-18.0.0/AndroidManifest.xml:2:1-24:12
 MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/51d1dd8429fd931505544f32cfbb1906/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:2:1-18:12
 MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/dca8c4d10e22a5a1ef0f3764f1108002/transformed/firebase-common-21.0.0/AndroidManifest.xml:15:1-41:12
-MERGED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:17:1-46:12
-MERGED from [com.google.android.gms:play-services-measurement-sdk:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/b2bc6d105a4192f061b9c45618d56119/transformed/play-services-measurement-sdk-22.3.0/AndroidManifest.xml:17:1-25:12
 MERGED from [com.google.android.gms:play-services-measurement-impl:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/da470008d643aa625f1667e39cb8e46a/transformed/play-services-measurement-impl-22.3.0/AndroidManifest.xml:17:1-32:12
 MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/f02f193766ad953f13d90dfb87f7b4c1/transformed/play-services-ads-identifier-18.0.0/AndroidManifest.xml:17:1-27:12
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/f2e33a0ad408f51bf16b153ac2e7ed97/transformed/play-services-measurement-sdk-api-22.3.0/AndroidManifest.xml:17:1-30:12
@@ -94,22 +94,22 @@ MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/booman/.gradle/caches/8.11.1/t
 MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/22fa847643120b5f1e311bf733a9bc7a/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
 MERGED from [com.google.firebase:firebase-firestore:25.1.2] /Users/booman/.gradle/caches/8.11.1/transforms/b5f01e11d53048de1f212b0bb5e4204e/transformed/firebase-firestore-25.1.2/AndroidManifest.xml:13:5-24:19
 MERGED from [com.google.firebase:firebase-firestore:25.1.2] /Users/booman/.gradle/caches/8.11.1/transforms/b5f01e11d53048de1f212b0bb5e4204e/transformed/firebase-firestore-25.1.2/AndroidManifest.xml:13:5-24:19
-MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/booman/.gradle/caches/8.11.1/transforms/660e8cae5e6bdc893ecfb84057e7b3c1/transformed/firebase-auth-interop-19.0.2/AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/booman/.gradle/caches/8.11.1/transforms/660e8cae5e6bdc893ecfb84057e7b3c1/transformed/firebase-auth-interop-19.0.2/AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-analytics:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/5950e294a1133e1728195c3b4ccfe2d2/transformed/firebase-analytics-22.3.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-analytics:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/5950e294a1133e1728195c3b4ccfe2d2/transformed/firebase-analytics-22.3.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:28:5-44:19
+MERGED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:28:5-44:19
 MERGED from [com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:29:5-37:19
 MERGED from [com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:29:5-37:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/b2bc6d105a4192f061b9c45618d56119/transformed/play-services-measurement-sdk-22.3.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/b2bc6d105a4192f061b9c45618d56119/transformed/play-services-measurement-sdk-22.3.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/booman/.gradle/caches/8.11.1/transforms/660e8cae5e6bdc893ecfb84057e7b3c1/transformed/firebase-auth-interop-19.0.2/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/booman/.gradle/caches/8.11.1/transforms/660e8cae5e6bdc893ecfb84057e7b3c1/transformed/firebase-auth-interop-19.0.2/AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-installations:18.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/84c1e3fe3d775dacfe0f6ca835fdd41a/transformed/firebase-installations-18.0.0/AndroidManifest.xml:11:5-22:19
 MERGED from [com.google.firebase:firebase-installations:18.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/84c1e3fe3d775dacfe0f6ca835fdd41a/transformed/firebase-installations-18.0.0/AndroidManifest.xml:11:5-22:19
 MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/51d1dd8429fd931505544f32cfbb1906/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:8:5-16:19
 MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/51d1dd8429fd931505544f32cfbb1906/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:8:5-16:19
 MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/dca8c4d10e22a5a1ef0f3764f1108002/transformed/firebase-common-21.0.0/AndroidManifest.xml:22:5-39:19
 MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/dca8c4d10e22a5a1ef0f3764f1108002/transformed/firebase-common-21.0.0/AndroidManifest.xml:22:5-39:19
-MERGED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:28:5-44:19
-MERGED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:28:5-44:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/b2bc6d105a4192f061b9c45618d56119/transformed/play-services-measurement-sdk-22.3.0/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/b2bc6d105a4192f061b9c45618d56119/transformed/play-services-measurement-sdk-22.3.0/AndroidManifest.xml:22:5-23:19
 MERGED from [com.google.android.gms:play-services-measurement-impl:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/da470008d643aa625f1667e39cb8e46a/transformed/play-services-measurement-impl-22.3.0/AndroidManifest.xml:29:5-30:19
 MERGED from [com.google.android.gms:play-services-measurement-impl:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/da470008d643aa625f1667e39cb8e46a/transformed/play-services-measurement-impl-22.3.0/AndroidManifest.xml:29:5-30:19
 MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/f02f193766ad953f13d90dfb87f7b4c1/transformed/play-services-ads-identifier-18.0.0/AndroidManifest.xml:25:5-20
@@ -212,22 +212,22 @@ MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/booman/.gradle/caches/8.11.1/t
 MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/22fa847643120b5f1e311bf733a9bc7a/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-firestore:25.1.2] /Users/booman/.gradle/caches/8.11.1/transforms/b5f01e11d53048de1f212b0bb5e4204e/transformed/firebase-firestore-25.1.2/AndroidManifest.xml:6:5-44
 MERGED from [com.google.firebase:firebase-firestore:25.1.2] /Users/booman/.gradle/caches/8.11.1/transforms/b5f01e11d53048de1f212b0bb5e4204e/transformed/firebase-firestore-25.1.2/AndroidManifest.xml:6:5-44
-MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/booman/.gradle/caches/8.11.1/transforms/660e8cae5e6bdc893ecfb84057e7b3c1/transformed/firebase-auth-interop-19.0.2/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/booman/.gradle/caches/8.11.1/transforms/660e8cae5e6bdc893ecfb84057e7b3c1/transformed/firebase-auth-interop-19.0.2/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/5950e294a1133e1728195c3b4ccfe2d2/transformed/firebase-analytics-22.3.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/5950e294a1133e1728195c3b4ccfe2d2/transformed/firebase-analytics-22.3.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/b2bc6d105a4192f061b9c45618d56119/transformed/play-services-measurement-sdk-22.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/b2bc6d105a4192f061b9c45618d56119/transformed/play-services-measurement-sdk-22.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/booman/.gradle/caches/8.11.1/transforms/660e8cae5e6bdc893ecfb84057e7b3c1/transformed/firebase-auth-interop-19.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/booman/.gradle/caches/8.11.1/transforms/660e8cae5e6bdc893ecfb84057e7b3c1/transformed/firebase-auth-interop-19.0.2/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-installations:18.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/84c1e3fe3d775dacfe0f6ca835fdd41a/transformed/firebase-installations-18.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-installations:18.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/84c1e3fe3d775dacfe0f6ca835fdd41a/transformed/firebase-installations-18.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/51d1dd8429fd931505544f32cfbb1906/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/51d1dd8429fd931505544f32cfbb1906/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/dca8c4d10e22a5a1ef0f3764f1108002/transformed/firebase-common-21.0.0/AndroidManifest.xml:19:5-44
 MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/dca8c4d10e22a5a1ef0f3764f1108002/transformed/firebase-common-21.0.0/AndroidManifest.xml:19:5-44
-MERGED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/b2bc6d105a4192f061b9c45618d56119/transformed/play-services-measurement-sdk-22.3.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/b2bc6d105a4192f061b9c45618d56119/transformed/play-services-measurement-sdk-22.3.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-impl:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/da470008d643aa625f1667e39cb8e46a/transformed/play-services-measurement-impl-22.3.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-impl:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/da470008d643aa625f1667e39cb8e46a/transformed/play-services-measurement-impl-22.3.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/f02f193766ad953f13d90dfb87f7b4c1/transformed/play-services-ads-identifier-18.0.0/AndroidManifest.xml:20:5-44
@@ -358,12 +358,12 @@ ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/booman/.gradle/caches/8.11.1/tr
 		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/22fa847643120b5f1e311bf733a9bc7a/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-firestore:25.1.2] /Users/booman/.gradle/caches/8.11.1/transforms/b5f01e11d53048de1f212b0bb5e4204e/transformed/firebase-firestore-25.1.2/AndroidManifest.xml:10:5-79
+MERGED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-installations:18.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/84c1e3fe3d775dacfe0f6ca835fdd41a/transformed/firebase-installations-18.0.0/AndroidManifest.xml:7:5-79
 MERGED from [com.google.firebase:firebase-installations:18.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/84c1e3fe3d775dacfe0f6ca835fdd41a/transformed/firebase-installations-18.0.0/AndroidManifest.xml:7:5-79
-MERGED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-measurement-impl:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/da470008d643aa625f1667e39cb8e46a/transformed/play-services-measurement-impl-22.3.0/AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-measurement-impl:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/da470008d643aa625f1667e39cb8e46a/transformed/play-services-measurement-impl-22.3.0/AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/f2e33a0ad408f51bf16b153ac2e7ed97/transformed/play-services-measurement-sdk-api-22.3.0/AndroidManifest.xml:24:5-79
@@ -374,12 +374,12 @@ MERGED from [io.grpc:grpc-android:1.62.2] /Users/booman/.gradle/caches/8.11.1/tr
 		ADDED from [com.google.firebase:firebase-firestore:25.1.2] /Users/booman/.gradle/caches/8.11.1/transforms/b5f01e11d53048de1f212b0bb5e4204e/transformed/firebase-firestore-25.1.2/AndroidManifest.xml:10:22-76
 uses-permission#android.permission.INTERNET
 ADDED from [com.google.firebase:firebase-firestore:25.1.2] /Users/booman/.gradle/caches/8.11.1/transforms/b5f01e11d53048de1f212b0bb5e4204e/transformed/firebase-firestore-25.1.2/AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:22:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-installations:18.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/84c1e3fe3d775dacfe0f6ca835fdd41a/transformed/firebase-installations-18.0.0/AndroidManifest.xml:8:5-67
 MERGED from [com.google.firebase:firebase-installations:18.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/84c1e3fe3d775dacfe0f6ca835fdd41a/transformed/firebase-installations-18.0.0/AndroidManifest.xml:8:5-67
-MERGED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-impl:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/da470008d643aa625f1667e39cb8e46a/transformed/play-services-measurement-impl-22.3.0/AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-impl:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/da470008d643aa625f1667e39cb8e46a/transformed/play-services-measurement-impl-22.3.0/AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/f2e33a0ad408f51bf16b153ac2e7ed97/transformed/play-services-measurement-sdk-api-22.3.0/AndroidManifest.xml:23:5-67
@@ -417,15 +417,47 @@ ADDED from [com.google.firebase:firebase-firestore:25.1.2] /Users/booman/.gradle
 	android:name
 		ADDED from [com.google.firebase:firebase-firestore:25.1.2] /Users/booman/.gradle/caches/8.11.1/transforms/b5f01e11d53048de1f212b0bb5e4204e/transformed/firebase-firestore-25.1.2/AndroidManifest.xml:21:17-111
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:24:5-68
-MERGED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:25:5-68
+ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:24:5-68
 MERGED from [com.google.android.gms:play-services-measurement-impl:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/da470008d643aa625f1667e39cb8e46a/transformed/play-services-measurement-impl-22.3.0/AndroidManifest.xml:25:5-68
 MERGED from [com.google.android.gms:play-services-measurement-impl:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/da470008d643aa625f1667e39cb8e46a/transformed/play-services-measurement-impl-22.3.0/AndroidManifest.xml:25:5-68
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/f2e33a0ad408f51bf16b153ac2e7ed97/transformed/play-services-measurement-sdk-api-22.3.0/AndroidManifest.xml:25:5-68
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/f2e33a0ad408f51bf16b153ac2e7ed97/transformed/play-services-measurement-sdk-api-22.3.0/AndroidManifest.xml:25:5-68
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:24:22-65
+		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:25:22-65
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/da470008d643aa625f1667e39cb8e46a/transformed/play-services-measurement-impl-22.3.0/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/da470008d643aa625f1667e39cb8e46a/transformed/play-services-measurement-impl-22.3.0/AndroidManifest.xml:26:5-110
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:26:22-107
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:29:9-33:20
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:31:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:30:13-85
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:35:9-38:40
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:38:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:36:13-84
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:39:9-43:72
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:41:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:42:13-37
+	android:permission
+		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:43:13-69
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:40:13-87
 uses-permission#com.google.android.gms.permission.AD_ID
 ADDED from [com.google.android.gms:play-services-measurement-api:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/7221d1020a3149d65766112031f4005f/transformed/play-services-measurement-api-22.3.0/AndroidManifest.xml:25:5-79
 MERGED from [com.google.android.gms:play-services-measurement-impl:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/da470008d643aa625f1667e39cb8e46a/transformed/play-services-measurement-impl-22.3.0/AndroidManifest.xml:27:5-79
@@ -490,38 +522,6 @@ ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/booman/.gradle/ca
 		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/dca8c4d10e22a5a1ef0f3764f1108002/transformed/firebase-common-21.0.0/AndroidManifest.xml:37:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/booman/.gradle/caches/8.11.1/transforms/dca8c4d10e22a5a1ef0f3764f1108002/transformed/firebase-common-21.0.0/AndroidManifest.xml:36:17-109
-uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
-ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:26:5-110
-MERGED from [com.google.android.gms:play-services-measurement-impl:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/da470008d643aa625f1667e39cb8e46a/transformed/play-services-measurement-impl-22.3.0/AndroidManifest.xml:26:5-110
-MERGED from [com.google.android.gms:play-services-measurement-impl:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/da470008d643aa625f1667e39cb8e46a/transformed/play-services-measurement-impl-22.3.0/AndroidManifest.xml:26:5-110
-	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:26:22-107
-receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:29:9-33:20
-	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:31:13-35
-	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:32:13-37
-	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:30:13-85
-service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:35:9-38:40
-	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:37:13-35
-	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:38:13-37
-	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:36:13-84
-service#com.google.android.gms.measurement.AppMeasurementJobService
-ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:39:9-43:72
-	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:41:13-35
-	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:42:13-37
-	android:permission
-		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:43:13-69
-	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:22.3.0] /Users/booman/.gradle/caches/8.11.1/transforms/8515b9455d8d8e9ffdd3652a4ce35728/transformed/play-services-measurement-22.3.0/AndroidManifest.xml:40:13-87
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/booman/.gradle/caches/8.11.1/transforms/11c0a5dcc6a1a84c2892ca0c7558d7d4/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:9-173
 	android:exported
