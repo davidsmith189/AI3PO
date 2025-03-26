@@ -37,13 +37,13 @@ id menu_document
 id menu_gallery
 id menu_take_photo
 id messageText
-id password
+id passwordEditText
 id save
 id sendButton
 id tabLayout
 id titleText
 id userInput
-id username
+id usernameEditText
 id viewPager
 layout activity_main
 layout fragment_home

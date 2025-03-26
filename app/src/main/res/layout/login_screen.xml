@@ -44,18 +44,18 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/username"
+                android:id="@+id/usernameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="40dp"
                 android:background="@color/white"
                 android:drawableLeft="@drawable/profile_icon"
                 android:drawablePadding="8dp"
-                android:hint="Username"
+                android:hint="Username/Email"
                 android:padding="8dp" />
 
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
@@ -72,8 +72,8 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/richGold"
-                android:text="Login"
-                android:textSize="18sp"
+                android:text="Login/Create"
+                android:textSize="16sp"
                 app:cornerRadius="20dp" />
 
 
