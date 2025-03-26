@@ -7,6 +7,8 @@ color purple_700
 color teal_200
 color teal_700
 color white
+drawable bg_received_message
+drawable bg_sent_message
 drawable bot_message_bg
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -20,12 +22,14 @@ id menu_take_photo
 id messageText
 id sendButton
 id tabLayout
+id typingIndicator
 id userInput
 id viewPager
 layout activity_main
 layout fragment_home
 layout fragment_profile
 layout fragment_saved
+layout item_bot_message
 layout item_chat
 layout item_chatbot_message
 layout item_user_message

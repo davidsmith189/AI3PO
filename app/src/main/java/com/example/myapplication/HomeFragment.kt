@@ -17,6 +17,7 @@ class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var chatAdapter: ChatAdapter
     private val messages = mutableListOf<ChatMessage>()
+    private val openAIService = OpenAIService()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,38 +39,37 @@ class HomeFragment : Fragment() {
     private fun sendMessage() {
         val message = binding.userInput.text.toString().trim()
         if (message.isNotEmpty()) {
+            // Add user message
             messages.add(ChatMessage(message, true))
-            println("User message added: $message")
-
+            
             binding.chatRecyclerView.post {
                 chatAdapter.notifyDataSetChanged()
                 binding.chatRecyclerView.scrollToPosition(messages.size - 1)
             }
-            chatAdapter.notifyDataSetChanged()
 
             binding.userInput.text.clear()
 
-            println("Current messages list: $messages")
+            // Add typing indicator
+            val typingMessage = ChatMessage("", false, true)
+            messages.add(typingMessage)
+            chatAdapter.notifyItemInserted(messages.size - 1)
+            binding.chatRecyclerView.scrollToPosition(messages.size - 1)
 
-            binding.chatRecyclerView.postDelayed({ chatbotResponse() }, 1000)
+            // Send message to OpenAI API
+            openAIService.sendMessage(message) { response ->
+                requireActivity().runOnUiThread {
+                    // Remove typing indicator
+                    messages.remove(typingMessage)
+                    // Add bot response
+                    messages.add(ChatMessage(response, false))
+                    chatAdapter.notifyDataSetChanged()
+                    binding.chatRecyclerView.scrollToPosition(messages.size - 1)
+                }
+            }
         } else {
             println("Message was empty, not added.")
         }
     }
-
-
-    private fun chatbotResponse() {
-        if (messages.isEmpty()) return
-
-        val response = getRandomResponse()
-        messages.add(ChatMessage(response, false))
-
-        requireActivity().runOnUiThread {
-            chatAdapter.notifyDataSetChanged()
-            binding.chatRecyclerView.scrollToPosition(messages.size - 1)
-        }
-    }
-
 
     private fun getRandomResponse(): String {
         val jsonString = try {

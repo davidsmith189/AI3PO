@@ -1,70 +1,53 @@
 package com.example.myapplication
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.databinding.ItemChatbotMessageBinding
 import com.example.myapplication.databinding.ItemUserMessageBinding
 
-class ChatAdapter(private val messages: MutableList<ChatMessage>) :
-    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class ChatAdapter(private val messages: List<ChatMessage>) :
+    RecyclerView.Adapter<ChatAdapter.MessageViewHolder>() {
 
-    companion object {
-        private const val TYPE_USER = 1
-        private const val TYPE_BOT = 0
+    class MessageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val messageText: TextView = itemView.findViewById(R.id.messageText)
+        val typingIndicator: TextView = itemView.findViewById(R.id.typingIndicator)
     }
 
-    class UserMessageViewHolder(private val binding: ItemUserMessageBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-        fun bind(message: ChatMessage) {
-            binding.messageText.text = message.message
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MessageViewHolder {
+        val layout = when (viewType) {
+            VIEW_TYPE_USER -> R.layout.item_user_message
+            else -> R.layout.item_bot_message
         }
+        val view = LayoutInflater.from(parent.context)
+            .inflate(layout, parent, false)
+        return MessageViewHolder(view)
     }
 
-    class BotMessageViewHolder(private val binding: ItemChatbotMessageBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-        fun bind(message: ChatMessage) {
-            binding.messageText.text = message.message
-        }
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return when (viewType) {
-            TYPE_USER -> {
-                val binding = ItemUserMessageBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-                UserMessageViewHolder(binding)
-            }
-            else -> {
-                val binding = ItemChatbotMessageBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-                BotMessageViewHolder(binding)
-            }
-        }
-    }
-
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MessageViewHolder, position: Int) {
         val message = messages[position]
-        when (holder) {
-            is UserMessageViewHolder -> {
-                println("Binding User Message: ${message.message}")
-                holder.bind(message)
-            }
-            is BotMessageViewHolder -> {
-                println("Binding Bot Message: ${message.message}")
-                holder.bind(message)
-            }
+        
+        if (message.isTyping) {
+            holder.messageText.visibility = View.GONE
+            holder.typingIndicator.visibility = View.VISIBLE
+        } else {
+            holder.messageText.visibility = View.VISIBLE
+            holder.typingIndicator.visibility = View.GONE
+            holder.messageText.text = message.message
         }
     }
 
-
-    override fun getItemCount(): Int {
-        println("Total messages in adapter: ${messages.size}")
-        return messages.size
-    }
+    override fun getItemCount() = messages.size
 
     override fun getItemViewType(position: Int): Int {
-        val type = if (messages[position].isUser) 1 else 0
-        println("Message type at position $position: $type")
-        return type
+        return if (messages[position].isUser) VIEW_TYPE_USER else VIEW_TYPE_BOT
     }
 
+    companion object {
+        private const val VIEW_TYPE_USER = 1
+        private const val VIEW_TYPE_BOT = 2
+    }
 }
+

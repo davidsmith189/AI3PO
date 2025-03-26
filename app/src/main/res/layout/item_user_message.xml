@@ -2,17 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
+    android:layout_marginStart="64dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="4dp"
     android:gravity="end"
-    android:padding="8dp">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/messageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/user_message_bg"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:background="@drawable/bg_sent_message"
         android:padding="12dp"
-        android:layout_marginBottom="4dp"/>
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/typingIndicator"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
 </LinearLayout>
