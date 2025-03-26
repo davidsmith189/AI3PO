@@ -26,12 +26,15 @@ class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var chatAdapter: ChatAdapter
     private val messages = mutableListOf<ChatMessage>()
+    private lateinit var openAIService: OpenAIService
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        openAIService = OpenAIService()
 
         chatAdapter = ChatAdapter(messages)
         binding.chatRecyclerView.layoutManager = LinearLayoutManager(requireContext()).apply {
@@ -79,8 +82,9 @@ class HomeFragment : Fragment() {
     private val cameraLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             val uri: Uri? = result.data?.data
-            messages.add(ChatMessage(attachmentUri = uri.toString(), isUser = true))
-            saveMessageToFirestore(ChatMessage(attachmentUri = uri.toString(), isUser = true))
+            val message = "Image attached"
+            messages.add(ChatMessage(message, true))
+            saveMessageToFirestore(ChatMessage(message, true))
             chatAdapter.notifyDataSetChanged()
         }
     }
@@ -88,8 +92,9 @@ class HomeFragment : Fragment() {
     private val galleryLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             val uri: Uri? = result.data?.data
-            messages.add(ChatMessage(attachmentUri = uri.toString(), isUser = true))
-            saveMessageToFirestore(ChatMessage(attachmentUri = uri.toString(), isUser = true))
+            val message = "Image attached"
+            messages.add(ChatMessage(message, true))
+            saveMessageToFirestore(ChatMessage(message, true))
             chatAdapter.notifyDataSetChanged()
         }
     }
@@ -97,8 +102,9 @@ class HomeFragment : Fragment() {
     private val documentLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             val uri: Uri? = result.data?.data
-            messages.add(ChatMessage(attachmentUri = uri.toString(), isUser = true))
-            saveMessageToFirestore(ChatMessage(attachmentUri = uri.toString(), isUser = true))
+            val message = "Document attached"
+            messages.add(ChatMessage(message, true))
+            saveMessageToFirestore(ChatMessage(message, true))
             chatAdapter.notifyDataSetChanged()
         }
     }
@@ -109,9 +115,8 @@ class HomeFragment : Fragment() {
         val data = hashMapOf(
             "message" to chatMessage.message,
             "isUser" to chatMessage.isUser,
-            "timestamp" to com.google.firebase.firestore.FieldValue.serverTimestamp(),
-            "attachmentUri" to chatMessage.attachmentUri
-          )
+            "timestamp" to com.google.firebase.firestore.FieldValue.serverTimestamp()
+        )
 
         db.collection("chats")
             .add(data)
@@ -119,68 +124,42 @@ class HomeFragment : Fragment() {
                 Log.d("Firestore", "message saved with ID: ${documentReference.id}")
             }
             .addOnFailureListener { e ->
-                Log.e("Firestore", "error savind message", e)
+                Log.e("Firestore", "error saving message", e)
             }
     }
 
     private fun sendMessage() {
         val message = binding.userInput.text.toString().trim()
         if (message.isNotEmpty()) {
-
-            val messageText = message
-            val chatMessage = ChatMessage(messageText, isUser = true)
-
+            // Add user message
             messages.add(ChatMessage(message, true))
-
-            saveMessageToFirestore(chatMessage)
-
-            println("User message added: $message")
-
+            
             binding.chatRecyclerView.post {
                 chatAdapter.notifyDataSetChanged()
                 binding.chatRecyclerView.scrollToPosition(messages.size - 1)
             }
-            chatAdapter.notifyDataSetChanged()
 
             binding.userInput.text.clear()
 
-            println("Current messages list: $messages")
+            // Add typing indicator
+            val typingMessage = ChatMessage("", false, true)
+            messages.add(typingMessage)
+            chatAdapter.notifyItemInserted(messages.size - 1)
+            binding.chatRecyclerView.scrollToPosition(messages.size - 1)
 
-            binding.chatRecyclerView.postDelayed({ chatbotResponse() }, 1000)
+            // Send message to OpenAI API
+            openAIService.sendMessage(message) { response ->
+                requireActivity().runOnUiThread {
+                    // Remove typing indicator
+                    messages.remove(typingMessage)
+                    // Add bot response
+                    messages.add(ChatMessage(response, false))
+                    chatAdapter.notifyDataSetChanged()
+                    binding.chatRecyclerView.scrollToPosition(messages.size - 1)
+                }
+            }
         } else {
             println("Message was empty, not added.")
         }
-    }
-
-
-    private fun chatbotResponse() {
-        if (messages.isEmpty()) return
-
-        val response = getRandomResponse()
-        messages.add(ChatMessage(response, false))
-
-        requireActivity().runOnUiThread {
-            chatAdapter.notifyDataSetChanged()
-            binding.chatRecyclerView.scrollToPosition(messages.size - 1)
-        }
-    }
-
-
-    private fun getRandomResponse(): String {
-        val jsonString = try {
-            val inputStream = requireContext().assets.open("samples.json")
-            val size = inputStream.available()
-            val buffer = ByteArray(size)
-            inputStream.read(buffer)
-            inputStream.close()
-            String(buffer, Charset.forName("UTF-8"))
-        } catch (ex: IOException) {
-            return "Oops! No response found."
-        }
-
-        val jsonObject = JSONObject(jsonString)
-        val responsesArray = jsonObject.getJSONArray("responses")
-        val randomIndex = Random.nextInt(responsesArray.length())
-        return responsesArray.getString(randomIndex)
     }
 }

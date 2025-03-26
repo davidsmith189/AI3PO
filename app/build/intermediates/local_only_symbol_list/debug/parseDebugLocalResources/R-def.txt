@@ -12,6 +12,8 @@ drawable ai3po_buddy
 drawable ai3po_buddy2
 drawable baseline_save_as_24
 drawable baseline_settings_24
+drawable bg_received_message
+drawable bg_sent_message
 drawable bot_message_bg
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -42,6 +44,7 @@ id save
 id sendButton
 id tabLayout
 id titleText
+id typingIndicator
 id userInput
 id usernameEditText
 id viewPager
@@ -49,6 +52,7 @@ layout activity_main
 layout fragment_home
 layout fragment_profile
 layout fragment_saved
+layout item_bot_message
 layout item_chat
 layout item_chatbot_message
 layout item_user_document
