@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:2:1-29:12
+ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:2:1-39:12
+INJECTED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:2:1-39:12
+INJECTED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:2:1-39:12
+INJECTED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:2:1-39:12
 MERGED from [androidx.databinding:viewbinding:8.9.0] /Users/booman/.gradle/caches/8.11.1/transforms/9d66c0eb5f4c81e3c8a887573335f0ea/transformed/viewbinding-8.9.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.12.0] /Users/booman/.gradle/caches/8.11.1/transforms/25d835a4d0d5b961a380f76b22ea8b7f/transformed/material-1.12.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /Users/booman/.gradle/caches/8.11.1/transforms/a149b128d3d82ba99482830d8012dbdf/transformed/constraintlayout-2.2.1/AndroidManifest.xml:2:1-9:12
@@ -83,9 +83,15 @@ MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/booma
 		INJECTED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:2:11-69
+uses-feature#android.hardware.camera
+ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:5:5-7:36
+	android:required
+		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:7:9-33
+	android:name
+		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:6:9-47
 application
-ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:5:5-23:19
-INJECTED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:5:5-23:19
+ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:9:5-33:19
+INJECTED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:9:5-33:19
 MERGED from [com.google.android.material:material:1.12.0] /Users/booman/.gradle/caches/8.11.1/transforms/25d835a4d0d5b961a380f76b22ea8b7f/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] /Users/booman/.gradle/caches/8.11.1/transforms/25d835a4d0d5b961a380f76b22ea8b7f/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /Users/booman/.gradle/caches/8.11.1/transforms/a149b128d3d82ba99482830d8012dbdf/transformed/constraintlayout-2.2.1/AndroidManifest.xml:7:5-20
@@ -145,49 +151,55 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/boom
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.15.0] /Users/booman/.gradle/caches/8.11.1/transforms/f7246ccf52525722c3d1a95234a003d4/transformed/core-1.15.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:11:9-35
+		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:10:9-41
+		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:14:9-41
 	android:fullBackupContent
-		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:8:9-54
+		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:12:9-54
 	tools:targetApi
-		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:13:9-29
+		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:17:9-29
 	android:icon
-		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:9:9-43
+		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:12:9-51
+		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:16:9-51
 	android:dataExtractionRules
-		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:7:9-65
-activity#com.example.myapplication.MainActivity
-ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:14:9-22:20
+		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:11:9-65
+activity#com.example.myapplication.LoginScreen
+ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:19:9-26:20
 	android:exported
-		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:16:13-36
+		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:21:13-36
 	android:name
-		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:15:13-41
+		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:20:13-40
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:17:13-21:29
+ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:22:13-25:29
 action#android.intent.action.MAIN
-ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:18:17-69
+ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:23:17-69
 	android:name
-		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:18:25-66
+		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:23:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:20:17-77
+ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:20:27-74
+		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:24:27-74
+activity#com.example.myapplication.MainActivity
+ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:28:9-31:20
+	android:exported
+		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:29:13-41
 uses-permission#android.permission.CAMERA
-ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:25:5-64
+ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:35:5-64
 	android:name
-		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:25:22-62
+		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:35:22-62
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:26:5-79
+ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:36:5-79
 	android:name
-		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:26:22-77
+		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:36:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:27:5-80
+ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:37:5-80
 	android:name
-		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:27:22-78
+		ADDED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml:37:22-78
 uses-sdk
 INJECTED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/booman/AndroidStudioProjects/AI3PO/app/src/main/AndroidManifest.xml
