@@ -6,6 +6,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
 import android.view.*
 import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
@@ -13,10 +14,12 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.databinding.FragmentHomeBinding
+import com.google.firebase.firestore.FirebaseFirestore
 import org.json.JSONObject
 import java.io.IOException
 import java.nio.charset.Charset
 import kotlin.random.Random
+import com.google.firebase.firestore.FieldValue
 
 class HomeFragment : Fragment() {
 
@@ -77,6 +80,7 @@ class HomeFragment : Fragment() {
         if (result.resultCode == Activity.RESULT_OK) {
             val uri: Uri? = result.data?.data
             messages.add(ChatMessage(attachmentUri = uri.toString(), isUser = true))
+            saveMessageToFirestore(ChatMessage(attachmentUri = uri.toString(), isUser = true))
             chatAdapter.notifyDataSetChanged()
         }
     }
@@ -85,6 +89,7 @@ class HomeFragment : Fragment() {
         if (result.resultCode == Activity.RESULT_OK) {
             val uri: Uri? = result.data?.data
             messages.add(ChatMessage(attachmentUri = uri.toString(), isUser = true))
+            saveMessageToFirestore(ChatMessage(attachmentUri = uri.toString(), isUser = true))
             chatAdapter.notifyDataSetChanged()
         }
     }
@@ -93,14 +98,42 @@ class HomeFragment : Fragment() {
         if (result.resultCode == Activity.RESULT_OK) {
             val uri: Uri? = result.data?.data
             messages.add(ChatMessage(attachmentUri = uri.toString(), isUser = true))
+            saveMessageToFirestore(ChatMessage(attachmentUri = uri.toString(), isUser = true))
             chatAdapter.notifyDataSetChanged()
         }
+    }
+
+    private fun saveMessageToFirestore(chatMessage: ChatMessage) {
+        val db = FirebaseFirestore.getInstance()
+
+        val data = hashMapOf(
+            "message" to chatMessage.message,
+            "isUser" to chatMessage.isUser,
+            "timestamp" to com.google.firebase.firestore.FieldValue.serverTimestamp(),
+            "attachmentUri" to chatMessage.attachmentUri
+          )
+
+        db.collection("chats")
+            .add(data)
+            .addOnSuccessListener { documentReference ->
+                Log.d("Firestore", "message saved with ID: ${documentReference.id}")
+            }
+            .addOnFailureListener { e ->
+                Log.e("Firestore", "error savind message", e)
+            }
     }
 
     private fun sendMessage() {
         val message = binding.userInput.text.toString().trim()
         if (message.isNotEmpty()) {
+
+            val messageText = message
+            val chatMessage = ChatMessage(messageText, isUser = true)
+
             messages.add(ChatMessage(message, true))
+
+            saveMessageToFirestore(chatMessage)
+
             println("User message added: $message")
 
             binding.chatRecyclerView.post {
