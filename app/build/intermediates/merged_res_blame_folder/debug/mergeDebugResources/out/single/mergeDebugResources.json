@@ -8,16 +8,16 @@
         "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable/bot_message_bg.xml"
     },
     {
+        "merged": "com.example.myapplication.app-debug-39:/layout_login_screen.xml.flat",
+        "source": "com.example.myapplication.app-main-41:/layout/login_screen.xml"
+    },
+    {
         "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/layout_item_user_document.xml.flat",
         "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/layout/item_user_document.xml"
     },
     {
         "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/layout_fragment_home.xml.flat",
         "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/layout/fragment_home.xml"
-    },
-    {
-        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/layout_fragment_profile.xml.flat",
-        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/layout/fragment_profile.xml"
     },
     {
         "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/layout_item_chatbot_message.xml.flat",
@@ -28,48 +28,28 @@
         "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-mdpi/profile_icon.png"
     },
     {
-        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/layout_item_user_image.xml.flat",
-        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/layout/item_user_image.xml"
-    },
-    {
         "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/menu_attachment_menu.xml.flat",
         "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/menu/attachment_menu.xml"
-    },
-    {
-        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-xhdpi_lock_icon.png.flat",
-        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-xhdpi/lock_icon.png"
-    },
-    {
-        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/layout_fragment_saved.xml.flat",
-        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/layout/fragment_saved.xml"
     },
     {
         "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable_user_message_bg.xml.flat",
         "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable/user_message_bg.xml"
     },
     {
-        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/xml_backup_rules.xml.flat",
-        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/xml/backup_rules.xml"
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/layout_fragment_saved.xml.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/layout/fragment_saved.xml"
     },
     {
-        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable_baseline_save_as_24.xml.flat",
-        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable/baseline_save_as_24.xml"
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/xml_backup_rules.xml.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/xml/backup_rules.xml"
     },
     {
         "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/layout_custom_edittext.xml.flat",
-        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/layout/custom_edittext.xml"
-    },
-    {
-        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-xhdpi_profile_icon.png.flat",
-        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-xhdpi/profile_icon.png"
-    },
-    {
-        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-xxhdpi_ai3po_buddy.png.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-xxhdpi/ai3po_buddy.png"
     },
     {
         "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
@@ -84,10 +64,6 @@
         "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/mipmap-anydpi-v26/ic_launcher_round.xml"
-    },
-    {
         "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-xxhdpi_lock_icon.png.flat",
         "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-xxhdpi/lock_icon.png"
     },
@@ -96,12 +72,104 @@
         "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable/baseline_settings_24.xml"
     },
     {
-        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-mdpi_lock_icon.png.flat",
-        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-mdpi/lock_icon.png"
-    },
-    {
         "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-xxhdpi_profile_icon.png.flat",
         "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-xxhdpi/profile_icon.png"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/mipmap-anydpi-v33_ic_launcher.xml.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/mipmap-anydpi-v33/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-xxxhdpi_ai3po_buddy.png.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-xxxhdpi/ai3po_buddy.png"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-xxxhdpi_lock_icon.png.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-xxxhdpi/lock_icon.png"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-mdpi_ai3po_buddy2.png.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-mdpi/ai3po_buddy2.png"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-mdpi_ai3po_buddy.png.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-mdpi/ai3po_buddy.png"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-hdpi_ai3po_buddy2.png.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-hdpi/ai3po_buddy2.png"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-xxxhdpi_ai3po_buddy2.png.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-xxxhdpi/ai3po_buddy2.png"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/layout_fragment_profile.xml.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/layout_item_user_image.xml.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/layout/item_user_image.xml"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-xhdpi_lock_icon.png.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-xhdpi/lock_icon.png"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-hdpi_ai3po_buddy.png.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-hdpi/ai3po_buddy.png"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable_baseline_save_as_24.xml.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable/baseline_save_as_24.xml"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/layout_custom_edittext.xml.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/layout/custom_edittext.xml"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-xhdpi_profile_icon.png.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-xhdpi/profile_icon.png"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-xhdpi_ai3po_buddy2.png.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-xhdpi/ai3po_buddy2.png"
+    },
+    {
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-mdpi_lock_icon.png.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-mdpi/lock_icon.png"
     },
     {
         "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/mipmap-hdpi_ic_launcher.webp.flat",
@@ -120,48 +188,28 @@
         "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/layout/activity_main.xml"
     },
     {
-        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/mipmap-anydpi-v33_ic_launcher.xml.flat",
-        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/mipmap-anydpi-v33/ic_launcher.xml"
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-xxhdpi_ai3po_buddy2.png.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-xxhdpi/ai3po_buddy2.png"
     },
     {
         "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/mipmap-xhdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable_ic_launcher_background.xml.flat",
-        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable/ic_launcher_background.xml"
-    },
-    {
-        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-v24/ic_launcher_foreground.xml"
-    },
-    {
         "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/menu_media_menu.xml.flat",
         "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/menu/media_menu.xml"
-    },
-    {
-        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
         "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-hdpi_profile_icon.png.flat",
         "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-hdpi/profile_icon.png"
     },
     {
-        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-xxxhdpi_lock_icon.png.flat",
-        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-xxxhdpi/lock_icon.png"
+        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-xhdpi_ai3po_buddy.png.flat",
+        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/drawable-xhdpi/ai3po_buddy.png"
     },
     {
         "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/mipmap-mdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/mipmap-mdpi/ic_launcher.webp"
     },
     {
         "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-xxxhdpi_profile_icon.png.flat",
@@ -170,10 +218,6 @@
     {
         "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/layout_login_screen.xml.flat",
         "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/layout/login_screen.xml"
-    },
-    {
-        "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-main-41:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
         "merged": "/Users/booman/.gradle/daemon/8.11.1/com.example.myapplication.app-debug-39:/drawable-hdpi_lock_icon.png.flat",

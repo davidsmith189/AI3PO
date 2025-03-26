@@ -12,7 +12,8 @@ class LoginScreen : AppCompatActivity() {
 
         val loginButton = findViewById<Button>(R.id.loginButton)
 
-        
+        // Suppose you have a button or some condition that triggers login success:
+        // For illustration, we'll just start MainActivity immediately.
         loginButton.setOnClickListener {
             navigateToMainActivity()
         }
@@ -23,6 +24,6 @@ class LoginScreen : AppCompatActivity() {
     private fun navigateToMainActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
-        finish()
+        finish() // finish LoginScreen so that the user can't navigate back to it
     }
 }

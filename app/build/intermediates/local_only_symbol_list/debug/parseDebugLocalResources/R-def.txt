@@ -8,6 +8,8 @@ color richGold
 color teal_200
 color teal_700
 color white
+drawable ai3po_buddy
+drawable ai3po_buddy2
 drawable baseline_save_as_24
 drawable baseline_settings_24
 drawable bot_message_bg
