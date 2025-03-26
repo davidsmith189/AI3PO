@@ -38,6 +38,7 @@ id menu_gallery
 id menu_take_photo
 id messageText
 id passwordEditText
+id registerButton
 id save
 id sendButton
 id tabLayout

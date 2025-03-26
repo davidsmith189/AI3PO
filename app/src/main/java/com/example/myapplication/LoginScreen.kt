@@ -19,9 +19,11 @@ class LoginScreen : AppCompatActivity() {
         val userOrEmail = findViewById<EditText>(R.id.usernameEditText)
         val password = findViewById<EditText>(R.id.passwordEditText)
         val loginButton = findViewById<Button>(R.id.loginButton)
+        val registerButton = findViewById<Button>(R.id.registerButton)
 
-        // Suppose you have a button or some condition that triggers login success:
-        // For illustration, we'll just start MainActivity immediately.
+
+
+
         loginButton.setOnClickListener {
             val userOrEmailString = userOrEmail.text.toString().trim()
             val passwordString = password.text.toString().trim()
@@ -29,9 +31,20 @@ class LoginScreen : AppCompatActivity() {
             if(userOrEmailString.isNotEmpty() && passwordString.isNotEmpty()) {
                 signInUser(userOrEmailString,passwordString)
             } else {
-                Toast.makeText(this, "please enter both email and password", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Please enter both email and password", Toast.LENGTH_SHORT).show()
             }
 
+        }
+
+        registerButton.setOnClickListener {
+            val userOrEmailString = userOrEmail.text.toString().trim()
+            val passwordString = password.text.toString().trim()
+
+            if (userOrEmailString.isNotEmpty() && passwordString.isNotEmpty()) {
+                createNewUser(userOrEmailString, passwordString)
+            } else {
+                Toast.makeText(this, "Please enter both email and password", Toast.LENGTH_SHORT).show()
+            }
         }
 
 

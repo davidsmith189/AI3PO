@@ -51,7 +51,7 @@
                 android:background="@color/white"
                 android:drawableLeft="@drawable/profile_icon"
                 android:drawablePadding="8dp"
-                android:hint="Username/Email"
+                android:hint="Email"
                 android:padding="8dp" />
 
             <EditText
@@ -72,7 +72,17 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/richGold"
-                android:text="Login/Create"
+                android:text="Login"
+                android:textSize="16sp"
+                app:cornerRadius="20dp" />
+
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/richGold"
+                android:text="register"
                 android:textSize="16sp"
                 app:cornerRadius="20dp" />
 
