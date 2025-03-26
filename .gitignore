@@ -36,3 +36,17 @@ output.json
 #NDK
 obj/
 .externalNativeBuild
+
+# New entries from the code block
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+*.log
+app/build/
+.externalNativeBuild/
+.cxx/
+out/
+.navigation/
+*.hprof
