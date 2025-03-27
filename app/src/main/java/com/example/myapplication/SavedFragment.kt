@@ -38,6 +38,7 @@ class SavedFragment: Fragment() {
 
             adapter = SavedChatsAdapter(chats)
             viewPager.adapter = adapter
+
         }
     }
 }

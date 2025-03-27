@@ -1,8 +1,16 @@
+
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
 }
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localProperties.load(new FileInputStream(localPropertiesFile))
+}
+def openAiApiKey = localProperties.getProperty("OPENAI_API_KEY") ?: "MISSING_KEY"
+
 
 android {
     namespace 'com.example.myapplication'
@@ -14,6 +22,7 @@ android {
         targetSdk 33
         versionCode 1
         versionName "1.0"
+        buildConfigField "String", "OPENAI_API_KEY", "\"${openAiApiKey}\""
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -43,12 +52,15 @@ dependencies {
     implementation 'androidx.viewpager2:viewpager2:1.1.0'
     implementation 'com.google.android.material:material:1.12.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
-    implementation 'com.google.firebase:firebase-firestore:25.1.2'
+    implementation 'com.google.firebase:firebase-firestore'
     implementation platform('com.google.firebase:firebase-bom:33.10.0')
     implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.2.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
     implementation 'androidx.recyclerview:recyclerview:1.4.0'
     implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'com.google.firebase:firebase-auth-ktx:23.2.0'
+
 }

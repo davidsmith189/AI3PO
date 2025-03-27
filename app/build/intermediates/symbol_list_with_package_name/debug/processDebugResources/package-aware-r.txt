@@ -1376,6 +1376,7 @@ color accent_material_dark
 color accent_material_light
 color androidx_core_ripple_material_light
 color androidx_core_secondary_text_default_material_light
+color azure
 color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
@@ -1387,6 +1388,10 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
+color browser_actions_bg_grey
+color browser_actions_divider_color
+color browser_actions_text_color
+color browser_actions_title_color
 color button_material_dark
 color button_material_light
 color call_notification_answer_color
@@ -2119,8 +2124,8 @@ color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
 color purple_200
-color purple_500
 color purple_700
+color richGold
 color ripple_material_dark
 color ripple_material_light
 color secondary_text_default_material_dark
@@ -2220,6 +2225,8 @@ dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen appcompat_dialog_background_inset
+dimen browser_actions_context_menu_max_width
+dimen browser_actions_context_menu_min_padding
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -3020,8 +3027,14 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable ai3po_buddy
+drawable ai3po_buddy2
 drawable avd_hide_password
 drawable avd_show_password
+drawable baseline_save_as_24
+drawable baseline_settings_24
+drawable bg_received_message
+drawable bg_sent_message
 drawable bot_message_bg
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -3076,8 +3089,12 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_other_sign_in
+drawable ic_passkey
+drawable ic_password
 drawable ic_search_black_24
 drawable indeterminate_static
+drawable lock_icon
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
 drawable m3_bottom_sheet_drag_handle
@@ -3150,6 +3167,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable profile_icon
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3257,6 +3275,11 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id browser_actions_header_text
+id browser_actions_menu_item_icon
+id browser_actions_menu_item_text
+id browser_actions_menu_items
+id browser_actions_menu_view
 id btnAttach
 id buttonPanel
 id cache_measures
@@ -3300,6 +3323,7 @@ id cradle
 id currentState
 id custom
 id customPanel
+id custom_toolbar
 id cut
 id dark
 id date_picker_actions
@@ -3309,6 +3333,7 @@ id decor_content_parent
 id default_activity_button
 id deltaRelative
 id dependency_ordering
+id descriptionText
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -3392,6 +3417,7 @@ id ignoreRequest
 id image
 id imageView
 id immediateStop
+id include_toolbar
 id included
 id indeterminate
 id info
@@ -3413,6 +3439,8 @@ id line3
 id linear
 id listMode
 id list_item
+id loginButton
+id loginText
 id m3_side_sheet
 id marquee
 id masked
@@ -3523,6 +3551,7 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id passwordEditText
 id password_toggle
 id path
 id pathRelative
@@ -3538,6 +3567,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id registerButton
 id report_drawn
 id reverseSawtooth
 id right
@@ -3546,6 +3576,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id save
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3642,6 +3673,7 @@ id textinput_suffix_text
 id time
 id title
 id titleDividerNoCustom
+id titleText
 id title_template
 id toggle
 id top
@@ -3658,12 +3690,14 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id typingIndicator
 id unchecked
 id uniform
 id unlabeled
 id up
 id useLogo
 id userInput
+id usernameEditText
 id vertical
 id vertical_only
 id viewPager
@@ -3801,6 +3835,8 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout browser_actions_context_menu_page
+layout browser_actions_context_menu_row
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3822,11 +3858,13 @@ layout fragment_profile
 layout fragment_saved
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_bot_message
 layout item_chat
 layout item_chatbot_message
 layout item_user_document
 layout item_user_image
 layout item_user_message
+layout login_screen
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3888,6 +3926,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout toolbar
 menu attachment_menu
 menu media_menu
 mipmap ic_launcher
@@ -3921,6 +3960,8 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string android_credentials_TYPE_PASSWORD_CREDENTIAL
+string androidx_credentials_TYPE_PUBLIC_KEY_CREDENTIAL
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
@@ -3960,11 +4001,15 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string copy_toast_msg
 string error_a11y_label
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string fallback_menu_item_copy_link
+string fallback_menu_item_open_in_browser
+string fallback_menu_item_share_link
 string gcm_defaultSenderId
 string google_api_key
 string google_app_id
@@ -4638,6 +4683,7 @@ style Theme_Design_Light
 style Theme_Design_Light_BottomSheetDialog
 style Theme_Design_Light_NoActionBar
 style Theme_Design_NoActionBar
+style Theme_Hidden
 style Theme_Material3_Dark
 style Theme_Material3_Dark_BottomSheetDialog
 style Theme_Material3_Dark_Dialog
@@ -4716,6 +4762,7 @@ style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
 style Theme_MyApplication
+style Theme_PlayCore_Transparent
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark
@@ -5372,3 +5419,4 @@ styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration
 styleable include constraintSet
 xml backup_rules
 xml data_extraction_rules
+xml image_share_filepaths

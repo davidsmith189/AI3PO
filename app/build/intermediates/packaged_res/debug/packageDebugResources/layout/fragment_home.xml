@@ -29,7 +29,7 @@
             android:layout_height="48dp"
             android:src="@android:drawable/ic_input_add"
             android:contentDescription="Attach Files"
-            android:backgroundTint="@color/teal_700"
+            android:backgroundTint="@color/azure"
             android:tint="@android:color/white"/>
 
         <EditText
@@ -49,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Send"
-            android:backgroundTint="#6200EE"
+            android:backgroundTint="@color/azure"
             android:textColor="#FFFFFF"/>
     </LinearLayout>
 </RelativeLayout>
