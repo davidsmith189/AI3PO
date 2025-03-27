@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/editTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Discussion Title/Topic" />
+
+    <EditText
+        android:id="@+id/editSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Subject Type (e.g., Math, History)" />
+
+    <TextView
+        android:id="@+id/timestampView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Timestamp will be auto-filled"
+        android:paddingTop="10dp"
+        android:textSize="14sp" />
+
+</LinearLayout>
