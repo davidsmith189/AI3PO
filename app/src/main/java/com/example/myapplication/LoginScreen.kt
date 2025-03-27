@@ -58,7 +58,7 @@ class LoginScreen : AppCompatActivity() {
                         ?.addOnCompleteListener { tokenTask ->
                             if (tokenTask.isSuccessful) {
                                 val idToken = tokenTask.result?.token
-                                navigateToMainActivity()
+                                navigateToMainActivity(userOrEmailString)
                             } else {
                                 Toast.makeText(this, "Token Generation Failed", Toast.LENGTH_SHORT).show()
                             }
@@ -75,7 +75,7 @@ class LoginScreen : AppCompatActivity() {
                 if (task.isSuccessful) {
 
                     Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show()
-                    navigateToMainActivity()
+                    navigateToMainActivity(userOrEmailString)
                 } else {
 
                     Toast.makeText(this, "Registration failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
@@ -83,8 +83,9 @@ class LoginScreen : AppCompatActivity() {
             }
     }
 
-    private fun navigateToMainActivity() {
+    private fun navigateToMainActivity(userOrEmailString:String) {
         val intent = Intent(this, MainActivity::class.java)
+        intent.putExtra("USERNAME",userOrEmailString) //Passes the username
         startActivity(intent)
         finish()
     }

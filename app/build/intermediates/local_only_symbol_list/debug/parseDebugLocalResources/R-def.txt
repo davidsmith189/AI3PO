@@ -15,10 +15,15 @@ drawable baseline_settings_24
 drawable bg_received_message
 drawable bg_sent_message
 drawable bot_message_bg
+drawable galaxy_background
+drawable gold_galaxy
+drawable gold_galaxy_background
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable lock_icon
+drawable plus_button
 drawable profile_icon
+drawable savefile
 drawable user_message_bg
 id btnAttach
 id chatInputLayout

@@ -13,6 +13,9 @@ def openAiApiKey = localProperties.getProperty("OPENAI_API_KEY") ?: "MISSING_KEY
 
 
 android {
+
+
+
     namespace 'com.example.myapplication'
     compileSdk 35
 

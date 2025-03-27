@@ -4,6 +4,7 @@ package com.example.myapplication
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
@@ -21,6 +22,10 @@ class MainActivity : AppCompatActivity() {
 
         val toolbar= findViewById<androidx.appcompat.widget.Toolbar>(R.id.custom_toolbar)
         setSupportActionBar(toolbar)
+
+        val username=intent.getStringExtra("USERNAME")?: "User Name"
+        val descriptionText = findViewById<TextView>(R.id.descriptionText)
+        descriptionText.text = username  // Set the retrieved username
 
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         val viewPager = findViewById<ViewPager2>(R.id.viewPager)

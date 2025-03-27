@@ -21,11 +21,11 @@
     <!-- user -->
     <TextView
         android:id="@+id/descriptionText"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="User Name"
         android:textSize="14sp"
-        android:textColor="@color/azure"
+        android:textColor="@color/white"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:layout_marginStart="16dp"
@@ -45,7 +45,7 @@
         android:id="@+id/save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/baseline_save_as_24"
+        android:src="@drawable/savefile"
         android:layout_gravity="end|center"/>
 
 
