@@ -50,6 +50,11 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
+    fun getChatMessages(): List<ChatMessage> {
+        return messages
+    }
+
+
     private fun showAttachmentMenu() {
         val popupMenu = PopupMenu(requireContext(), binding.btnAttach)
         popupMenu.menuInflater.inflate(R.menu.attachment_menu, popupMenu.menu)
