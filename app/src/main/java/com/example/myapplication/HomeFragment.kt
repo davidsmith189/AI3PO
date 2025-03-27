@@ -42,6 +42,8 @@ class HomeFragment : Fragment() {
         }
         binding.chatRecyclerView.adapter = chatAdapter
 
+        fetchMessages()
+
         binding.sendButton.setOnClickListener { sendMessage() }
         binding.btnAttach.setOnClickListener { showAttachmentMenu() }
 
@@ -83,8 +85,9 @@ class HomeFragment : Fragment() {
         if (result.resultCode == Activity.RESULT_OK) {
             val uri: Uri? = result.data?.data
             val message = "Image attached"
-            messages.add(ChatMessage(message, true))
-            saveMessageToFirestore(ChatMessage(message, true))
+            val userMessage = ChatMessage(message, true)
+            messages.add(userMessage)
+            saveMessageToFirestore(userMessage)
             chatAdapter.notifyDataSetChanged()
         }
     }
@@ -93,8 +96,10 @@ class HomeFragment : Fragment() {
         if (result.resultCode == Activity.RESULT_OK) {
             val uri: Uri? = result.data?.data
             val message = "Image attached"
-            messages.add(ChatMessage(message, true))
-            saveMessageToFirestore(ChatMessage(message, true))
+            val userMessage = ChatMessage(message, true)
+
+            messages.add(userMessage)
+            saveMessageToFirestore(userMessage)
             chatAdapter.notifyDataSetChanged()
         }
     }
@@ -103,10 +108,34 @@ class HomeFragment : Fragment() {
         if (result.resultCode == Activity.RESULT_OK) {
             val uri: Uri? = result.data?.data
             val message = "Document attached"
-            messages.add(ChatMessage(message, true))
-            saveMessageToFirestore(ChatMessage(message, true))
+            val userMessage = ChatMessage(message, true)
+
+            messages.add(userMessage)
+            saveMessageToFirestore(userMessage)
             chatAdapter.notifyDataSetChanged()
         }
+    }
+
+    private fun fetchMessages() {
+        val db = FirebaseFirestore.getInstance()
+        db.collection("openAIChats")
+            .orderBy("timestamp")
+            .addSnapshotListener { snapshot, e ->
+                if (e != null) {
+                    Log.w("Firestore", "Listen failed.", e)
+                    return@addSnapshotListener
+                }
+                if (snapshot != null) {
+                    messages.clear()
+                    for (doc in snapshot.documents) {
+                        val message = doc.getString("message") ?: ""
+                        val isUser = doc.getBoolean("isUser") ?: false
+                        messages.add(ChatMessage(message, isUser))
+                    }
+                    chatAdapter.notifyDataSetChanged()
+                    binding.chatRecyclerView.scrollToPosition(messages.size - 1)
+                }
+            }
     }
 
     private fun saveMessageToFirestore(chatMessage: ChatMessage) {
@@ -118,7 +147,7 @@ class HomeFragment : Fragment() {
             "timestamp" to com.google.firebase.firestore.FieldValue.serverTimestamp()
         )
 
-        db.collection("chats")
+        db.collection("openAIChats")
             .add(data)
             .addOnSuccessListener { documentReference ->
                 Log.d("Firestore", "message saved with ID: ${documentReference.id}")
@@ -131,15 +160,17 @@ class HomeFragment : Fragment() {
     private fun sendMessage() {
         val message = binding.userInput.text.toString().trim()
         if (message.isNotEmpty()) {
+            val userMessage = ChatMessage(message, true)
             // Add user message
-            messages.add(ChatMessage(message, true))
-            
+            messages.add(userMessage)
+
             binding.chatRecyclerView.post {
                 chatAdapter.notifyDataSetChanged()
                 binding.chatRecyclerView.scrollToPosition(messages.size - 1)
             }
 
             binding.userInput.text.clear()
+            saveMessageToFirestore(userMessage)
 
             // Add typing indicator
             val typingMessage = ChatMessage("", false, true)
@@ -153,13 +184,17 @@ class HomeFragment : Fragment() {
                     // Remove typing indicator
                     messages.remove(typingMessage)
                     // Add bot response
-                    messages.add(ChatMessage(response, false))
+                    val botMessage = ChatMessage(response,false)
+                    messages.add(botMessage)
                     chatAdapter.notifyDataSetChanged()
                     binding.chatRecyclerView.scrollToPosition(messages.size - 1)
+                    saveMessageToFirestore(botMessage)
                 }
             }
         } else {
             println("Message was empty, not added.")
         }
     }
+
+
 }
