@@ -3033,6 +3033,8 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable baseline_save_as_24
 drawable baseline_settings_24
+drawable bg_received_message
+drawable bg_sent_message
 drawable bot_message_bg
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -3366,6 +3368,8 @@ id easeInOut
 id easeOut
 id east
 id edge
+id editSubject
+id editTitle
 id edit_query
 id edit_text_id
 id elastic
@@ -3570,6 +3574,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id registerButton
 id report_drawn
 id reverseSawtooth
 id right
@@ -3673,6 +3678,7 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id time
+id timestampView
 id title
 id titleDividerNoCustom
 id titleText
@@ -3692,6 +3698,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id typingIndicator
 id unchecked
 id uniform
 id unlabeled
@@ -3854,11 +3861,13 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_save_metadata
 layout fragment_home
 layout fragment_profile
 layout fragment_saved
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_bot_message
 layout item_chat
 layout item_chatbot_message
 layout item_user_document
