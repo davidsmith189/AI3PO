@@ -3363,6 +3363,8 @@ id easeInOut
 id easeOut
 id east
 id edge
+id editSubject
+id editTitle
 id edit_query
 id edit_text_id
 id elastic
@@ -3671,6 +3673,7 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id time
+id timestampView
 id title
 id titleDividerNoCustom
 id titleText
@@ -3853,6 +3856,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_save_metadata
 layout fragment_home
 layout fragment_profile
 layout fragment_saved

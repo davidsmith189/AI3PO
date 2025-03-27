@@ -13,7 +13,8 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import androidx.recyclerview.widget.RecyclerView
 import android.widget.TextView
-
+import android.widget.Toast
+import com.google.firebase.firestore.FirebaseFirestore
 
 
 class SavedFragment: Fragment() {
@@ -28,19 +29,28 @@ class SavedFragment: Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         val viewPager = view.findViewById<ViewPager2>(R.id.viewPager)
+        val db = FirebaseFirestore.getInstance()
 
-        val jsonString = loadJsonFromAssets(requireContext(), "chats.json")
-        if (jsonString != null) {
-            val gson = Gson()
-            val chatListType = object : TypeToken<List<SavedChat>>() {}.type
-            val chats: List<SavedChat> = gson.fromJson(jsonString, chatListType)
+        db.collection("saved_chats")
+            .get()
+            .addOnSuccessListener { result ->
+                val savedChats = result.map { doc ->
+                    val title = doc.getString("title") ?: "Untitled"
+                    val messages = doc.get("messages") as? List<HashMap<String, Any>> ?: emptyList()
+                    val lastMessage = messages.lastOrNull()?.get("message")?.toString() ?: "No messages"
+                    SavedChat(title = title, lastMessage = lastMessage)
+                }
 
-            adapter = SavedChatsAdapter(chats)
-            viewPager.adapter = adapter
-
-        }
+                adapter = SavedChatsAdapter(savedChats)
+                viewPager.adapter = adapter
+            }
+            .addOnFailureListener {
+                Toast.makeText(requireContext(), "Failed to load saved chats", Toast.LENGTH_SHORT).show()
+            }
     }
+
 }
 fun loadJsonFromAssets(context: Context, filename: String): String? {
     return try {
