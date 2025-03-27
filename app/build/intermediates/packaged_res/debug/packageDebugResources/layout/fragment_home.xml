@@ -10,9 +10,11 @@
         android:layout_height="0dp"
         android:layout_above="@id/chatInputLayout"
         android:layout_alignParentTop="true"
-        android:scrollbars="vertical"
+        android:background="@drawable/gold_galaxy_background"
+
         android:padding="8dp"
-        android:visibility="visible"/>
+        android:scrollbars="vertical"
+        android:visibility="visible" />
 
     <LinearLayout
         android:id="@+id/chatInputLayout"
@@ -25,11 +27,11 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnAttach"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@android:drawable/ic_input_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/plus_button"
             android:contentDescription="Attach Files"
-            android:backgroundTint="@color/azure"
+            android:backgroundTint="@color/richGold"
             android:tint="@android:color/white"/>
 
         <EditText
@@ -49,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Send"
-            android:backgroundTint="@color/azure"
+            android:backgroundTint="@color/richGold"
             android:textColor="#FFFFFF"/>
     </LinearLayout>
 </RelativeLayout>

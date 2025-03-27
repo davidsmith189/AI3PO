@@ -32,28 +32,48 @@
         "source": "com.example.myapplication.app-main-46:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
+        "merged": "com.example.myapplication.app-debug-44:/drawable-xxhdpi_plus_button.png.flat",
+        "source": "com.example.myapplication.app-main-46:/drawable-xxhdpi/plus_button.png"
+    },
+    {
         "merged": "com.example.myapplication.app-debug-44:/layout_fragment_home.xml.flat",
         "source": "com.example.myapplication.app-main-46:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.example.myapplication.app-debug-44:/drawable-xhdpi_savefile.png.flat",
+        "source": "com.example.myapplication.app-main-46:/drawable-xhdpi/savefile.png"
     },
     {
         "merged": "com.example.myapplication.app-debug-44:/xml_backup_rules.xml.flat",
         "source": "com.example.myapplication.app-main-46:/xml/backup_rules.xml"
     },
     {
-        "merged": "com.example.myapplication.app-debug-44:/drawable-xxxhdpi_ai3po_buddy2.png.flat",
-        "source": "com.example.myapplication.app-main-46:/drawable-xxxhdpi/ai3po_buddy2.png"
+        "merged": "com.example.myapplication.app-debug-44:/layout_dialog_save_metadata.xml.flat",
+        "source": "com.example.myapplication.app-main-46:/layout/dialog_save_metadata.xml"
     },
     {
-        "merged": "com.example.myapplication.app-debug-44:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.example.myapplication.app-main-46:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "com.example.myapplication.app-debug-44:/drawable-xxxhdpi_ai3po_buddy2.png.flat",
+        "source": "com.example.myapplication.app-main-46:/drawable-xxxhdpi/ai3po_buddy2.png"
     },
     {
         "merged": "com.example.myapplication.app-debug-44:/drawable-mdpi_ai3po_buddy.png.flat",
         "source": "com.example.myapplication.app-main-46:/drawable-mdpi/ai3po_buddy.png"
     },
     {
+        "merged": "com.example.myapplication.app-debug-44:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.myapplication.app-main-46:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.myapplication.app-debug-44:/drawable-xxxhdpi_savefile.png.flat",
+        "source": "com.example.myapplication.app-main-46:/drawable-xxxhdpi/savefile.png"
+    },
+    {
         "merged": "com.example.myapplication.app-debug-44:/layout_fragment_profile.xml.flat",
         "source": "com.example.myapplication.app-main-46:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "com.example.myapplication.app-debug-44:/drawable-hdpi_savefile.png.flat",
+        "source": "com.example.myapplication.app-main-46:/drawable-hdpi/savefile.png"
     },
     {
         "merged": "com.example.myapplication.app-debug-44:/drawable-xxxhdpi_lock_icon.png.flat",
@@ -76,8 +96,16 @@
         "source": "com.example.myapplication.app-main-46:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
+        "merged": "com.example.myapplication.app-debug-44:/drawable-mdpi_savefile.png.flat",
+        "source": "com.example.myapplication.app-main-46:/drawable-mdpi/savefile.png"
+    },
+    {
         "merged": "com.example.myapplication.app-debug-44:/drawable-xxhdpi_profile_icon.png.flat",
         "source": "com.example.myapplication.app-main-46:/drawable-xxhdpi/profile_icon.png"
+    },
+    {
+        "merged": "com.example.myapplication.app-debug-44:/drawable-hdpi_plus_button.png.flat",
+        "source": "com.example.myapplication.app-main-46:/drawable-hdpi/plus_button.png"
     },
     {
         "merged": "com.example.myapplication.app-debug-44:/drawable_bg_sent_message.xml.flat",
@@ -92,6 +120,10 @@
         "source": "com.example.myapplication.app-main-46:/drawable-xhdpi/lock_icon.png"
     },
     {
+        "merged": "com.example.myapplication.app-debug-44:/drawable-mdpi_plus_button.png.flat",
+        "source": "com.example.myapplication.app-main-46:/drawable-mdpi/plus_button.png"
+    },
+    {
         "merged": "com.example.myapplication.app-debug-44:/layout_fragment_saved.xml.flat",
         "source": "com.example.myapplication.app-main-46:/layout/fragment_saved.xml"
     },
@@ -104,12 +136,20 @@
         "source": "com.example.myapplication.app-main-46:/drawable-hdpi/lock_icon.png"
     },
     {
+        "merged": "com.example.myapplication.app-debug-44:/drawable-xxhdpi_savefile.png.flat",
+        "source": "com.example.myapplication.app-main-46:/drawable-xxhdpi/savefile.png"
+    },
+    {
         "merged": "com.example.myapplication.app-debug-44:/drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "com.example.myapplication.app-main-46:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
         "merged": "com.example.myapplication.app-debug-44:/mipmap-mdpi_ic_launcher.webp.flat",
         "source": "com.example.myapplication.app-main-46:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.myapplication.app-debug-44:/drawable_gold_galaxy_background.png.flat",
+        "source": "com.example.myapplication.app-main-46:/drawable/gold_galaxy_background.png"
     },
     {
         "merged": "com.example.myapplication.app-debug-44:/drawable-mdpi_lock_icon.png.flat",
@@ -124,12 +164,20 @@
         "source": "com.example.myapplication.app-main-46:/layout/login_screen.xml"
     },
     {
-        "merged": "com.example.myapplication.app-debug-44:/drawable-xhdpi_ai3po_buddy.png.flat",
-        "source": "com.example.myapplication.app-main-46:/drawable-xhdpi/ai3po_buddy.png"
+        "merged": "com.example.myapplication.app-debug-44:/drawable-xxxhdpi_plus_button.png.flat",
+        "source": "com.example.myapplication.app-main-46:/drawable-xxxhdpi/plus_button.png"
+    },
+    {
+        "merged": "com.example.myapplication.app-debug-44:/drawable-xhdpi_plus_button.png.flat",
+        "source": "com.example.myapplication.app-main-46:/drawable-xhdpi/plus_button.png"
     },
     {
         "merged": "com.example.myapplication.app-debug-44:/drawable-xxxhdpi_ai3po_buddy.png.flat",
         "source": "com.example.myapplication.app-main-46:/drawable-xxxhdpi/ai3po_buddy.png"
+    },
+    {
+        "merged": "com.example.myapplication.app-debug-44:/drawable-xhdpi_ai3po_buddy.png.flat",
+        "source": "com.example.myapplication.app-main-46:/drawable-xhdpi/ai3po_buddy.png"
     },
     {
         "merged": "com.example.myapplication.app-debug-44:/layout_item_chatbot_message.xml.flat",
@@ -166,6 +214,10 @@
     {
         "merged": "com.example.myapplication.app-debug-44:/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "com.example.myapplication.app-main-46:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.myapplication.app-debug-44:/drawable_gold_galaxy.png.flat",
+        "source": "com.example.myapplication.app-main-46:/drawable/gold_galaxy.png"
     },
     {
         "merged": "com.example.myapplication.app-debug-44:/drawable-xhdpi_profile_icon.png.flat",
@@ -222,6 +274,10 @@
     {
         "merged": "com.example.myapplication.app-debug-44:/drawable-mdpi_profile_icon.png.flat",
         "source": "com.example.myapplication.app-main-46:/drawable-mdpi/profile_icon.png"
+    },
+    {
+        "merged": "com.example.myapplication.app-debug-44:/drawable_galaxy_background.png.flat",
+        "source": "com.example.myapplication.app-main-46:/drawable/galaxy_background.png"
     },
     {
         "merged": "com.example.myapplication.app-debug-44:/layout_activity_main.xml.flat",
