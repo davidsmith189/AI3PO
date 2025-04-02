@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.content.Context
+import android.content.Intent
 import android.util.Log
 import java.io.IOException
 import androidx.viewpager2.widget.ViewPager2
@@ -14,6 +15,7 @@ import com.google.gson.reflect.TypeToken
 import androidx.recyclerview.widget.RecyclerView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.Nullable
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -52,6 +54,15 @@ class SavedFragment: Fragment() {
             .addOnFailureListener {
                 Toast.makeText(requireContext(), "Failed to load saved chats", Toast.LENGTH_SHORT).show()
             }
+
+//        adapter.setOnItemClickListener { savedChat ->
+//            val intent = Intent(requireContext(), ChatAdapter::class.java)
+//            intent.putExtra("chat_title", savedChat.title)
+//            // Convert the messages list to JSON using Gson (or any method you prefer)
+//            val messagesJson = Gson().toJson(savedChat.lastMessage)
+//            intent.putExtra("chat_messages", messagesJson)
+//            startActivity(intent)
+//        }
     }
 
 }
@@ -67,9 +78,21 @@ fun loadJsonFromAssets(context: Context, filename: String): String? {
 class SavedChatsAdapter(private val chatList: List<SavedChat>) :
     RecyclerView.Adapter<SavedChatsAdapter.ChatViewHolder>() {
 
+    private var onItemClickListener: ((SavedChat) -> Unit)? = null
+
+    fun setOnItemClickListener(listener: (SavedChat) -> Unit) {
+        onItemClickListener = listener
+    }
+
     inner class ChatViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val titleText: TextView = itemView.findViewById(R.id.chat_title)
         val messageText: TextView = itemView.findViewById(R.id.chat_message)
+        init {
+            itemView.setOnClickListener{
+                onItemClickListener?.invoke(chatList[adapterPosition])
+            }
+
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatViewHolder {
@@ -87,6 +110,8 @@ class SavedChatsAdapter(private val chatList: List<SavedChat>) :
                 "Binding position $position: title=${chat.title}, lastMessage=${chat.lastMessage}"
             )
         }
+
+
 
     override fun getItemCount(): Int = chatList.size
 
