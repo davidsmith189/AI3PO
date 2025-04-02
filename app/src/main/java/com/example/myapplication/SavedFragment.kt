@@ -14,11 +14,12 @@ import com.google.gson.reflect.TypeToken
 import androidx.recyclerview.widget.RecyclerView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 
 
 class SavedFragment: Fragment() {
-    private lateinit var viewPager: ViewPager2
+    private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: SavedChatsAdapter
 
     override fun onCreateView(
@@ -30,7 +31,9 @@ class SavedFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val viewPager = view.findViewById<ViewPager2>(R.id.viewPager)
+        recyclerView = view.findViewById(R.id.chatRecyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
         val db = FirebaseFirestore.getInstance()
 
         db.collection("saved_chats")
@@ -44,7 +47,7 @@ class SavedFragment: Fragment() {
                 }
 
                 adapter = SavedChatsAdapter(savedChats)
-                viewPager.adapter = adapter
+                recyclerView.adapter = adapter
             }
             .addOnFailureListener {
                 Toast.makeText(requireContext(), "Failed to load saved chats", Toast.LENGTH_SHORT).show()
