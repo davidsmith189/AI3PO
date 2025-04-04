@@ -23,6 +23,7 @@ drawable ic_launcher_foreground
 drawable lock_icon
 drawable plus_button
 drawable profile_icon
+drawable saved_chat_background
 drawable savefile
 drawable user_message_bg
 id btnAttach

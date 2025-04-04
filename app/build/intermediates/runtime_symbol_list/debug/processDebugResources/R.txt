@@ -3171,11 +3171,12 @@ int drawable notification_tile_bg 0x7f070105
 int drawable notify_panel_notification_icon_bg 0x7f070106
 int drawable plus_button 0x7f070107
 int drawable profile_icon 0x7f070108
-int drawable savefile 0x7f070109
-int drawable test_level_drawable 0x7f07010a
-int drawable tooltip_frame_dark 0x7f07010b
-int drawable tooltip_frame_light 0x7f07010c
-int drawable user_message_bg 0x7f07010d
+int drawable saved_chat_background 0x7f070109
+int drawable savefile 0x7f07010a
+int drawable test_level_drawable 0x7f07010b
+int drawable tooltip_frame_dark 0x7f07010c
+int drawable tooltip_frame_light 0x7f07010d
+int drawable user_message_bg 0x7f07010e
 int id ALT 0x7f080000
 int id BOTTOM_END 0x7f080001
 int id BOTTOM_START 0x7f080002
