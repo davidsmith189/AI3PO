@@ -26,6 +26,9 @@ drawable profile_icon
 drawable savefile
 drawable user_message_bg
 id btnAttach
+id btnClear
+id btnColor
+id btnUndo
 id chatInputLayout
 id chatRecyclerView
 id chat_message
@@ -34,6 +37,7 @@ id custom_toolbar
 id descriptionText
 id documentIcon
 id documentName
+id drawingView
 id editSubject
 id editTitle
 id imageView
@@ -49,6 +53,7 @@ id messageText
 id passwordEditText
 id registerButton
 id save
+id seekBarWidth
 id sendButton
 id tabLayout
 id timestampView
@@ -59,6 +64,7 @@ id usernameEditText
 id viewPager
 layout activity_main
 layout dialog_save_metadata
+layout fragment_doodle
 layout fragment_home
 layout fragment_profile
 layout fragment_saved
