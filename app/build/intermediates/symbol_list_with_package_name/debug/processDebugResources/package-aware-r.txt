@@ -3287,6 +3287,9 @@ id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
 id btnAttach
+id btnClear
+id btnColor
+id btnUndo
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3364,6 +3367,7 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
+id drawingView
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -3606,6 +3610,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id seekBarWidth
 id select_dialog_listview
 id selected
 id selection_type
@@ -3865,6 +3870,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_save_metadata
+layout fragment_doodle
 layout fragment_home
 layout fragment_profile
 layout fragment_saved
