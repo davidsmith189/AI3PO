@@ -91,6 +91,7 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = ViewPagerAdapter(this)
         viewPager.adapter = adapter
+        viewPager.isUserInputEnabled = false  // Disable swipe gestures
 
 
 
@@ -100,9 +101,18 @@ class MainActivity : AppCompatActivity() {
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             when (position) {
-                0 -> tab.text = "Discussion"
-                1 -> tab.text = "Doodle"
-                2 -> tab.text = "Saved"
+                0 -> {
+                    tab.text = "Discussion"
+                    viewPager.setCurrentItem(0, false)
+                }
+                1 -> {
+                    tab.text = "Doodle"
+                    viewPager.setCurrentItem(1, false)
+                }
+                2 -> {
+                    tab.text = "Saved"
+                    viewPager.setCurrentItem(2, false)
+                }
             }
         }.attach()
     }
