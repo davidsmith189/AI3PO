@@ -172,6 +172,10 @@
         "source": "com.example.myapplication.app-main-46:/layout/login_screen.xml"
     },
     {
+        "merged": "com.example.myapplication.app-debug-44:/layout_fragment_doodle.xml.flat",
+        "source": "com.example.myapplication.app-main-46:/layout/fragment_doodle.xml"
+    },
+    {
         "merged": "com.example.myapplication.app-debug-44:/drawable-xxxhdpi_plus_button.png.flat",
         "source": "com.example.myapplication.app-main-46:/drawable-xxxhdpi/plus_button.png"
     },
