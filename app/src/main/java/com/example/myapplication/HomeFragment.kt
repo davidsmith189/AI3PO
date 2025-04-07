@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.databinding.FragmentHomeBinding
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import org.json.JSONObject
 import java.io.IOException
@@ -122,8 +123,15 @@ class HomeFragment : Fragment() {
     }
 
     private fun fetchMessages() {
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        if (currentUser == null) {
+            return
+        }
+        val userId = currentUser.uid
         val db = FirebaseFirestore.getInstance()
-        db.collection("openAIChats")
+        db.collection("users")
+            .document(userId)
+            .collection("openAIChats")
             .orderBy("timestamp")
             .addSnapshotListener { snapshot, e ->
                 if (e != null) {
@@ -143,24 +151,33 @@ class HomeFragment : Fragment() {
             }
     }
 
+
     private fun saveMessageToFirestore(chatMessage: ChatMessage) {
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        if (currentUser == null) {
+            return
+        }
+        val userId = currentUser.uid
         val db = FirebaseFirestore.getInstance()
 
         val data = hashMapOf(
             "message" to chatMessage.message,
             "isUser" to chatMessage.isUser,
-            "timestamp" to com.google.firebase.firestore.FieldValue.serverTimestamp()
+            "timestamp" to FieldValue.serverTimestamp()
         )
 
-        db.collection("openAIChats")
+        db.collection("users")
+            .document(userId)
+            .collection("openAIChats")
             .add(data)
             .addOnSuccessListener { documentReference ->
-                Log.d("Firestore", "message saved with ID: ${documentReference.id}")
+                Log.d("Firestore", "Message saved with ID: ${documentReference.id}")
             }
             .addOnFailureListener { e ->
-                Log.e("Firestore", "error saving message", e)
+                Log.e("Firestore", "Error saving message", e)
             }
     }
+
 
     private fun sendMessage() {
         val message = binding.userInput.text.toString().trim()
