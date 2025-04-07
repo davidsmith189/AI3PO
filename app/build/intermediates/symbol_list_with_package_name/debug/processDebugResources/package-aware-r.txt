@@ -3302,6 +3302,7 @@ id chain2
 id chains
 id chatInputLayout
 id chatRecyclerView
+id chatTitleTextView
 id chat_message
 id chat_title
 id checkbox
@@ -3843,6 +3844,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_chat_detail
 layout activity_main
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row

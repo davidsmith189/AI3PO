@@ -29,6 +29,7 @@ drawable user_message_bg
 id btnAttach
 id chatInputLayout
 id chatRecyclerView
+id chatTitleTextView
 id chat_message
 id chat_title
 id custom_toolbar
@@ -58,6 +59,7 @@ id typingIndicator
 id userInput
 id usernameEditText
 id viewPager
+layout activity_chat_detail
 layout activity_main
 layout dialog_save_metadata
 layout fragment_home
