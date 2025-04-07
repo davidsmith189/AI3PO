@@ -57,7 +57,6 @@ class LoginScreen : AppCompatActivity() {
                     auth.currentUser?.getIdToken(true)
                         ?.addOnCompleteListener { tokenTask ->
                             if (tokenTask.isSuccessful) {
-                                val idToken = tokenTask.result?.token
                                 navigateToMainActivity(userOrEmailString)
                             } else {
                                 Toast.makeText(this, "Token Generation Failed", Toast.LENGTH_SHORT).show()
