@@ -3173,6 +3173,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable plus_button
 drawable profile_icon
+drawable saved_chat_background
 drawable savefile
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -3287,6 +3288,9 @@ id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
 id btnAttach
+id btnClear
+id btnColor
+id btnUndo
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3302,6 +3306,7 @@ id chain2
 id chains
 id chatInputLayout
 id chatRecyclerView
+id chatTitleTextView
 id chat_message
 id chat_title
 id checkbox
@@ -3363,6 +3368,7 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
+id drawingView
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -3604,6 +3610,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id seekBarWidth
 id select_dialog_listview
 id selected
 id selection_type
@@ -3843,6 +3850,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_chat_detail
 layout activity_main
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
@@ -3863,6 +3871,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_save_metadata
+layout fragment_doodle
 layout fragment_home
 layout fragment_profile
 layout fragment_saved

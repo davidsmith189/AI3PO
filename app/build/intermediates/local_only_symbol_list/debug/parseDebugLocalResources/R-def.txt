@@ -1,6 +1,5 @@
 R_DEF: Internal format may change without notice
 local
-array subjects
 color azure
 color black
 color purple_200
@@ -24,17 +23,24 @@ drawable ic_launcher_foreground
 drawable lock_icon
 drawable plus_button
 drawable profile_icon
+drawable saved_chat_background
 drawable savefile
 drawable user_message_bg
 id btnAttach
+id btnClear
+id btnColor
+id btnUndo
 id chatInputLayout
 id chatRecyclerView
+id chatTitleTextView
 id chat_message
 id chat_title
 id custom_toolbar
 id descriptionText
 id documentIcon
 id documentName
+id drawingView
+id editSubject
 id editTitle
 id imageView
 id include_toolbar
@@ -49,8 +55,8 @@ id messageText
 id passwordEditText
 id registerButton
 id save
+id seekBarWidth
 id sendButton
-id spinnerSubject
 id tabLayout
 id timestampView
 id titleText
@@ -58,8 +64,10 @@ id typingIndicator
 id userInput
 id usernameEditText
 id viewPager
+layout activity_chat_detail
 layout activity_main
 layout dialog_save_metadata
+layout fragment_doodle
 layout fragment_home
 layout fragment_profile
 layout fragment_saved

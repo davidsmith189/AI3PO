@@ -123,34 +123,42 @@ class HomeFragment : Fragment() {
     }
 
     private fun fetchMessages() {
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        if (currentUser == null) {
+            return
+        }
+        val userId = currentUser.uid
         val db = FirebaseFirestore.getInstance()
-        val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
-
         db.collection("users")
             .document(userId)
-            .collection("chats")
+            .collection("openAIChats")
             .orderBy("timestamp")
             .addSnapshotListener { snapshot, e ->
-                if (e != null || snapshot == null) {
+                if (e != null) {
                     Log.w("Firestore", "Listen failed.", e)
                     return@addSnapshotListener
                 }
-
-                messages.clear()
-                snapshot.documents.forEach { doc ->
-                    val message = doc.getString("message") ?: ""
-                    val isUser = doc.getBoolean("isUser") ?: false
-                    messages.add(ChatMessage(message, isUser))
+                if (snapshot != null) {
+                    messages.clear()
+                    for (doc in snapshot.documents) {
+                        val message = doc.getString("message") ?: ""
+                        val isUser = doc.getBoolean("isUser") ?: false
+                        messages.add(ChatMessage(message, isUser))
+                    }
+                    chatAdapter.notifyDataSetChanged()
+                    binding.chatRecyclerView.scrollToPosition(messages.size - 1)
                 }
-                chatAdapter.notifyDataSetChanged()
-                binding.chatRecyclerView.scrollToPosition(messages.size - 1)
             }
     }
 
 
     private fun saveMessageToFirestore(chatMessage: ChatMessage) {
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        if (currentUser == null) {
+            return
+        }
+        val userId = currentUser.uid
         val db = FirebaseFirestore.getInstance()
-        val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
 
         val data = hashMapOf(
             "message" to chatMessage.message,
@@ -160,10 +168,10 @@ class HomeFragment : Fragment() {
 
         db.collection("users")
             .document(userId)
-            .collection("chats")
+            .collection("openAIChats")
             .add(data)
-            .addOnSuccessListener {
-                Log.d("Firestore", "Message saved for user: $userId")
+            .addOnSuccessListener { documentReference ->
+                Log.d("Firestore", "Message saved with ID: ${documentReference.id}")
             }
             .addOnFailureListener { e ->
                 Log.e("Firestore", "Error saving message", e)

@@ -10,7 +10,7 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapte
     override fun createFragment(position: Int): Fragment {
         return when (position) {
             0 -> HomeFragment()
-            1 -> ProfileFragment()
+            1 -> DoodleFragment()
             2 -> SavedFragment()
             else -> HomeFragment()
         }

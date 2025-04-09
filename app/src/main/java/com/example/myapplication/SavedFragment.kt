@@ -36,8 +36,14 @@ class SavedFragment: Fragment() {
 
         recyclerView = view.findViewById(R.id.chatRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        if (currentUser == null) {
+            Toast.makeText(requireContext(), "User not authenticated", Toast.LENGTH_SHORT).show()
+            return
+        }
+        val userId = currentUser.uid
         val db = FirebaseFirestore.getInstance()
-        val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
 
         db.collection("users")
             .document(userId)
@@ -58,6 +64,8 @@ class SavedFragment: Fragment() {
                 Toast.makeText(requireContext(), "Failed to load saved chats", Toast.LENGTH_SHORT).show()
             }
     }
+
+
 }
 fun loadJsonFromAssets(context: Context, filename: String): String? {
     return try {
@@ -80,13 +88,22 @@ class SavedChatsAdapter(private val chatList: List<SavedChat>) :
     inner class ChatViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val titleText: TextView = itemView.findViewById(R.id.chat_title)
         val messageText: TextView = itemView.findViewById(R.id.chat_message)
-        init {
-            itemView.setOnClickListener{
-                onItemClickListener?.invoke(chatList[adapterPosition])
-            }
 
+        init {
+            itemView.setOnClickListener {
+                val savedChat = chatList[bindingAdapterPosition]
+                val context = itemView.context
+                val intent = Intent(context, ChatDetailActivity::class.java)
+                // Pass the chat title
+                intent.putExtra("chat_title", savedChat.title)
+                // Convert the messages list to JSON using Gson (assuming savedChat.messages is a List<ChatMessage>)
+                val messagesJson = Gson().toJson(savedChat.messages)
+                intent.putExtra("chat_messages", messagesJson)
+                context.startActivity(intent)
+            }
         }
     }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatViewHolder {
         val view = LayoutInflater.from(parent.context)
