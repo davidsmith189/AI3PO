@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 
@@ -32,7 +33,12 @@ class MainActivity : AppCompatActivity() {
         val saveIcon: ImageView = findViewById(R.id.save)
 
         fun saveChatWithMetadata(title: String, subject: String, timestamp: Long) {
-            // Find HomeFragment and access its messages
+            val currentUser = FirebaseAuth.getInstance().currentUser
+            if (currentUser == null) {
+                Toast.makeText(this, "User not authenticated", Toast.LENGTH_SHORT).show()
+                return
+            }
+            val userId = currentUser.uid
             val homeFragment = supportFragmentManager.findFragmentByTag("f0") as? HomeFragment
             val chatMessages = homeFragment?.getChatMessages() ?: emptyList()
 
@@ -45,12 +51,15 @@ class MainActivity : AppCompatActivity() {
                         "message" to it.message,
                         "isUser" to it.isUser,
                         "attachmentUri" to it.attachmentUri,
-                        ("timestamp" to it.timestamp ?: com.google.firebase.Timestamp.now()) as Pair<Any, Any>
+                        "timestamp" to (it.timestamp ?: com.google.firebase.Timestamp.now())
                     )
                 }
             )
 
-            FirebaseFirestore.getInstance().collection("saved_chats")
+            FirebaseFirestore.getInstance()
+                .collection("users")
+                .document(userId)
+                .collection("saved_chats")
                 .add(chatMap)
                 .addOnSuccessListener {
                     Toast.makeText(this, "Chat with metadata saved!", Toast.LENGTH_SHORT).show()
@@ -59,6 +68,7 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "Error saving chat", Toast.LENGTH_SHORT).show()
                 }
         }
+
 
 
         fun showSaveMetadataDialog() {
