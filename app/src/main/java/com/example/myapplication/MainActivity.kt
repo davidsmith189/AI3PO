@@ -16,7 +16,10 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.Timestamp
-
+import com.google.type.Date
+import java.text.SimpleDateFormat
+import java.util.Locale
+import java.util.TimeZone
 
 
 class MainActivity : AppCompatActivity() {
@@ -118,7 +121,12 @@ class MainActivity : AppCompatActivity() {
         val timestampView = dialogView.findViewById<TextView>(R.id.timestampView)
 
         val timestamp = System.currentTimeMillis()
-        timestampView.text = "Timestamp: $timestamp"
+
+        val sdf = SimpleDateFormat("EEEE, MMMM d, yyyy h:mm a", Locale.US)
+        sdf.timeZone = TimeZone.getTimeZone("America/Los_Angeles")
+        val formattedDate = sdf.format(java.util.Date(timestamp))
+
+        timestampView.text = "Timestamp: $formattedDate"
 
         AlertDialog.Builder(this)
             .setTitle("Save Chat Metadata")
@@ -130,6 +138,6 @@ class MainActivity : AppCompatActivity() {
             }
             .setNegativeButton("Cancel", null)
             .show()
-
     }
+
 }
