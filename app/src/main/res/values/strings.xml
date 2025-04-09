@@ -2,4 +2,13 @@
     <string name="app_name">AI3PO</string>
     <string name="chatTitle">chatTitle</string>
     <string name="lastMessagePreview">lastMessagePreview</string>
+
+    <string-array name="subjects">
+        <item>History</item>
+        <item>Math</item>
+        <item>Science</item>
+        <item>English</item>
+        <item>Other</item>
+    </string-array>
+
 </resources>
