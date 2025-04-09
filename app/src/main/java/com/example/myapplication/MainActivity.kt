@@ -4,14 +4,18 @@ package com.example.myapplication
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import android.widget.Toolbar
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.Timestamp
 
 
 class MainActivity : AppCompatActivity() {
@@ -31,72 +35,14 @@ class MainActivity : AppCompatActivity() {
 
         val saveIcon: ImageView = findViewById(R.id.save)
 
-        fun saveChatWithMetadata(title: String, subject: String, timestamp: Long) {
-            // Find HomeFragment and access its messages
-            val homeFragment = supportFragmentManager.findFragmentByTag("f0") as? HomeFragment
-            val chatMessages = homeFragment?.getChatMessages() ?: emptyList()
-
-            val chatMap = hashMapOf(
-                "title" to title,
-                "subject" to subject,
-                "timestamp" to timestamp,
-                "messages" to chatMessages.map {
-                    hashMapOf(
-                        "message" to it.message,
-                        "isUser" to it.isUser,
-                        "attachmentUri" to it.attachmentUri,
-                        ("timestamp" to it.timestamp ?: com.google.firebase.Timestamp.now()) as Pair<Any, Any>
-                    )
-                }
-            )
-
-            FirebaseFirestore.getInstance().collection("saved_chats")
-                .add(chatMap)
-                .addOnSuccessListener {
-                    Toast.makeText(this, "Chat with metadata saved!", Toast.LENGTH_SHORT).show()
-                }
-                .addOnFailureListener {
-                    Toast.makeText(this, "Error saving chat", Toast.LENGTH_SHORT).show()
-                }
-        }
-
-
-        fun showSaveMetadataDialog() {
-            val dialogView = layoutInflater.inflate(R.layout.dialog_save_metadata, null)
-            val editTitle = dialogView.findViewById<EditText>(R.id.editTitle)
-            val editSubject = dialogView.findViewById<EditText>(R.id.editSubject)
-            val timestampView = dialogView.findViewById<TextView>(R.id.timestampView)
-
-            val timestamp = System.currentTimeMillis()
-            timestampView.text = "Timestamp: $timestamp"
-
-            val builder = androidx.appcompat.app.AlertDialog.Builder(this)
-                .setTitle("Save Chat Metadata")
-                .setView(dialogView)
-                .setPositiveButton("Save") { _, _ ->
-                    val title = editTitle.text.toString()
-                    val subject = editSubject.text.toString()
-
-                    saveChatWithMetadata(title, subject, timestamp)
-                }
-                .setNegativeButton("Cancel", null)
-            builder.show()
-        }
-
-
         saveIcon.setOnClickListener {
             showSaveMetadataDialog()
         }
 
-
         val adapter = ViewPagerAdapter(this)
         viewPager.adapter = adapter
 
-
-
         supportActionBar?.setDisplayShowTitleEnabled(false)
-
-
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             when (position) {
@@ -105,5 +51,61 @@ class MainActivity : AppCompatActivity() {
                 2 -> tab.text = "Saved"
             }
         }.attach()
+    }
+
+    private fun saveChatWithMetadata(title: String, subject: String, timestamp: Long) {
+        val homeFragment = supportFragmentManager.findFragmentByTag("f0") as? HomeFragment
+        val chatMessages = homeFragment?.getChatMessages() ?: emptyList()
+
+        val messagesData = chatMessages.map {
+            hashMapOf(
+                "message" to it.message,
+                "isUser" to it.isUser,
+                "attachmentUri" to it.attachmentUri,
+                "timestamp" to (it.timestamp ?: Timestamp.now())
+            )
+        }
+
+        val chatMap = hashMapOf(
+            "title" to title,
+            "subject" to subject,
+            "timestamp" to Timestamp(timestamp / 1000, ((timestamp % 1000) * 1000000).toInt()),
+            "messages" to messagesData
+        )
+
+        val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
+
+        FirebaseFirestore.getInstance()
+            .collection("users")
+            .document(userId)
+            .collection("saved_chats")
+            .add(chatMap)
+            .addOnSuccessListener {
+                Toast.makeText(this, "Chat with metadata saved!", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener {
+                Toast.makeText(this, "Error saving chat", Toast.LENGTH_SHORT).show()
+            }
+    }
+
+    private fun showSaveMetadataDialog() {
+        val dialogView = layoutInflater.inflate(R.layout.dialog_save_metadata, null)
+        val editTitle = dialogView.findViewById<EditText>(R.id.editTitle)
+        val spinnerSubject = dialogView.findViewById<Spinner>(R.id.spinnerSubject)
+        val timestampView = dialogView.findViewById<TextView>(R.id.timestampView)
+
+        val timestamp = System.currentTimeMillis()
+        timestampView.text = "Timestamp: $timestamp"
+
+        AlertDialog.Builder(this)
+            .setTitle("Save Chat Metadata")
+            .setView(dialogView)
+            .setPositiveButton("Save") { _, _ ->
+                val title = editTitle.text.toString()
+                val subject = spinnerSubject.selectedItem.toString()
+                saveChatWithMetadata(title, subject, timestamp)
+            }
+            .setNegativeButton("Cancel", null)
+            .show()
     }
 }

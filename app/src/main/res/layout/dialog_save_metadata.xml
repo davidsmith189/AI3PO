@@ -11,11 +11,14 @@
         android:layout_height="wrap_content"
         android:hint="Discussion Title/Topic" />
 
-    <EditText
-        android:id="@+id/editSubject"
+    <Spinner
+        android:id="@+id/spinnerSubject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Subject Type (e.g., Math, History)" />
+        android:entries="@array/subjects" />
+
+
+
 
     <TextView
         android:id="@+id/timestampView"

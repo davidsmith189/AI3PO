@@ -17,6 +17,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.Nullable
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 
@@ -35,10 +36,12 @@ class SavedFragment: Fragment() {
 
         recyclerView = view.findViewById(R.id.chatRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-
         val db = FirebaseFirestore.getInstance()
+        val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
 
-        db.collection("saved_chats")
+        db.collection("users")
+            .document(userId)
+            .collection("saved_chats")
             .get()
             .addOnSuccessListener { result ->
                 val savedChats = result.map { doc ->
@@ -54,17 +57,7 @@ class SavedFragment: Fragment() {
             .addOnFailureListener {
                 Toast.makeText(requireContext(), "Failed to load saved chats", Toast.LENGTH_SHORT).show()
             }
-
-//        adapter.setOnItemClickListener { savedChat ->
-//            val intent = Intent(requireContext(), ChatAdapter::class.java)
-//            intent.putExtra("chat_title", savedChat.title)
-//            // Convert the messages list to JSON using Gson (or any method you prefer)
-//            val messagesJson = Gson().toJson(savedChat.lastMessage)
-//            intent.putExtra("chat_messages", messagesJson)
-//            startActivity(intent)
-//        }
     }
-
 }
 fun loadJsonFromAssets(context: Context, filename: String): String? {
     return try {

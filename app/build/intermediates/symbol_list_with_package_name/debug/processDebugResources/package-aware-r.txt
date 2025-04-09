@@ -77,6 +77,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array subjects
 attr SharedValue
 attr SharedValueId
 attr actionBarDivider
@@ -3368,7 +3369,6 @@ id easeInOut
 id easeOut
 id east
 id edge
-id editSubject
 id editTitle
 id edit_query
 id edit_text_id
@@ -3625,6 +3625,7 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
+id spinnerSubject
 id spline
 id split_action_bar
 id spread
