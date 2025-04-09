@@ -1,5 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+array subjects
 color azure
 color black
 color purple_200
@@ -38,7 +39,6 @@ id descriptionText
 id documentIcon
 id documentName
 id drawingView
-id editSubject
 id editTitle
 id imageView
 id include_toolbar
@@ -55,6 +55,7 @@ id registerButton
 id save
 id seekBarWidth
 id sendButton
+id spinnerSubject
 id tabLayout
 id timestampView
 id titleText
