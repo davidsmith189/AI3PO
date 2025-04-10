@@ -16,13 +16,13 @@
         android:layout_margin="30dp"
         app:cardCornerRadius="30dp"
         app:cardElevation="20dp"
-        android:background="@color/white">
+        android:background="?attr/colorOnPrimary">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:background="@color/white"
+            android:background="?attr/colorOnPrimary"
             android:orientation="vertical"
             android:padding="24dp">
 
@@ -48,7 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="40dp"
-                android:background="@color/white"
+                android:background="?attr/colorOnPrimary"
                 android:drawableLeft="@drawable/profile_icon"
                 android:drawablePadding="8dp"
                 android:hint="Email"
@@ -59,7 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
-                android:background="@color/white"
+                android:background="?attr/colorOnPrimary"
                 android:drawableLeft="@drawable/lock_icon"
                 android:drawablePadding="8dp"
                 android:hint="Password"

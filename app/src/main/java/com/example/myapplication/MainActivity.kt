@@ -6,6 +6,9 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import android.widget.Switch
+import android.content.Intent
+
 import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
@@ -16,15 +19,14 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val toolbar= findViewById<androidx.appcompat.widget.Toolbar>(R.id.custom_toolbar)
         setSupportActionBar(toolbar)
 
-        val username=intent.getStringExtra("USERNAME")?: "User Name"
-        val descriptionText = findViewById<TextView>(R.id.descriptionText)
-        descriptionText.text = username  // Set the retrieved username
+
 
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         val viewPager = findViewById<ViewPager2>(R.id.viewPager)
@@ -89,6 +91,10 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+
+
+
+
         val adapter = ViewPagerAdapter(this)
         viewPager.adapter = adapter
         viewPager.isUserInputEnabled = false  // Disable swipe gestures
@@ -115,5 +121,17 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }.attach()
+
+
+        val settingsButton = findViewById<ImageView>(R.id.settings)
+        settingsButton.setOnClickListener {
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
+
     }
+
 }

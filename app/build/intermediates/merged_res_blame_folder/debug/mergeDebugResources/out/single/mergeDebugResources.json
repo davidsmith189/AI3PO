@@ -52,6 +52,10 @@
         "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-46:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
+        "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-44:\\drawable_rounded_red.xml.flat",
+        "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-46:\\drawable\\rounded_red.xml"
+    },
+    {
         "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-44:\\drawable-mdpi_ai3po_buddy.png.flat",
         "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-46:\\drawable-mdpi\\ai3po_buddy.png"
     },
@@ -66,6 +70,10 @@
     {
         "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-44:\\drawable-mdpi_profile_icon.png.flat",
         "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-46:\\drawable-mdpi\\profile_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-44:\\drawable-mdpi_settings.png.flat",
+        "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-46:\\drawable-mdpi\\settings.png"
     },
     {
         "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-44:\\drawable-xxxhdpi_savefile.png.flat",
@@ -132,6 +140,10 @@
         "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-46:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-44:\\layout_settings_page.xml.flat",
+        "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-46:\\layout\\settings_page.xml"
+    },
+    {
         "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-44:\\menu_attachment_menu.xml.flat",
         "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-46:\\menu\\attachment_menu.xml"
     },
@@ -188,6 +200,10 @@
         "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-46:\\drawable\\bg_sent_message.xml"
     },
     {
+        "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-44:\\drawable_back_arrow.xml.flat",
+        "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-46:\\drawable\\back_arrow.xml"
+    },
+    {
         "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-44:\\drawable_bg_received_message.xml.flat",
         "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-46:\\drawable\\bg_received_message.xml"
     },
@@ -216,12 +232,20 @@
         "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-46:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "com.example.myapplication.app-debug-44:/layout_settings_page.xml.flat",
+        "source": "com.example.myapplication.app-main-46:/layout/settings_page.xml"
+    },
+    {
         "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-44:\\layout_item_user_image.xml.flat",
         "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-46:\\layout\\item_user_image.xml"
     },
     {
         "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-44:\\drawable-xxhdpi_profile_icon.png.flat",
         "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-46:\\drawable-xxhdpi\\profile_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-44:\\drawable-xxhdpi_settings.png.flat",
+        "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-46:\\drawable-xxhdpi\\settings.png"
     },
     {
         "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-44:\\drawable-mdpi_lock_icon.png.flat",
@@ -234,6 +258,14 @@
     {
         "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-44:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-46:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-44:\\drawable-hdpi_settings.png.flat",
+        "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-46:\\drawable-hdpi\\settings.png"
+    },
+    {
+        "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-44:\\drawable-xxxhdpi_settings.png.flat",
+        "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-46:\\drawable-xxxhdpi\\settings.png"
     },
     {
         "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-44:\\drawable-xhdpi_ai3po_buddy.png.flat",
@@ -262,6 +294,10 @@
     {
         "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-44:\\drawable-hdpi_ai3po_buddy.png.flat",
         "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-46:\\drawable-hdpi\\ai3po_buddy.png"
+    },
+    {
+        "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-44:\\drawable-xhdpi_settings.png.flat",
+        "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-46:\\drawable-xhdpi\\settings.png"
     },
     {
         "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-44:\\drawable-xxhdpi_plus_button.png.flat",

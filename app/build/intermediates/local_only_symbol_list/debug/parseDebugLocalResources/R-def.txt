@@ -10,6 +10,7 @@ color teal_700
 color white
 drawable ai3po_buddy
 drawable ai3po_buddy2
+drawable back_arrow
 drawable baseline_save_as_24
 drawable baseline_settings_24
 drawable bg_received_message
@@ -22,7 +23,9 @@ drawable ic_launcher_foreground
 drawable lock_icon
 drawable plus_button
 drawable profile_icon
+drawable rounded_red
 drawable savefile
+drawable settings
 drawable user_message_bg
 id btnAttach
 id btnClear
@@ -33,7 +36,8 @@ id chatRecyclerView
 id chat_message
 id chat_title
 id custom_toolbar
-id descriptionText
+id darkModeSwitch
+id darkModeToggleCard
 id documentIcon
 id documentName
 id drawingView
@@ -43,6 +47,7 @@ id imageView
 id include_toolbar
 id loginButton
 id loginText
+id logoutButton
 id menu_camera
 id menu_choose_image
 id menu_document
@@ -54,12 +59,16 @@ id registerButton
 id save
 id seekBarWidth
 id sendButton
+id settings
+id settingsToolbar
 id tabLayout
 id timestampView
 id titleText
 id typingIndicator
 id userInput
+id usernameCard
 id usernameEditText
+id usernameText
 id viewPager
 layout activity_main
 layout dialog_save_metadata
@@ -74,6 +83,7 @@ layout item_user_document
 layout item_user_image
 layout item_user_message
 layout login_screen
+layout settings_page
 layout toolbar
 menu attachment_menu
 menu media_menu

@@ -57,6 +57,7 @@ class LoginScreen : AppCompatActivity() {
                     auth.currentUser?.getIdToken(true)
                         ?.addOnCompleteListener { tokenTask ->
                             if (tokenTask.isSuccessful) {
+                                UserData.username = userOrEmailString
                                 navigateToMainActivity(userOrEmailString)
                             } else {
                                 Toast.makeText(this, "Token Generation Failed", Toast.LENGTH_SHORT).show()
@@ -72,7 +73,7 @@ class LoginScreen : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(userOrEmailString, passwordString)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-
+                    UserData.username = "TestUser"
                     Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show()
                     navigateToMainActivity(userOrEmailString)
                 } else {
@@ -84,8 +85,15 @@ class LoginScreen : AppCompatActivity() {
 
     private fun navigateToMainActivity(userOrEmailString:String) {
         val intent = Intent(this, MainActivity::class.java)
-        intent.putExtra("USERNAME",userOrEmailString) //Passes the username
+        intent.putExtra("USER_OR_EMAIL",userOrEmailString) //Passes the username
         startActivity(intent)
         finish()
     }
+    private fun navigateToSettingsActivity(userOrEmailString: String) {
+        val intent = Intent(this, SettingsActivity::class.java)
+        intent.putExtra("USER_OR_EMAIL", userOrEmailString)  // Pass the string to SettingsActivity
+        startActivity(intent)
+    }
+
+
 }

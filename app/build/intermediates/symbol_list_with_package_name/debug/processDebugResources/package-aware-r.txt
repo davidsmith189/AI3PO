@@ -3031,6 +3031,7 @@ drawable ai3po_buddy
 drawable ai3po_buddy2
 drawable avd_hide_password
 drawable avd_show_password
+drawable back_arrow
 drawable baseline_save_as_24
 drawable baseline_settings_24
 drawable bg_received_message
@@ -3171,7 +3172,9 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable plus_button
 drawable profile_icon
+drawable rounded_red
 drawable savefile
+drawable settings
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3333,6 +3336,8 @@ id customPanel
 id custom_toolbar
 id cut
 id dark
+id darkModeSwitch
+id darkModeToggleCard
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -3340,7 +3345,6 @@ id decor_content_parent
 id default_activity_button
 id deltaRelative
 id dependency_ordering
-id descriptionText
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -3451,6 +3455,7 @@ id listMode
 id list_item
 id loginButton
 id loginText
+id logoutButton
 id m3_side_sheet
 id marquee
 id masked
@@ -3612,6 +3617,8 @@ id select_dialog_listview
 id selected
 id selection_type
 id sendButton
+id settings
+id settingsToolbar
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3709,7 +3716,9 @@ id unlabeled
 id up
 id useLogo
 id userInput
+id usernameCard
 id usernameEditText
+id usernameText
 id vertical
 id vertical_only
 id viewPager
@@ -3939,6 +3948,7 @@ layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout settings_page
 layout support_simple_spinner_dropdown_item
 layout toolbar
 menu attachment_menu

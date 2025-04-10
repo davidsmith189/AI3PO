@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:2:1-39:12
+ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:2:1-44:12
 MERGED from [androidx.databinding:viewbinding:8.9.1] C:\Users\esqes\.gradle\caches\8.11.1\transforms\285821a79718b1a3c8c37c654b64cf28\transformed\viewbinding-8.9.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\esqes\.gradle\caches\8.11.1\transforms\447a7b22312a9e51ee0e8e2bce11d681\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\esqes\.gradle\caches\8.11.1\transforms\5c15f35be2256a9c3237f09583046319\transformed\constraintlayout-2.2.1\AndroidManifest.xml:2:1-9:12
@@ -103,8 +103,8 @@ ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManife
 	android:name
 		ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:6:9-47
 application
-ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:9:5-33:19
-INJECTED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:9:5-33:19
+ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:9:5-38:19
+INJECTED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:9:5-38:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\esqes\.gradle\caches\8.11.1\transforms\447a7b22312a9e51ee0e8e2bce11d681\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\esqes\.gradle\caches\8.11.1\transforms\447a7b22312a9e51ee0e8e2bce11d681\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\esqes\.gradle\caches\8.11.1\transforms\5c15f35be2256a9c3237f09583046319\transformed\constraintlayout-2.2.1\AndroidManifest.xml:7:5-20
@@ -215,18 +215,24 @@ ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManife
 		ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:30:13-36
 	android:name
 		ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:29:13-41
+activity#com.example.myapplication.SettingsActivity
+ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:33:9-36:20
+	android:exported
+		ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:35:13-36
+	android:name
+		ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:34:13-45
 uses-permission#android.permission.CAMERA
-ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:35:5-64
+ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:40:5-64
 	android:name
-		ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:35:22-62
+		ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:40:22-62
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:36:5-79
+ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:41:5-79
 	android:name
-		ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:36:22-77
+		ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:41:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:37:5-80
+ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:42:5-80
 	android:name
-		ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:37:22-78
+		ADDED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:42:22-78
 uses-sdk
 INJECTED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\esqes\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml
