@@ -4,9 +4,12 @@ package com.example.myapplication
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageView
-import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
+import android.widget.Switch
+import android.content.Intent
+import android.widget.Spinner
+
 import android.widget.Toolbar
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -15,8 +18,6 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.Timestamp
-import com.google.type.Date
 import java.text.SimpleDateFormat
 import java.util.Locale
 import java.util.TimeZone
@@ -24,15 +25,14 @@ import java.util.TimeZone
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val toolbar= findViewById<androidx.appcompat.widget.Toolbar>(R.id.custom_toolbar)
         setSupportActionBar(toolbar)
 
-        val username=intent.getStringExtra("USERNAME")?: "User Name"
-        val descriptionText = findViewById<TextView>(R.id.descriptionText)
-        descriptionText.text = username  // Set the retrieved username
+
 
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         val viewPager = findViewById<ViewPager2>(R.id.viewPager)
@@ -41,10 +41,13 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
         saveIcon.setOnClickListener {
             showSaveMetadataDialog()
         }
+
+
+
+
 
 
         val adapter = ViewPagerAdapter(this)
@@ -73,6 +76,17 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }.attach()
+
+
+        val settingsButton = findViewById<ImageView>(R.id.settings)
+        settingsButton.setOnClickListener {
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
+
     }
 
     private fun saveChatWithMetadata(title: String, subject: String, timestamp: Long) {
