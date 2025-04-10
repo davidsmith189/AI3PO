@@ -2,7 +2,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle"
     >
-    <solid android:color="@android:color/secondary_text_light" />
+    <solid android:color="?android:attr/textColorSecondaryInverse" />
 
     <corners android:radius="8dp" />
 
