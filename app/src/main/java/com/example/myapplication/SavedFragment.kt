@@ -17,6 +17,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.Nullable
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 
@@ -36,9 +37,17 @@ class SavedFragment: Fragment() {
         recyclerView = view.findViewById(R.id.chatRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        if (currentUser == null) {
+            Toast.makeText(requireContext(), "User not authenticated", Toast.LENGTH_SHORT).show()
+            return
+        }
+        val userId = currentUser.uid
         val db = FirebaseFirestore.getInstance()
 
-        db.collection("saved_chats")
+        db.collection("users")
+            .document(userId)
+            .collection("saved_chats")
             .get()
             .addOnSuccessListener { result ->
                 val savedChats = result.map { doc ->
@@ -54,16 +63,8 @@ class SavedFragment: Fragment() {
             .addOnFailureListener {
                 Toast.makeText(requireContext(), "Failed to load saved chats", Toast.LENGTH_SHORT).show()
             }
-
-//        adapter.setOnItemClickListener { savedChat ->
-//            val intent = Intent(requireContext(), ChatAdapter::class.java)
-//            intent.putExtra("chat_title", savedChat.title)
-//            // Convert the messages list to JSON using Gson (or any method you prefer)
-//            val messagesJson = Gson().toJson(savedChat.lastMessage)
-//            intent.putExtra("chat_messages", messagesJson)
-//            startActivity(intent)
-//        }
     }
+
 
 }
 fun loadJsonFromAssets(context: Context, filename: String): String? {
@@ -87,13 +88,22 @@ class SavedChatsAdapter(private val chatList: List<SavedChat>) :
     inner class ChatViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val titleText: TextView = itemView.findViewById(R.id.chat_title)
         val messageText: TextView = itemView.findViewById(R.id.chat_message)
-        init {
-            itemView.setOnClickListener{
-                onItemClickListener?.invoke(chatList[adapterPosition])
-            }
 
+        init {
+            itemView.setOnClickListener {
+                val savedChat = chatList[bindingAdapterPosition]
+                val context = itemView.context
+                val intent = Intent(context, ChatDetailActivity::class.java)
+                // Pass the chat title
+                intent.putExtra("chat_title", savedChat.title)
+                // Convert the messages list to JSON using Gson (assuming savedChat.messages is a List<ChatMessage>)
+                val messagesJson = Gson().toJson(savedChat.messages)
+                intent.putExtra("chat_messages", messagesJson)
+                context.startActivity(intent)
+            }
         }
     }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatViewHolder {
         val view = LayoutInflater.from(parent.context)

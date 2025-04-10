@@ -1,5 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+array subjects
 color azure
 color black
 color purple_200
@@ -10,12 +11,12 @@ color teal_700
 color white
 drawable ai3po_buddy
 drawable ai3po_buddy2
-drawable back_arrow
 drawable baseline_save_as_24
 drawable baseline_settings_24
 drawable bg_received_message
 drawable bg_sent_message
 drawable bot_message_bg
+drawable galaxy_background
 drawable gold_galaxy
 drawable gold_galaxy_background
 drawable ic_launcher_background
@@ -23,9 +24,8 @@ drawable ic_launcher_foreground
 drawable lock_icon
 drawable plus_button
 drawable profile_icon
-drawable rounded_red
+drawable saved_chat_background
 drawable savefile
-drawable settings
 drawable user_message_bg
 id btnAttach
 id btnClear
@@ -33,21 +33,19 @@ id btnColor
 id btnUndo
 id chatInputLayout
 id chatRecyclerView
+id chatTitleTextView
 id chat_message
 id chat_title
 id custom_toolbar
-id darkModeSwitch
-id darkModeToggleCard
+id descriptionText
 id documentIcon
 id documentName
 id drawingView
-id editSubject
 id editTitle
 id imageView
 id include_toolbar
 id loginButton
 id loginText
-id logoutButton
 id menu_camera
 id menu_choose_image
 id menu_document
@@ -59,17 +57,15 @@ id registerButton
 id save
 id seekBarWidth
 id sendButton
-id settings
-id settingsToolbar
+id spinnerSubject
 id tabLayout
 id timestampView
 id titleText
 id typingIndicator
 id userInput
-id usernameCard
 id usernameEditText
-id usernameText
 id viewPager
+layout activity_chat_detail
 layout activity_main
 layout dialog_save_metadata
 layout fragment_doodle
@@ -83,7 +79,6 @@ layout item_user_document
 layout item_user_image
 layout item_user_message
 layout login_screen
-layout settings_page
 layout toolbar
 menu attachment_menu
 menu media_menu
