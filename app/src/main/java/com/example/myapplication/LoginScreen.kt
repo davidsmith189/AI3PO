@@ -44,18 +44,10 @@ class LoginScreen : AppCompatActivity() {
             }
         }
 
-//        registerButton.setOnClickListener {
-//            val userOrEmailString = userOrEmail.text.toString().trim()
-//            val passwordString = password.text.toString().trim()
-//
-//            if (userOrEmailString.isNotEmpty() && passwordString.isNotEmpty()) {
-//                createNewUser(userOrEmailString, passwordString)
-//            } else {
-//                Toast.makeText(this, "Please enter both email and password", Toast.LENGTH_SHORT).show()
-//            }
-//        }
-
-
+        registerButton.setOnClickListener {
+            val intent = Intent(this, SignupScreen::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun signInUser(userOrEmailString: String, passwordString: String ) {
@@ -77,32 +69,14 @@ class LoginScreen : AppCompatActivity() {
             }
     }
 
-//    private fun createNewUser(userOrEmailString: String, passwordString: String) {
-//        auth.createUserWithEmailAndPassword(userOrEmailString, passwordString)
-//            .addOnCompleteListener(this) { task ->
-//                if (task.isSuccessful) {
-//                    UserData.username = "TestUser"
-//                    Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show()
-//                    navigateToMainActivity(userOrEmailString)
-//                } else {
-//
-//                    Toast.makeText(this, "Registration failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
-//                }
-//            }
-//    }
 
     private fun navigateToMainActivity(userOrEmailString:String) {
         val intent = Intent(this, MainActivity::class.java)
-        intent.putExtra("USER_OR_EMAIL",userOrEmailString) //Passes the username
+        intent.putExtra("USER_OR_EMAIL",userOrEmailString)
         startActivity(intent)
         finish()
     }
 
-    private fun navigateToSettingsActivity(userOrEmailString: String) {
-        val intent = Intent(this, SettingsActivity::class.java)
-        intent.putExtra("USER_OR_EMAIL", userOrEmailString)  // Pass the string to SettingsActivity
-        startActivity(intent)
-    }
 
 
 }

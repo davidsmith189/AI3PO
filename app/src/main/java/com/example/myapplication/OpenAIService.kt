@@ -9,7 +9,7 @@ import com.example.myapplication.BuildConfig
 
 class OpenAIService {
     private val client = OkHttpClient()
-    private val apiKey = "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"
+    private val apiKey = "1234"// took out api key
     private val apiUrl = "https://api.openai.com/v1/chat/completions"
 
     fun sendMessage(message: String, callback: (String) -> Unit) {

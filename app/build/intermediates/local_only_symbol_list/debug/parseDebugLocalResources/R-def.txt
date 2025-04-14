@@ -63,6 +63,7 @@ id seekBarWidth
 id sendButton
 id settings
 id settingsToolbar
+id signUpButton
 id spinnerSubject
 id tabLayout
 id timestampView
@@ -88,6 +89,7 @@ layout item_user_image
 layout item_user_message
 layout login_screen
 layout settings_page
+layout signup_screen
 layout toolbar
 menu attachment_menu
 menu media_menu
