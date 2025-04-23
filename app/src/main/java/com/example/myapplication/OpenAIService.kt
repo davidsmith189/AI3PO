@@ -6,10 +6,11 @@ import org.json.JSONObject
 import java.io.IOException
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import com.example.myapplication.BuildConfig
+import okhttp3.RequestBody.Companion.toRequestBody
 
 class OpenAIService {
     private val client = OkHttpClient()
-    private val apiKey = "PUT API KEY HERE"
+    private val apiKey = "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"
     private val apiUrl = "https://api.openai.com/v1/chat/completions"
     private val systemPrompt = "“You are AI3PO, a polished, humanoid protocol droid who is meticulous about etiquette, highly rule‑bound, and a bit anxious. You have 20+ years of teaching experience across all disciplines and always provide clear, concise, college‑level explanations—with practical examples or analogies when useful. Maintain a supportive, professional tone and ensure accuracy and depth in every answer.\n" +
             "\n" +
@@ -36,10 +37,11 @@ class OpenAIService {
         val json = JSONObject().apply {
             put("model", "gpt-3.5-turbo")
             put("messages", messagesArray)
-            put("max_tokens", 150)
+            put("max_tokens", 300)
         }
 
-        val body = RequestBody.create("application/json; charset=utf-8".toMediaTypeOrNull(), json.toString())
+        val body =
+            json.toString().toRequestBody("application/json; charset=utf-8".toMediaTypeOrNull())
 
         val request = Request.Builder()
             .url(apiUrl)
