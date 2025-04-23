@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.content.Context
 import android.content.Intent
 import android.util.Log
+import android.widget.ExpandableListView
 import java.io.IOException
 import androidx.viewpager2.widget.ViewPager2
 import com.google.gson.Gson
@@ -17,56 +18,64 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.Nullable
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 
-class SavedFragment: Fragment() {
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: SavedChatsAdapter
+class SavedFragment : Fragment() {
+    private lateinit var expandableListView: ExpandableListView
+    private lateinit var adapter: SavedChatsExpandableAdapter
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_saved, container, false)
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        expandableListView = view.findViewById(R.id.expandableListView)
 
-        recyclerView = view.findViewById(R.id.chatRecyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        val userId = FirebaseAuth.getInstance().currentUser?.uid
+            ?: return Toast.makeText(requireContext(), "Not signed in", Toast.LENGTH_SHORT).show()
 
-        val currentUser = FirebaseAuth.getInstance().currentUser
-        if (currentUser == null) {
-            Toast.makeText(requireContext(), "User not authenticated", Toast.LENGTH_SHORT).show()
-            return
-        }
-        val userId = currentUser.uid
-        val db = FirebaseFirestore.getInstance()
-
-        db.collection("users")
+        FirebaseFirestore.getInstance()
+            .collection("users")
             .document(userId)
             .collection("saved_chats")
             .get()
             .addOnSuccessListener { result ->
-                val savedChats = result.map { doc ->
-                    val title = doc.getString("title") ?: "Untitled"
-                    val messages = doc.get("messages") as? List<HashMap<String, Any>> ?: emptyList()
-                    val lastMessage = messages.lastOrNull()?.get("message")?.toString() ?: "No messages"
-                    SavedChat(title = title, lastMessage = lastMessage)
+                val chats = result.map { doc ->
+                    val title   = doc.getString("title")   ?: "Untitled"
+                    val subject = doc.getString("subject") ?: "Other"
+                    @Suppress("UNCHECKED_CAST")
+                    val msgs = (doc.get("messages") as? List<HashMap<String,Any>>)
+                        ?.map { m ->
+                            ChatMessage(
+                                message       = m["message"      ].toString(),
+                                isUser        = m["isUser"       ] as Boolean,
+                                attachmentUri = m["attachmentUri"]?.toString() ?: "",
+                                timestamp     = m["timestamp"]   as? com.google.firebase.Timestamp
+                            )
+                        } ?: emptyList()
+                    val lastMsg = msgs.lastOrNull()?.message ?: "No messages"
+                    SavedChat(title, lastMsg, subject, msgs)
                 }
 
-                adapter = SavedChatsAdapter(savedChats)
-                recyclerView.adapter = adapter
+                // group by subject
+                val grouped = chats.groupBy { it.subject }
+                val subjects = grouped.keys.toList()
+
+                adapter = SavedChatsExpandableAdapter(requireContext(), subjects, grouped)
+                expandableListView.setAdapter(adapter)
             }
             .addOnFailureListener {
                 Toast.makeText(requireContext(), "Failed to load saved chats", Toast.LENGTH_SHORT).show()
             }
     }
-
-
 }
+
 fun loadJsonFromAssets(context: Context, filename: String): String? {
     return try {
         context.assets.open(filename).bufferedReader().use { it.readText() }
