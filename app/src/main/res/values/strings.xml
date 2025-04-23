@@ -2,8 +2,11 @@
     <string name="app_name">AI3PO</string>
     <string name="chatTitle">chatTitle</string>
     <string name="lastMessagePreview">lastMessagePreview</string>
+    <string name="new_chat">Start new discussion</string>
+
 
     <string-array name="subjects">
+        <item>Select Subject...</item>
         <item>History</item>
         <item>Math</item>
         <item>Science</item>

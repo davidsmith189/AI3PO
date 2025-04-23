@@ -40,6 +40,10 @@
         "source": "com.example.myapplication.app-main-46:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
+        "merged": "com.example.myapplication.app-debug-44:/layout_forgot_password.xml.flat",
+        "source": "com.example.myapplication.app-main-46:/layout/forgot_password.xml"
+    },
+    {
         "merged": "com.example.myapplication.app-debug-44:/drawable-xxhdpi_plus_button.png.flat",
         "source": "com.example.myapplication.app-main-46:/drawable-xxhdpi/plus_button.png"
     },
@@ -234,6 +238,10 @@
     {
         "merged": "com.example.myapplication.app-debug-44:/drawable-hdpi_settings.png.flat",
         "source": "com.example.myapplication.app-main-46:/drawable-hdpi/settings.png"
+    },
+    {
+        "merged": "com.example.myapplication.app-debug-44:/layout_signup_screen.xml.flat",
+        "source": "com.example.myapplication.app-main-46:/layout/signup_screen.xml"
     },
     {
         "merged": "com.example.myapplication.app-debug-44:/drawable_bot_message_bg.xml.flat",

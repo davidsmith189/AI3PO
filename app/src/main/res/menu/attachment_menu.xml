@@ -12,4 +12,11 @@
         android:id="@+id/menu_document"
         android:title="Documents"
         android:icon="@android:drawable/ic_menu_upload"/>
+
+    <item
+        android:id="@+id/menu_clear_chat"
+        android:title="@string/new_chat"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"/>
+
+
 </menu>

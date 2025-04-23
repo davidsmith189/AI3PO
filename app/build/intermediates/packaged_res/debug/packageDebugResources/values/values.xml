@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="subjects">
+        <item>Select Subject...</item>
         <item>History</item>
         <item>Math</item>
         <item>Science</item>
@@ -23,6 +24,7 @@
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDSa4PjlGf3WwjW3abD7_GIrjrtTQ78mng</string>
     <string name="google_storage_bucket" translatable="false">ai3po-7e0b9.firebasestorage.app</string>
     <string name="lastMessagePreview">lastMessagePreview</string>
+    <string name="new_chat">Start new discussion</string>
     <string name="project_id" translatable="false">ai3po-7e0b9</string>
     <style name="Theme.MyApplication" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         

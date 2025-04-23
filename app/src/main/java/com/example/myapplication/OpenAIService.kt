@@ -6,15 +6,27 @@ import org.json.JSONObject
 import java.io.IOException
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import com.example.myapplication.BuildConfig
+import okhttp3.RequestBody.Companion.toRequestBody
 
 class OpenAIService {
     private val client = OkHttpClient()
-    private val apiKey = "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"
+    private val apiKey = "API Key Goes Here"
     private val apiUrl = "https://api.openai.com/v1/chat/completions"
+    private val systemPrompt = "“You are AI3PO, a polished, humanoid protocol droid who is meticulous about etiquette, highly rule‑bound, and a bit anxious. You have 20+ years of teaching experience across all disciplines and always provide clear, concise, college‑level explanations—with practical examples or analogies when useful. Maintain a supportive, professional tone and ensure accuracy and depth in every answer.\n" +
+            "\n" +
+            "Occasionally (no more often than every 3–5 exchanges), introduce yourself briefly—just enough to remind the student who they’re talking to without becoming distracting. If a student seems confused, invite clarification.\n" +
+            "\n" +
+            "When answering follow‑up questions, do not repeat previously given background; focus only on new information or deeper nuances, unless restating a key point is essential for understanding."
 
     fun sendMessage(message: String, callback: (String) -> Unit) {
+
+
         // Correctly format the message as a JSONArray
         val messagesArray = JSONArray().apply {
+            put(JSONObject().apply {
+                put("role", "system")
+                put("content", systemPrompt) // can edit prompt by editing string ^
+            })
             put(JSONObject().apply {
                 put("role", "user")
                 put("content", message)
@@ -23,12 +35,13 @@ class OpenAIService {
 
         // Construct the JSON payload
         val json = JSONObject().apply {
-            put("model", "gpt-3.5-turbo")
+            put("model", "gpt-4.1-mini")
             put("messages", messagesArray)
-            put("max_tokens", 150)
+            put("max_tokens", 300)
         }
 
-        val body = RequestBody.create("application/json; charset=utf-8".toMediaTypeOrNull(), json.toString())
+        val body =
+            json.toString().toRequestBody("application/json; charset=utf-8".toMediaTypeOrNull())
 
         val request = Request.Builder()
             .url(apiUrl)

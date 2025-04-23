@@ -4,7 +4,7 @@
 
     <uses-feature
         android:name="android.hardware.camera"
-        android:required="false" />
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -37,6 +37,16 @@
 
         <activity
             android:name=".ChatDetailActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".SignupScreen"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".ForgotPassword"
             android:exported="true">
         </activity>
 

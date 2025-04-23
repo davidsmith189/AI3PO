@@ -26,13 +26,6 @@
             android:orientation="vertical"
             android:padding="24dp">
 
-<!--            <ImageView-->
-<!--                android:id="@+id/logoImage"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:src="@drawable/ai3po_buddy2" />-->
-
             <TextView
                 android:id="@+id/loginText"
                 android:layout_width="match_parent"
@@ -66,6 +59,16 @@
                 android:inputType="textPassword"
                 android:padding="8dp" />
 
+            <TextView
+                android:id="@+id/forgotButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="Forgot password?"
+                android:textColor="@color/richGold"
+                android:textSize="16sp" />
+
             <Button
                 android:id="@+id/loginButton"
                 android:layout_width="match_parent"
@@ -76,15 +79,15 @@
                 android:textSize="16sp"
                 app:cornerRadius="20dp" />
 
-            <Button
+            <TextView
                 android:id="@+id/registerButton"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="15dp"
-                android:backgroundTint="@color/richGold"
-                android:text="register"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/richGold"
+                android:text="New user? Sign up here."
                 android:textSize="16sp"
-                app:cornerRadius="20dp" />
+                android:gravity="center_horizontal" />
 
 
         </LinearLayout>

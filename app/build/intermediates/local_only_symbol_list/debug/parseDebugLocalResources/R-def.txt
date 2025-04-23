@@ -45,6 +45,8 @@ id documentIcon
 id documentName
 id drawingView
 id editTitle
+id expandableListView
+id forgotButton
 id imageView
 id include_toolbar
 id loginButton
@@ -52,17 +54,20 @@ id loginText
 id logoutButton
 id menu_camera
 id menu_choose_image
+id menu_clear_chat
 id menu_document
 id menu_gallery
 id menu_take_photo
 id messageText
 id passwordEditText
 id registerButton
+id resetPasswordBtn
 id save
 id seekBarWidth
 id sendButton
 id settings
 id settingsToolbar
+id signUpButton
 id spinnerSubject
 id tabLayout
 id timestampView
@@ -76,6 +81,7 @@ id viewPager
 layout activity_chat_detail
 layout activity_main
 layout dialog_save_metadata
+layout forgot_password
 layout fragment_doodle
 layout fragment_home
 layout fragment_profile
@@ -88,6 +94,7 @@ layout item_user_image
 layout item_user_message
 layout login_screen
 layout settings_page
+layout signup_screen
 layout toolbar
 menu attachment_menu
 menu media_menu
@@ -101,6 +108,7 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
 string lastMessagePreview
+string new_chat
 string project_id
 style Theme.MyApplication
 xml backup_rules

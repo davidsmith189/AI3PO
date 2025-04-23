@@ -3390,6 +3390,7 @@ id enterAlwaysCollapsed
 id escape
 id exitUntilCollapsed
 id expand_activities_button
+id expandableListView
 id expanded_menu
 id fade
 id fill
@@ -3405,6 +3406,7 @@ id fixed
 id flip
 id floating
 id forever
+id forgotButton
 id fragment_container_view_tag
 id frost
 id fullscreen_header
@@ -3486,6 +3488,7 @@ id material_value_index
 id matrix
 id menu_camera
 id menu_choose_image
+id menu_clear_chat
 id menu_document
 id menu_gallery
 id menu_take_photo
@@ -3586,6 +3589,7 @@ id ratio
 id rectangles
 id registerButton
 id report_drawn
+id resetPasswordBtn
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3627,6 +3631,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id signUpButton
 id sin
 id skipCollapsed
 id skipped
@@ -3879,6 +3884,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_save_metadata
+layout forgot_password
 layout fragment_doodle
 layout fragment_home
 layout fragment_profile
@@ -3953,6 +3959,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout settings_page
+layout signup_screen
 layout support_simple_spinner_dropdown_item
 layout toolbar
 menu attachment_menu
@@ -4147,6 +4154,7 @@ string mtrl_switch_track_decoration_path
 string mtrl_switch_track_path
 string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
+string new_chat
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through

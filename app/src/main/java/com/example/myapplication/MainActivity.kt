@@ -84,9 +84,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
-
-
     }
 
     private fun saveChatWithMetadata(title: String, subject: String, timestamp: Long) {
@@ -147,7 +144,10 @@ class MainActivity : AppCompatActivity() {
             .setView(dialogView)
             .setPositiveButton("Save") { _, _ ->
                 val title = editTitle.text.toString()
-                val subject = spinnerSubject.selectedItem.toString()
+                var subject = spinnerSubject.selectedItem.toString()
+                if (subject == "Select Subject..."){
+                    subject = "Other"
+                }
                 saveChatWithMetadata(title, subject, timestamp)
             }
             .setNegativeButton("Cancel", null)
