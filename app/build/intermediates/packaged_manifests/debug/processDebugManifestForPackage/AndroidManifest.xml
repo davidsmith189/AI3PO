@@ -67,6 +67,10 @@
             android:name="com.example.myapplication.SignupScreen"
             android:exported="true" >
         </activity>
+        <activity
+            android:name="com.example.myapplication.ForgotPassword"
+            android:exported="true" >
+        </activity>
 
         <provider
             android:name="androidx.startup.InitializationProvider"
