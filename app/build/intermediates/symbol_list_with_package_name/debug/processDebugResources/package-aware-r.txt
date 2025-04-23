@@ -3405,6 +3405,7 @@ id fixed
 id flip
 id floating
 id forever
+id forgotButton
 id fragment_container_view_tag
 id frost
 id fullscreen_header
@@ -3586,6 +3587,7 @@ id ratio
 id rectangles
 id registerButton
 id report_drawn
+id resetPasswordBtn
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3880,6 +3882,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_save_metadata
+layout forgot_password
 layout fragment_doodle
 layout fragment_home
 layout fragment_profile

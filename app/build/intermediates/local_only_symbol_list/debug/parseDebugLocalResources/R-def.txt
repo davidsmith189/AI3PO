@@ -45,6 +45,7 @@ id documentIcon
 id documentName
 id drawingView
 id editTitle
+id forgotButton
 id imageView
 id include_toolbar
 id loginButton
@@ -58,6 +59,7 @@ id menu_take_photo
 id messageText
 id passwordEditText
 id registerButton
+id resetPasswordBtn
 id save
 id seekBarWidth
 id sendButton
@@ -77,6 +79,7 @@ id viewPager
 layout activity_chat_detail
 layout activity_main
 layout dialog_save_metadata
+layout forgot_password
 layout fragment_doodle
 layout fragment_home
 layout fragment_profile

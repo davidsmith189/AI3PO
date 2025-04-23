@@ -21,7 +21,7 @@ class LoginScreen : AppCompatActivity() {
         val password = findViewById<EditText>(R.id.passwordEditText)
         val loginButton = findViewById<Button>(R.id.loginButton)
         val registerButton = findViewById<TextView>(R.id.registerButton)
-
+        val forgotPasswordButton = findViewById<TextView>(R.id.forgotButton)
 
 
 
@@ -42,6 +42,10 @@ class LoginScreen : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Please enter both email and password", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        forgotPasswordButton.setOnClickListener {
+            startActivity(Intent(this, ForgotPassword::class.java))
         }
 
         registerButton.setOnClickListener {
