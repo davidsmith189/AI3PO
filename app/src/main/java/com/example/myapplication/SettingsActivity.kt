@@ -28,19 +28,9 @@ class SettingsActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Settings"
 
-        //val userOrEmailString = intent.getStringExtra("USER_OR_EMAIL")
-        //val usernameTextView = findViewById<TextView>(R.id.usernameText)  // Example TextView
-        //usernameTextView.text = userOrEmailString  // Display the string in a TextView
-
-
         val username = UserData.username ?: "Default User"
         val usernameTextView = findViewById<TextView>(R.id.usernameText)
         usernameTextView.text = username
-
-
-        //val username=intent.getStringExtra("USERNAME")?: "User Name"
-        //val descriptionText = findViewById<TextView>(R.id.usernameText)
-        //descriptionText.text = username  // Set the retrieved username
 
         // Handle back arrow
         toolbar.setNavigationOnClickListener {
