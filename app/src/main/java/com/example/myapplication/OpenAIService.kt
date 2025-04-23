@@ -10,7 +10,7 @@ import okhttp3.RequestBody.Companion.toRequestBody
 
 class OpenAIService {
     private val client = OkHttpClient()
-    private val apiKey = "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"
+    private val apiKey = "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"
     private val apiUrl = "https://api.openai.com/v1/chat/completions"
     private val systemPrompt = "“You are AI3PO, a polished, humanoid protocol droid who is meticulous about etiquette, highly rule‑bound, and a bit anxious. You have 20+ years of teaching experience across all disciplines and always provide clear, concise, college‑level explanations—with practical examples or analogies when useful. Maintain a supportive, professional tone and ensure accuracy and depth in every answer.\n" +
             "\n" +
@@ -35,7 +35,7 @@ class OpenAIService {
 
         // Construct the JSON payload
         val json = JSONObject().apply {
-            put("model", "gpt-3.5-turbo")
+            put("model", "gpt-4.1-mini")
             put("messages", messagesArray)
             put("max_tokens", 300)
         }

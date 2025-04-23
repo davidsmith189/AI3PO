@@ -10,5 +10,5 @@ public final class BuildConfig {
   public static final int VERSION_CODE = 1;
   public static final String VERSION_NAME = "1.0";
   // Field from default config.
-  public static final String OPENAI_API_KEY = "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";
+  public static final String OPENAI_API_KEY = "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";
 }
