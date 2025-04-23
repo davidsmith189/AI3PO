@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="16dp"
     android:layout_width="match_parent"
@@ -11,7 +11,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+       >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/trash_delete"
+            android:layout_gravity="end|center_horizontal"
+            />
 
         <TextView
             android:id="@+id/chat_title"
@@ -33,6 +40,8 @@
             android:ellipsize="end"
             android:singleLine="false"
             android:text="@string/lastMessagePreview" />
+
+
 
 <!--        <View-->
 <!--            android:layout_width="match_parent"-->
