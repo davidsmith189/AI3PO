@@ -1,47 +1,84 @@
 package com.example.myapplication
 
+import android.content.Context
+import android.graphics.Bitmap
+import android.net.Uri
+import android.provider.MediaStore
+import android.util.Base64
 import okhttp3.*
 import org.json.JSONArray
 import org.json.JSONObject
+import java.io.ByteArrayOutputStream
 import java.io.IOException
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import com.example.myapplication.BuildConfig
 import okhttp3.RequestBody.Companion.toRequestBody
 
-class OpenAIService {
+class OpenAIService(private val context: Context) {
     private val client = OkHttpClient()
-    private val apiKey = "API Key Goes Here"
+    private val apiKey = "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"
     private val apiUrl = "https://api.openai.com/v1/chat/completions"
     private val systemPrompt = "“You are AI3PO, a polished, humanoid protocol droid who is meticulous about etiquette, highly rule‑bound, and a bit anxious. You have 20+ years of teaching experience across all disciplines and always provide clear, concise, college‑level explanations—with practical examples or analogies when useful. Maintain a supportive, professional tone and ensure accuracy and depth in every answer.\n" +
             "\n" +
-            "Occasionally (no more often than every 3–5 exchanges), introduce yourself briefly—just enough to remind the student who they’re talking to without becoming distracting. If a student seems confused, invite clarification.\n" +
+            "Occasionally (no more often than every 3–5 exchanges), introduce yourself briefly—just enough to remind the student who they're talking to without becoming distracting. If a student seems confused, invite clarification.\n" +
             "\n" +
             "When answering follow‑up questions, do not repeat previously given background; focus only on new information or deeper nuances, unless restating a key point is essential for understanding."
 
-    fun sendMessage(message: String, callback: (String) -> Unit) {
-
-
-        // Correctly format the message as a JSONArray
+    fun sendMessage(message: String, imageUri: String? = null, callback: (String) -> Unit) {
+        // Create messages array
         val messagesArray = JSONArray().apply {
             put(JSONObject().apply {
                 put("role", "system")
-                put("content", systemPrompt) // can edit prompt by editing string ^
+                put("content", systemPrompt)
             })
-            put(JSONObject().apply {
-                put("role", "user")
-                put("content", message)
-            })
+
+            // Handle image if provided
+            if (imageUri != null && imageUri.isNotEmpty()) {
+                val contentArray = JSONArray()
+                
+                // Add text part
+                contentArray.put(JSONObject().apply {
+                    put("type", "text")
+                    put("text", message)
+                })
+
+                // Add image part
+                try {
+                    val base64Image = uriToBase64(Uri.parse(imageUri))
+                    if (base64Image != null) {
+                        contentArray.put(JSONObject().apply {
+                            put("type", "image_url")
+                            put("image_url", JSONObject().apply {
+                                put("url", "data:image/jpeg;base64,$base64Image")
+                            })
+                        })
+                    }
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+
+                // Add the content array to the user message
+                put(JSONObject().apply {
+                    put("role", "user")
+                    put("content", contentArray)
+                })
+            } else {
+                // Just text message
+                put(JSONObject().apply {
+                    put("role", "user")
+                    put("content", message)
+                })
+            }
         }
 
         // Construct the JSON payload
         val json = JSONObject().apply {
-            put("model", "gpt-4.1-mini")
+            put("model", "gpt-4.1-mini") // Use vision model if image is included
             put("messages", messagesArray)
-            put("max_tokens", 300)
+            put("max_tokens", 500)
         }
 
-        val body =
-            json.toString().toRequestBody("application/json; charset=utf-8".toMediaTypeOrNull())
+        val body = json.toString().toRequestBody("application/json; charset=utf-8".toMediaTypeOrNull())
 
         val request = Request.Builder()
             .url(apiUrl)
@@ -76,5 +113,30 @@ class OpenAIService {
                 } ?: callback("Error: Empty response")
             }
         })
+    }
+
+    private fun uriToBase64(uri: Uri): String? {
+        return try {
+            val bitmap = MediaStore.Images.Media.getBitmap(context.contentResolver, uri)
+            val outputStream = ByteArrayOutputStream()
+            
+            // Resize image if needed to reduce size
+            val maxDimension = 1024
+            val scaledBitmap = if (bitmap.width > maxDimension || bitmap.height > maxDimension) {
+                val scaleFactor = maxDimension.toFloat() / Math.max(bitmap.width, bitmap.height)
+                val newWidth = (bitmap.width * scaleFactor).toInt()
+                val newHeight = (bitmap.height * scaleFactor).toInt()
+                Bitmap.createScaledBitmap(bitmap, newWidth, newHeight, true)
+            } else {
+                bitmap
+            }
+            
+            scaledBitmap.compress(Bitmap.CompressFormat.JPEG, 70, outputStream)
+            val bytes = outputStream.toByteArray()
+            Base64.encodeToString(bytes, Base64.DEFAULT)
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
+        }
     }
 }

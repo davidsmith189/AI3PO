@@ -3267,6 +3267,7 @@ id anticipate
 id arc
 id asConfigured
 id async
+id attachmentImage
 id auto
 id autoComplete
 id autoCompleteToEnd
@@ -3293,6 +3294,7 @@ id btnAttach
 id btnClear
 id btnColor
 id btnUndo
+id btnUpload
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3383,6 +3385,7 @@ id edit_query
 id edit_text_id
 id elastic
 id embed
+id emptyView
 id end
 id endToStart
 id enterAlways
@@ -3412,6 +3415,7 @@ id frost
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -3433,7 +3437,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageView
 id immediateStop
 id include_toolbar
 id included
@@ -3582,6 +3585,7 @@ id pooling_container_listener_holder_tag
 id position
 id postLayout
 id pressed
+id progressBar
 id progress_circular
 id progress_horizontal
 id radio
@@ -3891,6 +3895,7 @@ layout fragment_profile
 layout fragment_saved
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_bot_image
 layout item_bot_message
 layout item_chat
 layout item_chatbot_message
@@ -5456,3 +5461,4 @@ styleable include constraintSet
 xml backup_rules
 xml data_extraction_rules
 xml image_share_filepaths
+xml provider_paths

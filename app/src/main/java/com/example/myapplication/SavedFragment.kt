@@ -9,23 +9,23 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 import android.widget.ExpandableListView
-import java.io.IOException
-import androidx.viewpager2.widget.ViewPager2
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
-import androidx.recyclerview.widget.RecyclerView
+import android.widget.ProgressBar
 import android.widget.TextView
+import java.io.IOException
+import com.google.gson.Gson
+import androidx.recyclerview.widget.RecyclerView
 import android.widget.Toast
-import androidx.annotation.Nullable
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-
+import com.google.firebase.firestore.ListenerRegistration
+import com.google.firebase.firestore.Query
 
 class SavedFragment : Fragment() {
     private lateinit var expandableListView: ExpandableListView
+    private lateinit var progressBar: ProgressBar
+    private lateinit var emptyView: TextView
     private lateinit var adapter: SavedChatsExpandableAdapter
+    private var firestoreListener: ListenerRegistration? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -36,42 +36,95 @@ class SavedFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         expandableListView = view.findViewById(R.id.expandableListView)
-
+        progressBar = view.findViewById(R.id.progressBar)
+        emptyView = view.findViewById(R.id.emptyView)
+        
+        // Initially show progress bar and hide empty view
+        progressBar.visibility = View.VISIBLE
+        emptyView.visibility = View.GONE
+        expandableListView.visibility = View.GONE
+        
+        setupFirestoreListener()
+    }
+    
+    override fun onResume() {
+        super.onResume()
+        if (firestoreListener == null) {
+            setupFirestoreListener()
+        }
+    }
+    
+    override fun onPause() {
+        super.onPause()
+        firestoreListener?.remove()
+        firestoreListener = null
+    }
+    
+    private fun setupFirestoreListener() {
         val userId = FirebaseAuth.getInstance().currentUser?.uid
             ?: return Toast.makeText(requireContext(), "Not signed in", Toast.LENGTH_SHORT).show()
 
-        FirebaseFirestore.getInstance()
+        // Show loading state
+        progressBar.visibility = View.VISIBLE
+        emptyView.visibility = View.GONE
+        
+        // Use a real-time listener instead of a one-time get()
+        firestoreListener = FirebaseFirestore.getInstance()
             .collection("users")
             .document(userId)
             .collection("saved_chats")
-            .get()
-            .addOnSuccessListener { result ->
-                val chats = result.map { doc ->
-                    val title   = doc.getString("title")   ?: "Untitled"
-                    val subject = doc.getString("subject") ?: "Other"
-                    @Suppress("UNCHECKED_CAST")
-                    val msgs = (doc.get("messages") as? List<HashMap<String,Any>>)
-                        ?.map { m ->
-                            ChatMessage(
-                                message       = m["message"      ].toString(),
-                                isUser        = m["isUser"       ] as Boolean,
-                                attachmentUri = m["attachmentUri"]?.toString() ?: "",
-                                timestamp     = m["timestamp"]   as? com.google.firebase.Timestamp
-                            )
-                        } ?: emptyList()
-                    val lastMsg = msgs.lastOrNull()?.message ?: "No messages"
-                    SavedChat(title, lastMsg, subject, msgs)
+            .orderBy("timestamp", Query.Direction.DESCENDING) // Most recent first
+            .addSnapshotListener { snapshot, error ->
+                // Hide progress bar regardless of result
+                progressBar.visibility = View.GONE
+                
+                if (error != null) {
+                    Log.e("SavedFragment", "Listen failed", error)
+                    Toast.makeText(requireContext(), "Failed to load saved chats", Toast.LENGTH_SHORT).show()
+                    return@addSnapshotListener
                 }
+                
+                if (snapshot != null) {
+                    val chats = snapshot.documents.map { doc ->
+                        val title = doc.getString("title") ?: "Untitled"
+                        val subject = doc.getString("subject") ?: "Other"
+                        @Suppress("UNCHECKED_CAST")
+                        val msgs = (doc.get("messages") as? List<HashMap<String, Any>>)
+                            ?.map { m ->
+                                ChatMessage(
+                                    message = m["message"].toString(),
+                                    isUser = m["isUser"] as Boolean,
+                                    attachmentUri = m["attachmentUri"]?.toString() ?: "",
+                                    timestamp = m["timestamp"] as? com.google.firebase.Timestamp
+                                )
+                            } ?: emptyList()
+                        val lastMsg = msgs.lastOrNull()?.message ?: "No messages"
+                        SavedChat(title, lastMsg, subject, msgs)
+                    }
 
-                // group by subject
-                val grouped = chats.groupBy { it.subject }
-                val subjects = grouped.keys.toList()
+                    // Check if there are any chats
+                    if (chats.isEmpty()) {
+                        expandableListView.visibility = View.GONE
+                        emptyView.visibility = View.VISIBLE
+                        return@addSnapshotListener
+                    }
+                    
+                    // Show the list view and hide empty view
+                    expandableListView.visibility = View.VISIBLE
+                    emptyView.visibility = View.GONE
 
-                adapter = SavedChatsExpandableAdapter(requireContext(), subjects, grouped)
-                expandableListView.setAdapter(adapter)
-            }
-            .addOnFailureListener {
-                Toast.makeText(requireContext(), "Failed to load saved chats", Toast.LENGTH_SHORT).show()
+                    // Group by subject
+                    val grouped = chats.groupBy { it.subject }
+                    val subjects = grouped.keys.toList()
+
+                    adapter = SavedChatsExpandableAdapter(requireContext(), subjects, grouped)
+                    expandableListView.setAdapter(adapter)
+                    
+                    // Expand the first group if there are any subjects
+                    if (subjects.isNotEmpty()) {
+                        expandableListView.expandGroup(0)
+                    }
+                }
             }
     }
 }

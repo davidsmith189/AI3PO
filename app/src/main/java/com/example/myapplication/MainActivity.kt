@@ -21,9 +21,12 @@ import com.google.firebase.firestore.FirebaseFirestore
 import java.text.SimpleDateFormat
 import java.util.Locale
 import java.util.TimeZone
+import android.net.Uri
 
 
 class MainActivity : AppCompatActivity() {
+    private var pendingDrawingUri: Uri? = null
+    
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -152,6 +155,20 @@ class MainActivity : AppCompatActivity() {
             }
             .setNegativeButton("Cancel", null)
             .show()
+    }
+
+    fun setPendingDrawingUri(uri: Uri) {
+        pendingDrawingUri = uri
+        
+        // Get reference to the current HomeFragment and notify it about the new drawing
+        val homeFragment = supportFragmentManager.fragments.firstOrNull { it is HomeFragment } as? HomeFragment
+        homeFragment?.handleIncomingDrawing(uri)
+    }
+    
+    fun getPendingDrawingUri(): Uri? {
+        val uri = pendingDrawingUri
+        pendingDrawingUri = null
+        return uri
     }
 
 }

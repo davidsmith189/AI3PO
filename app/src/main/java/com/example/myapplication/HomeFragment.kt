@@ -1,22 +1,29 @@
 package com.example.myapplication
 
+import android.Manifest
 import android.app.Activity
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.PopupMenu
+import android.view.*
+import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
+import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.databinding.FragmentHomeBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FieldValue
+import java.io.File
+import java.io.IOException
+import java.text.SimpleDateFormat
+import java.util.*
 
 class HomeFragment : Fragment() {
 
@@ -24,6 +31,18 @@ class HomeFragment : Fragment() {
     private lateinit var chatAdapter: ChatAdapter
     private val messages: MutableList<ChatMessage> = mutableListOf()
     private lateinit var openAIService: OpenAIService
+    private var currentPhotoUri: Uri? = null
+    private var pendingImageUri: Uri? = null
+
+    private val requestPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { isGranted ->
+        if (isGranted) {
+            openCamera()
+        } else {
+            Toast.makeText(requireContext(), "Camera permission is required to take photos", Toast.LENGTH_SHORT).show()
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,11 +56,10 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        openAIService = OpenAIService()
+        openAIService = OpenAIService(requireContext())
 
         chatAdapter = ChatAdapter(messages)
         binding.chatRecyclerView.layoutManager = LinearLayoutManager(requireContext()).apply {
-
             stackFromEnd = true
         }
         binding.chatRecyclerView.adapter = chatAdapter
@@ -49,7 +67,8 @@ class HomeFragment : Fragment() {
         fetchMessages()
 
         binding.sendButton.setOnClickListener {
-            sendMessage()
+            sendMessage(pendingImageUri?.toString())
+            pendingImageUri = null
         }
 
         binding.btnAttach.setOnClickListener {
@@ -62,30 +81,36 @@ class HomeFragment : Fragment() {
     }
 
     private fun showAttachmentMenu() {
-        val popup = PopupMenu(requireContext(), binding.btnAttach)
-        popup.menuInflater.inflate(R.menu.attachment_menu, popup.menu)
-        popup.setOnMenuItemClickListener { menuItem ->
+        val popupMenu = PopupMenu(requireContext(), binding.btnAttach)
+        popupMenu.menuInflater.inflate(R.menu.attachment_menu, popupMenu.menu)
+
+        popupMenu.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.menu_camera      -> {
-                    openCamera()
-                    true
-                }
-                R.id.menu_gallery     -> {
-                    openGallery()
-                    true
-                }
-                R.id.menu_document    -> {
-                    openDocuments()
-                    true
-                }
-                R.id.menu_clear_chat  -> {
+                R.id.menu_camera -> checkCameraPermission()
+                R.id.menu_gallery -> openGallery()
+                R.id.menu_document -> openDocuments()
+                R.id.menu_clear_chat -> {
                     clearChat()
                     true
                 }
-                else                  -> false
+            }
+            true
+        }
+        popupMenu.show()
+    }
+
+    private fun checkCameraPermission() {
+        when {
+            ContextCompat.checkSelfPermission(
+                requireContext(),
+                Manifest.permission.CAMERA
+            ) == PackageManager.PERMISSION_GRANTED -> {
+                openCamera()
+            }
+            else -> {
+                requestPermissionLauncher.launch(Manifest.permission.CAMERA)
             }
         }
-        popup.show()
     }
 
     fun clearChat() {
@@ -95,9 +120,33 @@ class HomeFragment : Fragment() {
         binding.chatRecyclerView.scrollToPosition(0)
     }
 
+    private fun createImageFile(): File {
+        val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
+        val imageFileName = "JPEG_" + timeStamp + "_"
+        val storageDir = requireContext().getExternalFilesDir("Images")
+        return File.createTempFile(
+            imageFileName,
+            ".jpg",
+            storageDir
+        )
+    }
+
     private fun openCamera() {
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        cameraLauncher.launch(intent)
+        intent.resolveActivity(requireActivity().packageManager)?.let {
+            try {
+                val photoFile = createImageFile()
+                currentPhotoUri = FileProvider.getUriForFile(
+                    requireContext(),
+                    "${requireContext().packageName}.fileprovider",
+                    photoFile
+                )
+                intent.putExtra(MediaStore.EXTRA_OUTPUT, currentPhotoUri)
+                cameraLauncher.launch(intent)
+            } catch (ex: IOException) {
+                Toast.makeText(requireContext(), "Error creating image file", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     private fun openGallery() {
@@ -107,38 +156,64 @@ class HomeFragment : Fragment() {
 
     private fun openDocuments() {
         val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
+        intent.addCategory(Intent.CATEGORY_OPENABLE)
         intent.type = "*/*"
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        intent.addFlags(Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION)
         documentLauncher.launch(intent)
     }
 
     private val cameraLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
-                // We ignore the actual Uri for now, just add a placeholder message
-                val userMessage = ChatMessage("Image attached", true)
-                messages.add(userMessage)
-                chatAdapter.notifyDataSetChanged()
-                saveMessageToFirestore(userMessage)
+                currentPhotoUri?.let { uri ->
+                    // FileProvider URIs from our own app don't need persistable permissions
+                    pendingImageUri = uri
+                    binding.userInput.hint = "Ask about the image..."
+                    Toast.makeText(requireContext(), "Image attached. Add a message and send.", Toast.LENGTH_SHORT).show()
+                }
             }
         }
 
     private val galleryLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
-                val userMessage = ChatMessage("Image attached", true)
-                messages.add(userMessage)
-                chatAdapter.notifyDataSetChanged()
-                saveMessageToFirestore(userMessage)
+                val uri = result.data?.data
+                if (uri != null) {
+                    try {
+                        // For content from other apps, we need to take persistable permissions
+                        // but wrap it in a try-catch in case it fails
+                        val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION
+                        requireContext().contentResolver.takePersistableUriPermission(uri, takeFlags)
+                    } catch (e: SecurityException) {
+                        Log.d("HomeFragment", "Could not take persistable permission for URI $uri")
+                    }
+                    
+                    pendingImageUri = uri
+                    binding.userInput.hint = "Ask about the image..."
+                    Toast.makeText(requireContext(), "Image attached. Add a message and send.", Toast.LENGTH_SHORT).show()
+                }
             }
         }
 
     private val documentLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
-                val userMessage = ChatMessage("Document attached", true)
-                messages.add(userMessage)
-                chatAdapter.notifyDataSetChanged()
-                saveMessageToFirestore(userMessage)
+                val uri = result.data?.data
+                if (uri != null) {
+                    try {
+                        // For content from other apps, we need to take persistable permissions
+                        // but wrap it in a try-catch in case it fails
+                        val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION
+                        requireContext().contentResolver.takePersistableUriPermission(uri, takeFlags)
+                    } catch (e: SecurityException) {
+                        Log.d("HomeFragment", "Could not take persistable permission for URI $uri")
+                    }
+                    
+                    pendingImageUri = uri
+                    binding.userInput.hint = "Ask about the document..."
+                    Toast.makeText(requireContext(), "Document attached. Add a message and send.", Toast.LENGTH_SHORT).show()
+                }
             }
         }
 
@@ -159,9 +234,10 @@ class HomeFragment : Fragment() {
                 if (snapshot != null) {
                     messages.clear()
                     for (doc in snapshot.documents) {
-                        val text   = doc.getString("message") ?: ""
+                        val text = doc.getString("message") ?: ""
                         val isUser = doc.getBoolean("isUser") ?: false
-                        messages.add(ChatMessage(text, isUser))
+                        val attachmentUri = doc.getString("attachmentUri") ?: ""
+                        messages.add(ChatMessage(text, isUser, attachmentUri = attachmentUri))
                     }
                     chatAdapter.notifyDataSetChanged()
                     binding.chatRecyclerView.scrollToPosition(messages.size - 1)
@@ -176,8 +252,9 @@ class HomeFragment : Fragment() {
 
         val data = hashMapOf(
             "message" to chatMessage.message,
-            "isUser"  to chatMessage.isUser,
-            "timestamp" to FieldValue.serverTimestamp()
+            "isUser" to chatMessage.isUser,
+            "timestamp" to FieldValue.serverTimestamp(),
+            "attachmentUri" to chatMessage.attachmentUri
         )
 
         db.collection("users")
@@ -192,18 +269,19 @@ class HomeFragment : Fragment() {
             }
     }
 
-    private fun sendMessage() {
+    private fun sendMessage(imageUri: String? = null) {
         val inputText = binding.userInput.text.toString().trim()
-        if (inputText.isEmpty()) {
-            // Do nothing if blank
+        if (inputText.isEmpty() && imageUri == null) {
+            // Do nothing if blank and no image
             return
         }
 
-        val userMessage = ChatMessage(inputText, true)
+        val userMessage = ChatMessage(inputText, true, attachmentUri = imageUri ?: "")
         messages.add(userMessage)
         chatAdapter.notifyDataSetChanged()
         binding.chatRecyclerView.scrollToPosition(messages.size - 1)
         binding.userInput.text.clear()
+        binding.userInput.hint = "Type a message..."
         saveMessageToFirestore(userMessage)
 
         val typingIndicator = ChatMessage("", false, isTyping = true)
@@ -211,9 +289,8 @@ class HomeFragment : Fragment() {
         chatAdapter.notifyItemInserted(messages.size - 1)
         binding.chatRecyclerView.scrollToPosition(messages.size - 1)
 
-        openAIService.sendMessage(inputText) { responseText ->
+        openAIService.sendMessage(inputText, imageUri) { responseText ->
             requireActivity().runOnUiThread {
-
                 messages.remove(typingIndicator)
 
                 val botMessage = ChatMessage(responseText, false)
@@ -223,5 +300,16 @@ class HomeFragment : Fragment() {
                 saveMessageToFirestore(botMessage)
             }
         }
+    }
+
+    fun handleIncomingDrawing(drawingUri: Uri) {
+        // Set the drawing URI as the pending image URI
+        pendingImageUri = drawingUri
+        
+        // Update the input hint to indicate a drawing is attached
+        binding.userInput.hint = "Add context to your drawing..."
+        
+        // Show a toast message
+        Toast.makeText(requireContext(), "Drawing attached. Add context and send.", Toast.LENGTH_SHORT).show()
     }
 }
