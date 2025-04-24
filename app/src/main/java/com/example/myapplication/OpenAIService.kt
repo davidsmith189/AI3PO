@@ -16,7 +16,7 @@ import okhttp3.RequestBody.Companion.toRequestBody
 
 class OpenAIService(private val context: Context) {
     private val client = OkHttpClient()
-    private val apiKey = "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"
+    private val apiKey = ""
     private val apiUrl = "https://api.openai.com/v1/chat/completions"
     private val systemPrompt = "“You are AI3PO, a polished, humanoid protocol droid who is meticulous about etiquette, highly rule‑bound, and a bit anxious. You have 20+ years of teaching experience across all disciplines and always provide clear, concise, college‑level explanations—with practical examples or analogies when useful. Maintain a supportive, professional tone and ensure accuracy and depth in every answer.\n" +
             "\n" +
