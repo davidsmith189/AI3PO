@@ -1412,6 +1412,7 @@ color common_google_signin_btn_text_light_disabled
 color common_google_signin_btn_text_light_focused
 color common_google_signin_btn_text_light_pressed
 color common_google_signin_btn_tint
+color darkGold
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -2126,6 +2127,7 @@ color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
 color purple_200
 color purple_700
+color red
 color richGold
 color ripple_material_dark
 color ripple_material_light
@@ -3180,6 +3182,7 @@ drawable settings
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable trashcan
 drawable user_message_bg
 id ALT
 id BOTTOM_END
@@ -3720,6 +3723,7 @@ id transition_pause_alpha
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id trash_icon
 id triangle
 id typingIndicator
 id unchecked

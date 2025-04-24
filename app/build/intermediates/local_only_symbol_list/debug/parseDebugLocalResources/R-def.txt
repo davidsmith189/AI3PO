@@ -3,8 +3,10 @@ local
 array subjects
 color azure
 color black
+color darkGold
 color purple_200
 color purple_700
+color red
 color richGold
 color teal_200
 color teal_700
@@ -28,6 +30,7 @@ drawable rounded_red
 drawable saved_chat_background
 drawable savefile
 drawable settings
+drawable trashcan
 drawable user_message_bg
 id attachmentImage
 id btnAttach
@@ -75,6 +78,7 @@ id spinnerSubject
 id tabLayout
 id timestampView
 id titleText
+id trash_icon
 id typingIndicator
 id userInput
 id usernameCard
