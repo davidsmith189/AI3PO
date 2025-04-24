@@ -32,10 +32,12 @@ drawable savefile
 drawable settings
 drawable trashcan
 drawable user_message_bg
+id attachmentImage
 id btnAttach
 id btnClear
 id btnColor
 id btnUndo
+id btnUpload
 id chatInputLayout
 id chatRecyclerView
 id chatTitleTextView
@@ -48,9 +50,9 @@ id documentIcon
 id documentName
 id drawingView
 id editTitle
+id emptyView
 id expandableListView
 id forgotButton
-id imageView
 id include_toolbar
 id loginButton
 id loginText
@@ -63,6 +65,7 @@ id menu_gallery
 id menu_take_photo
 id messageText
 id passwordEditText
+id progressBar
 id registerButton
 id resetPasswordBtn
 id save
@@ -90,6 +93,7 @@ layout fragment_doodle
 layout fragment_home
 layout fragment_profile
 layout fragment_saved
+layout item_bot_image
 layout item_bot_message
 layout item_chat
 layout item_chatbot_message
@@ -117,3 +121,4 @@ string project_id
 style Theme.MyApplication
 xml backup_rules
 xml data_extraction_rules
+xml provider_paths

@@ -2,9 +2,15 @@ package com.example.myapplication
 
 import android.content.Context
 import android.graphics.*
+import android.net.Uri
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
+import androidx.core.content.FileProvider
+import java.io.File
+import java.io.FileOutputStream
+import java.text.SimpleDateFormat
+import java.util.*
 
 class DrawingView @JvmOverloads constructor(
     context: Context,
@@ -80,5 +86,54 @@ class DrawingView @JvmOverloads constructor(
 
     fun setStrokeWidth(width: Float) {
         paint.strokeWidth = width
+    }
+    
+    fun saveToFile(): Uri? {
+        if (paths.isEmpty() && !path.hasPoints()) {
+            return null // Nothing to save
+        }
+        
+        // Create a bitmap with the same dimensions as the view
+        val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)
+        canvas.drawColor(Color.WHITE) // Set background color
+        
+        // Draw all paths on the canvas
+        paths.forEach { (path, paint) ->
+            canvas.drawPath(path, paint)
+        }
+        canvas.drawPath(path, paint)
+        
+        try {
+            // Create a file to save the bitmap
+            val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
+            val fileName = "Doodle_$timeStamp.jpg"
+            val storageDir = context.getExternalFilesDir("Doodles")
+            if (!storageDir?.exists()!!) {
+                storageDir.mkdirs()
+            }
+            
+            val file = File(storageDir, fileName)
+            val fos = FileOutputStream(file)
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 90, fos)
+            fos.flush()
+            fos.close()
+            
+            // Return the content URI using FileProvider
+            return FileProvider.getUriForFile(
+                context,
+                "${context.packageName}.fileprovider",
+                file
+            )
+        } catch (e: Exception) {
+            e.printStackTrace()
+            return null
+        }
+    }
+
+    // Helper method to check if a path is empty
+    private fun Path.hasPoints(): Boolean {
+        val pm = PathMeasure(this, false)
+        return pm.length > 0
     }
 } 
