@@ -23,11 +23,11 @@
         app:navigationIcon="@drawable/back_arrow"
         app:navigationIconTint="?android:attr/textColorPrimary"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/logoutButton"
         android:layout_width="204dp"
         android:layout_height="67dp"
-        android:background="@drawable/rounded_red"
+        android:backgroundTint="@color/red"
         android:text="Logout"
         android:textStyle="bold"
         android:textColor="@color/white"
@@ -35,7 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="MissingConstraints" />
+        />
 
 
 

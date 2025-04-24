@@ -46,6 +46,7 @@ class SavedChatsExpandableAdapter(
             .inflate(R.layout.item_chat, parent, false)
         view.findViewById<TextView>(R.id.chat_title).text = chat.title
         view.findViewById<TextView>(R.id.chat_message).text = chat.lastMessage
+        val deleteIcon=view.findViewById<View>(R.id.trash_icon)
         view.setOnClickListener {
             // same launch logic you had in SavedChatsAdapter
             val intent = Intent(ctx, ChatDetailActivity::class.java)
@@ -53,6 +54,36 @@ class SavedChatsExpandableAdapter(
             intent.putExtra("chat_messages", Gson().toJson(chat.messages))
             ctx.startActivity(intent)
         }
+        deleteIcon.setOnClickListener{
+            deleteChat(chat.title){
+                val mutableList=data[subjects[groupPos]]?.toMutableList()
+                mutableList?.removeAt(childPos)
+                (data as MutableMap)[subjects[groupPos]]=mutableList?: emptyList()
+                notifyDataSetChanged()
+            }
+        }
+
         return view
+    }
+    private fun deleteChat(title:String,onDeleted:()->Unit){
+        val userId = com.google.firebase.auth.FirebaseAuth.getInstance().currentUser?.uid ?: return
+        val db = com.google.firebase.firestore.FirebaseFirestore.getInstance()
+
+        db.collection("users")
+            .document(userId)
+            .collection("saved_chats")
+            .whereEqualTo("title", title)
+            .get()
+            .addOnSuccessListener { result ->
+                for (doc in result) {
+                    db.collection("users")
+                        .document(userId)
+                        .collection("saved_chats")
+                        .document(doc.id)
+                        .delete()
+                }
+                onDeleted()
+            }
+
     }
 }
