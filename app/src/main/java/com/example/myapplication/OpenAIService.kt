@@ -3,8 +3,11 @@ package com.example.myapplication
 import android.content.Context
 import android.graphics.Bitmap
 import android.net.Uri
+import android.os.Handler
+import android.os.Looper
 import android.provider.MediaStore
 import android.util.Base64
+import android.widget.Toast
 import okhttp3.*
 import org.json.JSONArray
 import org.json.JSONObject
@@ -14,15 +17,25 @@ import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import com.example.myapplication.BuildConfig
 import okhttp3.RequestBody.Companion.toRequestBody
 
-class OpenAIService(private val context: Context) {
+class OpenAIService(private val context: Context, private val onResponse: (String) -> Unit = {}) {
     private val client = OkHttpClient()
-    private val apiKey = "API Key Goes Here"
+    private val apiKey = "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"
     private val apiUrl = "https://api.openai.com/v1/chat/completions"
     private val systemPrompt = "“You are AI3PO, a polished, humanoid protocol droid who is meticulous about etiquette, highly rule‑bound, and a bit anxious. You have 20+ years of teaching experience across all disciplines and always provide clear, concise, college‑level explanations—with practical examples or analogies when useful. Maintain a supportive, professional tone and ensure accuracy and depth in every answer.\n" +
             "\n" +
             "Occasionally (no more often than every 3–5 exchanges), introduce yourself briefly—just enough to remind the student who they're talking to without becoming distracting. If a student seems confused, invite clarification.\n" +
             "\n" +
             "When answering follow‑up questions, do not repeat previously given background; focus only on new information or deeper nuances, unless restating a key point is essential for understanding."
+
+    init {
+        // Automatically send a "Hello!" greeting when the service is instantiated
+        sendMessage("Hello Introduce Yourself!") { response ->
+            // Post back to the main thread to show a Toast
+            Handler(Looper.getMainLooper()).post {
+                onResponse(response)
+            }
+        }
+    }
 
     fun sendMessage(message: String, imageUri: String? = null, callback: (String) -> Unit) {
         // Create messages array
@@ -92,25 +105,22 @@ class OpenAIService(private val context: Context) {
             }
 
             override fun onResponse(call: Call, response: Response) {
-                response.body?.string()?.let {
-                    try {
-                        val jsonResponse = JSONObject(it)
-
-                        // Check for errors in the response before trying to parse choices
-                        if (!jsonResponse.has("choices")) {
-                            callback("Error: ${jsonResponse.toString(2)}")
-                            return
-                        }
-
-                        val reply = jsonResponse.getJSONArray("choices")
-                            .getJSONObject(0)
-                            .getJSONObject("message")
-                            .getString("content")
-                        callback(reply.trim())
-                    } catch (e: Exception) {
-                        callback("Error parsing response: ${e.message}")
-                    }
-                } ?: callback("Error: Empty response")
+                val bodyString = response.body?.string()
+                if (bodyString == null) {
+                    callback("Error: Empty response")
+                    return
+                }
+                try {
+                    val jsonResponse = JSONObject(bodyString)
+                    val reply = jsonResponse
+                        .getJSONArray("choices")
+                        .getJSONObject(0)
+                        .getJSONObject("message")
+                        .getString("content").trim()
+                    callback(reply)
+                } catch (e: Exception) {
+                    callback("Error parsing response: ${e.message}")
+                }
             }
         })
     }
