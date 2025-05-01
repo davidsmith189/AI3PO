@@ -120,6 +120,9 @@ class MainActivity : AppCompatActivity() {
             .add(chatMap)
             .addOnSuccessListener {
                 Toast.makeText(this, "Chat with metadata saved!", Toast.LENGTH_SHORT).show()
+
+                // Reset chat session only after successfully saving the chat
+                homeFragment?.resetChatSession()
             }
             .addOnFailureListener {
                 Toast.makeText(this, "Error saving chat", Toast.LENGTH_SHORT).show()

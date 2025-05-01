@@ -113,12 +113,36 @@ class HomeFragment : Fragment() {
         }
     }
 
+    private var isNewChatSession = false
+
     fun clearChat() {
         messages.clear()
         chatAdapter.notifyDataSetChanged()
-        // Scroll to top (empty list)
         binding.chatRecyclerView.scrollToPosition(0)
+
+        val currentUser = FirebaseAuth.getInstance().currentUser ?: return
+        val db = FirebaseFirestore.getInstance()
+
+        // Clear the temporary openAIChats collection
+        db.collection("users")
+            .document(currentUser.uid)
+            .collection("openAIChats")
+            .get()
+            .addOnSuccessListener { snapshot ->
+                for (doc in snapshot.documents) {
+                    doc.reference.delete()
+                }
+            }
+
+        isNewChatSession = true
     }
+
+
+    fun resetChatSession() {
+        isNewChatSession = false
+        //fetchMessages() // Refresh messages after saving, if needed
+    }
+
 
     private fun createImageFile(): File {
         val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
@@ -231,7 +255,7 @@ class HomeFragment : Fragment() {
                     Log.w("HomeFragment", "Firestore listen failed.", error)
                     return@addSnapshotListener
                 }
-                if (snapshot != null) {
+                if (snapshot != null && !isNewChatSession) {
                     messages.clear()
                     for (doc in snapshot.documents) {
                         val text = doc.getString("message") ?: ""
