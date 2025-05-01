@@ -56,7 +56,12 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        openAIService = OpenAIService(requireContext())
+        openAIService = OpenAIService(requireContext()) { greeting ->
+                requireActivity().runOnUiThread {
+                    messages.add(ChatMessage(greeting, isUser = false))
+                    chatAdapter.notifyItemInserted(messages.size - 1)
+                }
+        }
 
         chatAdapter = ChatAdapter(messages)
         binding.chatRecyclerView.layoutManager = LinearLayoutManager(requireContext()).apply {

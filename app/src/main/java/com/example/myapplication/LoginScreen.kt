@@ -39,6 +39,7 @@ class LoginScreen : AppCompatActivity() {
 
             if(userOrEmailString.isNotEmpty() && passwordString.isNotEmpty()) {
                 signInUser(userOrEmailString,passwordString)
+
             } else {
                 Toast.makeText(this, "Please enter both email and password", Toast.LENGTH_SHORT).show()
             }
@@ -52,7 +53,15 @@ class LoginScreen : AppCompatActivity() {
             val intent = Intent(this, SignupScreen::class.java)
             startActivity(intent)
         }
+
+        auth.currentUser?.let { user ->  //persistent login
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+            return
+        }
     }
+
+
 
     private fun signInUser(userOrEmailString: String, passwordString: String ) {
         auth.signInWithEmailAndPassword(userOrEmailString, passwordString)
