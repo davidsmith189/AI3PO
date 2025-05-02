@@ -121,9 +121,9 @@ class SavedFragment : Fragment() {
                     expandableListView.setAdapter(adapter)
                     
                     // Expand the first group if there are any subjects
-                    if (subjects.isNotEmpty()) {
-                        expandableListView.expandGroup(0)
-                    }
+                    //if (subjects.isNotEmpty()) {
+                    //    expandableListView.expandGroup(0)
+                    //}
                 }
             }
     }

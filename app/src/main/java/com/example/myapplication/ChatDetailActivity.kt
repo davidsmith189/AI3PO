@@ -20,30 +20,23 @@ class ChatDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat_detail)
 
-        // sets title of page to the chat_title used previously
         val chatTitle = intent.getStringExtra("chat_title") ?: "Chat Detail"
-        // For example, if you have a TextView to display the title:
         findViewById<TextView>(R.id.chatTitleTextView).text = chatTitle
 
-        // retrieve the JSON string for the chat messages from the intent extras.
         val chatMessagesJson = intent.getStringExtra("chat_messages")
         if (chatMessagesJson != null) {
-            // parsing using gson for json
             val type = object : TypeToken<List<ChatMessage>>() {}.type
             val parsedMessages: List<ChatMessage> = Gson().fromJson(chatMessagesJson, type)
             messages.addAll(parsedMessages)
         }
 
-        // resusing chatadapter for recyclerview
         val recyclerView = findViewById<RecyclerView>(R.id.chatRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
         chatAdapter = ChatAdapter(messages)
         recyclerView.adapter = chatAdapter
 
-        fetchConversationFromFirestore()
-        Log.d("ChatDetailActivity", "Number of messages: ${messages.size}")
-
     }
+
 
     private fun fetchConversationFromFirestore() {
         val currentUser = FirebaseAuth.getInstance().currentUser
