@@ -9,21 +9,21 @@
 9        android:targetSdkVersion="33" />
 10
 11    <uses-feature
-11-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:5:5-7:35
+11-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:5:5-7:35
 12        android:name="android.hardware.camera"
-12-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:6:9-47
+12-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:6:9-47
 13        android:required="true" />
-13-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:7:9-32
+13-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:7:9-32
 14
 15    <uses-permission android:name="android.permission.CAMERA" />
-15-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:9:5-65
-15-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:9:22-62
+15-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:9:5-65
+15-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:9:22-62
 16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-16-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:10:5-80
-16-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:10:22-77
+16-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:10:5-80
+16-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:10:22-77
 17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-17-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:11:5-81
-17-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:11:22-78
+17-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:11:5-81
+17-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:11:22-78
 18    <uses-permission android:name="android.permission.INTERNET" />
 18-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\agveg\.gradle\caches\8.11.1\transforms\83b3900d166e4cf31d591302fbbd97fd\transformed\firebase-auth-23.2.0\AndroidManifest.xml:25:5-67
 18-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\agveg\.gradle\caches\8.11.1\transforms\83b3900d166e4cf31d591302fbbd97fd\transformed\firebase-auth-23.2.0\AndroidManifest.xml:25:22-64
@@ -61,106 +61,106 @@
 31-->[androidx.core:core:1.15.0] C:\Users\agveg\.gradle\caches\8.11.1\transforms\9416d3142d13ce0ab6ab44ba2524a8ed\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
 32
 33    <application
-33-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:13:5-72:19
+33-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:13:5-72:19
 34        android:allowBackup="true"
-34-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:14:9-35
+34-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:14:9-35
 35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 35-->[androidx.core:core:1.15.0] C:\Users\agveg\.gradle\caches\8.11.1\transforms\9416d3142d13ce0ab6ab44ba2524a8ed\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
 36        android:dataExtractionRules="@xml/data_extraction_rules"
-36-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:15:9-65
+36-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:15:9-65
 37        android:debuggable="true"
 38        android:extractNativeLibs="false"
 39        android:fullBackupContent="@xml/backup_rules"
-39-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:16:9-54
+39-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:16:9-54
 40        android:icon="@mipmap/ic_launcher"
-40-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:17:9-43
+40-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:17:9-43
 41        android:label="@string/app_name"
-41-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:18:9-41
+41-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:18:9-41
 42        android:roundIcon="@mipmap/ic_launcher_round"
-42-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:19:9-54
+42-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:19:9-54
 43        android:supportsRtl="true"
-43-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:20:9-35
+43-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:20:9-35
 44        android:testOnly="true"
 45        android:theme="@style/Theme.MyApplication" >
-45-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:21:9-51
+45-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:21:9-51
 46        <provider
 47            android:name="androidx.core.content.FileProvider"
-47-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:25:13-62
+47-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:25:13-62
 48            android:authorities="com.example.myapplication.fileprovider"
-48-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:26:13-64
+48-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:26:13-64
 49            android:exported="false"
-49-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:27:13-37
+49-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:27:13-37
 50            android:grantUriPermissions="true" >
-50-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:28:13-47
+50-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:28:13-47
 51            <meta-data
-51-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:29:13-31:58
+51-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:29:13-31:58
 52                android:name="android.support.FILE_PROVIDER_PATHS"
-52-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:30:17-67
+52-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:30:17-67
 53                android:resource="@xml/provider_paths" />
-53-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:31:17-55
+53-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:31:17-55
 54        </provider>
 55
 56        <activity
-56-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:34:9-41:20
+56-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:34:9-41:20
 57            android:name="com.example.myapplication.LoginScreen"
-57-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:35:13-40
+57-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:35:13-40
 58            android:exported="true" >
-58-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:36:13-36
+58-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:36:13-36
 59            <intent-filter>
-59-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:37:13-40:29
+59-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:37:13-40:29
 60                <action android:name="android.intent.action.MAIN" />
-60-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:38:17-69
-60-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:38:25-66
+60-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:38:17-69
+60-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:38:25-66
 61
 62                <category android:name="android.intent.category.LAUNCHER" />
-62-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:39:17-77
-62-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:39:27-74
+62-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:39:17-77
+62-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:39:27-74
 63            </intent-filter>
 64        </activity>
 65        <activity
-65-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:43:9-50:20
+65-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:43:9-50:20
 66            android:name="com.example.myapplication.MainActivity"
-66-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:44:13-41
+66-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:44:13-41
 67            android:exported="true" >
-67-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:45:13-36
+67-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:45:13-36
 68            <intent-filter>
-68-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:37:13-40:29
+68-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:37:13-40:29
 69                <action android:name="android.intent.action.MAIN" />
-69-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:38:17-69
-69-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:38:25-66
+69-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:38:17-69
+69-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:38:25-66
 70
 71                <category android:name="android.intent.category.LAUNCHER" />
-71-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:39:17-77
-71-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:39:27-74
+71-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:39:17-77
+71-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:39:27-74
 72            </intent-filter>
 73        </activity>
 74        <activity
-74-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:52:9-55:20
+74-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:52:9-55:20
 75            android:name="com.example.myapplication.SettingsActivity"
-75-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:53:13-45
+75-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:53:13-45
 76            android:exported="true" >
-76-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:54:13-36
+76-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:54:13-36
 77        </activity>
 78        <activity
-78-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:57:9-60:20
+78-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:57:9-60:20
 79            android:name="com.example.myapplication.ChatDetailActivity"
-79-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:58:13-47
+79-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:58:13-47
 80            android:exported="true" >
-80-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:59:13-36
+80-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:59:13-36
 81        </activity>
 82        <activity
-82-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:62:9-65:20
+82-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:62:9-65:20
 83            android:name="com.example.myapplication.SignupScreen"
-83-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:63:13-41
+83-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:63:13-41
 84            android:exported="true" >
-84-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:64:13-36
+84-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:64:13-36
 85        </activity>
 86        <activity
-86-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:67:9-70:20
+86-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:67:9-70:20
 87            android:name="com.example.myapplication.ForgotPassword"
-87-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:68:13-43
+87-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:68:13-43
 88            android:exported="true" >
-88-->C:\Users\agveg\AndroidStudioProjects\AI3PO\app\src\main\AndroidManifest.xml:69:13-36
+88-->C:\Users\agveg\StudioProjects\AI3PO\app\src\main\AndroidManifest.xml:69:13-36
 89        </activity>
 90
 91        <provider

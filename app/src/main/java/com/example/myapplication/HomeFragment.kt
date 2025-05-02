@@ -58,8 +58,11 @@ class HomeFragment : Fragment() {
 
         openAIService = OpenAIService(requireContext()) { greeting ->
                 requireActivity().runOnUiThread {
-                    messages.add(ChatMessage(greeting, isUser = false))
+                    val botGreeting = ChatMessage(greeting, isUser = false)
+                    messages.add(botGreeting)
                     chatAdapter.notifyItemInserted(messages.size - 1)
+
+                    saveMessageToFirestore(botGreeting)
                 }
         }
 
@@ -120,27 +123,42 @@ class HomeFragment : Fragment() {
 
     private var isNewChatSession = false
 
+    // HomeFragment.kt
     fun clearChat() {
+        // 1) clear local list
         messages.clear()
         chatAdapter.notifyDataSetChanged()
         binding.chatRecyclerView.scrollToPosition(0)
 
+        // 2) clear Firestore
         val currentUser = FirebaseAuth.getInstance().currentUser ?: return
         val db = FirebaseFirestore.getInstance()
-
-        // Clear the temporary openAIChats collection
         db.collection("users")
             .document(currentUser.uid)
             .collection("openAIChats")
             .get()
-            .addOnSuccessListener { snapshot ->
-                for (doc in snapshot.documents) {
-                    doc.reference.delete()
-                }
-            }
+            .addOnSuccessListener { it.documents.forEach { doc -> doc.reference.delete() } }
 
+        // 3) flag new session (to bypass your snapshot listener)
         isNewChatSession = true
+
+        // 4) ask the professor to re-introduce themself
+        openAIService.sendMessage("Hello Introduce Yourself!") { greeting ->
+            requireActivity().runOnUiThread {
+                val botGreeting = ChatMessage(greeting, isUser = false)
+                messages.add(botGreeting)
+                chatAdapter.notifyItemInserted(messages.size - 1)
+                binding.chatRecyclerView.scrollToPosition(messages.size - 1)
+
+                // save it so future snapshot refreshes include it
+                saveMessageToFirestore(botGreeting)
+
+                // 5) reset the flag now that we’ve manually rebuilt the list
+                isNewChatSession = false
+            }
+        }
     }
+
 
 
     fun resetChatSession() {
