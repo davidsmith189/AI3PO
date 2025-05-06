@@ -56,7 +56,15 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        openAIService = OpenAIService(requireContext())
+        openAIService = OpenAIService(requireContext()) { greeting ->
+                requireActivity().runOnUiThread {
+                    val botGreeting = ChatMessage(greeting, isUser = false)
+                    messages.add(botGreeting)
+                    chatAdapter.notifyItemInserted(messages.size - 1)
+
+                    saveMessageToFirestore(botGreeting)
+                }
+        }
 
         chatAdapter = ChatAdapter(messages)
         binding.chatRecyclerView.layoutManager = LinearLayoutManager(requireContext()).apply {
@@ -113,12 +121,51 @@ class HomeFragment : Fragment() {
         }
     }
 
+    private var isNewChatSession = false
+
+    // HomeFragment.kt
     fun clearChat() {
+        // 1) clear local list
         messages.clear()
         chatAdapter.notifyDataSetChanged()
-        // Scroll to top (empty list)
         binding.chatRecyclerView.scrollToPosition(0)
+
+        // 2) clear Firestore
+        val currentUser = FirebaseAuth.getInstance().currentUser ?: return
+        val db = FirebaseFirestore.getInstance()
+        db.collection("users")
+            .document(currentUser.uid)
+            .collection("openAIChats")
+            .get()
+            .addOnSuccessListener { it.documents.forEach { doc -> doc.reference.delete() } }
+
+        // 3) flag new session (to bypass your snapshot listener)
+        isNewChatSession = true
+
+        // 4) ask the professor to re-introduce themself
+        openAIService.sendMessage("Hello Introduce Yourself!") { greeting ->
+            requireActivity().runOnUiThread {
+                val botGreeting = ChatMessage(greeting, isUser = false)
+                messages.add(botGreeting)
+                chatAdapter.notifyItemInserted(messages.size - 1)
+                binding.chatRecyclerView.scrollToPosition(messages.size - 1)
+
+                // save it so future snapshot refreshes include it
+                saveMessageToFirestore(botGreeting)
+
+                // 5) reset the flag now that we’ve manually rebuilt the list
+                isNewChatSession = false
+            }
+        }
     }
+
+
+
+    fun resetChatSession() {
+        isNewChatSession = false
+        //fetchMessages() // Refresh messages after saving, if needed
+    }
+
 
     private fun createImageFile(): File {
         val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
@@ -231,7 +278,7 @@ class HomeFragment : Fragment() {
                     Log.w("HomeFragment", "Firestore listen failed.", error)
                     return@addSnapshotListener
                 }
-                if (snapshot != null) {
+                if (snapshot != null && !isNewChatSession) {
                     messages.clear()
                     for (doc in snapshot.documents) {
                         val text = doc.getString("message") ?: ""

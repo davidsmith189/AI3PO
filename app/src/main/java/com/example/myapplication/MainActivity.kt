@@ -59,26 +59,39 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        supportActionBar?.setDisplayShowTitleEnabled(false)
+        //supportActionBar?.setDisplayShowTitleEnabled(false)
 
 
 
+        //TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+        //    when (position) {
+        //        0 -> {
+        //            tab.text = "Discussion"
+        //            viewPager.setCurrentItem(0, false)
+        //        }
+        //        1 -> {
+        //            tab.text = "Doodle"
+        //            viewPager.setCurrentItem(1, false)
+        //        }
+        //        2 -> {
+        //           tab.text = "Saved"
+        //            viewPager.setCurrentItem(2, false)
+        //        }
+        //    }
+        //}.attach()
+
+        // set up the tabs
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-            when (position) {
-                0 -> {
-                    tab.text = "Discussion"
-                    viewPager.setCurrentItem(0, false)
-                }
-                1 -> {
-                    tab.text = "Doodle"
-                    viewPager.setCurrentItem(1, false)
-                }
-                2 -> {
-                    tab.text = "Saved"
-                    viewPager.setCurrentItem(2, false)
-                }
+            tab.text = when (position) {
+                0 -> "Discussion"
+                1 -> "Doodle"
+                2 -> "Saved"
+                else -> null
             }
         }.attach()
+
+// **force** start on the Discussion tab
+        viewPager.currentItem = 0
 
 
         val settingsButton = findViewById<ImageView>(R.id.settings)
@@ -120,6 +133,9 @@ class MainActivity : AppCompatActivity() {
             .add(chatMap)
             .addOnSuccessListener {
                 Toast.makeText(this, "Chat with metadata saved!", Toast.LENGTH_SHORT).show()
+
+                // Reset chat session only after successfully saving the chat
+                homeFragment?.resetChatSession()
             }
             .addOnFailureListener {
                 Toast.makeText(this, "Error saving chat", Toast.LENGTH_SHORT).show()
