@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
+import androidx.cardview.widget.CardView
 
 
 class SettingsActivity : AppCompatActivity() {
@@ -78,6 +79,14 @@ class SettingsActivity : AppCompatActivity() {
 
             finish()
         }
+
+        val forgotPasswordButton = findViewById<CardView>(R.id.changePassword)
+        forgotPasswordButton.setOnClickListener {
+            val intent = Intent(this, ForgotPassword::class.java)
+            startActivity(intent)
+        }
+
+
 
     }
 
