@@ -212,6 +212,10 @@
         "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-47:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
+        "merged": "com.example.myapplication.app-debug-45:/layout_item_bot_message.xml.flat",
+        "source": "com.example.myapplication.app-main-47:/layout/item_bot_message.xml"
+    },
+    {
         "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-45:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-47:\\drawable\\ic_launcher_background.xml"
     },
@@ -224,12 +228,12 @@
         "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-47:\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-45:\\layout_fragment_doodle.xml.flat",
-        "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-47:\\layout\\fragment_doodle.xml"
-    },
-    {
         "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-45:\\layout_item_bot_message.xml.flat",
         "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-47:\\layout\\item_bot_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-45:\\layout_fragment_doodle.xml.flat",
+        "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-47:\\layout\\fragment_doodle.xml"
     },
     {
         "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-45:\\drawable-mdpi_ai3po_buddy2.png.flat",
@@ -282,10 +286,6 @@
     {
         "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-45:\\menu_attachment_menu.xml.flat",
         "source": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-main-47:\\menu\\attachment_menu.xml"
-    },
-    {
-        "merged": "com.example.myapplication.app-debug-45:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.example.myapplication.app-main-47:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
         "merged": "C:\\Users\\esqes\\.gradle\\daemon\\8.11.1\\com.example.myapplication.app-debug-45:\\mipmap-xhdpi_ic_launcher.webp.flat",
