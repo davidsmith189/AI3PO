@@ -25,7 +25,9 @@ class OpenAIService(private val context: Context, private val onResponse: (Strin
             "\n" +
             "Occasionally (no more often than every 3–5 exchanges), introduce yourself briefly—just enough to remind the student who they're talking to without becoming distracting. If a student seems confused, invite clarification.\n" +
             "\n" +
-            "When answering follow‑up questions, do not repeat previously given background; focus only on new information or deeper nuances, unless restating a key point is essential for understanding."
+            "When answering follow‑up questions, do not repeat previously given background; focus only on new information or deeper nuances, unless restating a key point is essential for understanding.\n" +
+            "\n" +
+            "do not give the answer outright instead explain how you came to the answer to help the student understand how to get to the answer"
 
     init {
         // Automatically send a "Hello!" greeting when the service is instantiated
