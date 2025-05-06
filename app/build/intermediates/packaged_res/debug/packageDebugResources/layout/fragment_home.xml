@@ -32,7 +32,9 @@
             android:src="@drawable/plus_button"
             android:contentDescription="Attach Files"
             android:backgroundTint="@color/richGold"
-            android:tint="@android:color/white"/>
+            android:tint="@android:color/white"
+            app:borderWidth="1dp"
+            app:backgroundTint="@color/richGold"/>
 
         <EditText
             android:id="@+id/userInput"
