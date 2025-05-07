@@ -142,7 +142,10 @@ class HomeFragment : Fragment() {
         // 3) flag new session (to bypass your snapshot listener)
         isNewChatSession = true
 
-        // 4) ask the professor to re-introduce themself
+        // 4) Reset the conversation history in OpenAIService
+        openAIService.resetConversation()
+
+        // 5) ask the professor to re-introduce themself
         openAIService.sendMessage("Hello Introduce Yourself!") { greeting ->
             requireActivity().runOnUiThread {
                 val botGreeting = ChatMessage(greeting, isUser = false)
@@ -153,19 +156,17 @@ class HomeFragment : Fragment() {
                 // save it so future snapshot refreshes include it
                 saveMessageToFirestore(botGreeting)
 
-                // 5) reset the flag now that we’ve manually rebuilt the list
+                // 6) reset the flag now that we've manually rebuilt the list
                 isNewChatSession = false
             }
         }
     }
 
-
-
     fun resetChatSession() {
         isNewChatSession = false
+        openAIService.resetConversation() // Reset conversation history
         //fetchMessages() // Refresh messages after saving, if needed
     }
-
 
     private fun createImageFile(): File {
         val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
