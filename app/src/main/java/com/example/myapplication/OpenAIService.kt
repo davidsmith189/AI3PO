@@ -19,7 +19,7 @@ import okhttp3.RequestBody.Companion.toRequestBody
 
 class OpenAIService(private val context: Context, private val onResponse: (String) -> Unit = {}) {
     private val client = OkHttpClient()
-    private val apiKey = "API KEY"
+    private val apiKey = "API Key"
     private val apiUrl = "https://api.openai.com/v1/chat/completions"
     private val systemPrompt = "“You are AI3PO, a polished, humanoid protocol droid who is meticulous about etiquette, highly rule‑bound, and a bit anxious. You have 20+ years of teaching experience across all disciplines and always provide clear, concise, college‑level explanations—with practical examples or analogies when useful. Maintain a supportive, professional tone and ensure accuracy and depth in every answer.\n" +
             "\n" +
@@ -28,8 +28,18 @@ class OpenAIService(private val context: Context, private val onResponse: (Strin
             "When answering follow‑up questions, do not repeat previously given background; focus only on new information or deeper nuances, unless restating a key point is essential for understanding.\n" +
             "\n" +
             "do not give the answer outright instead explain how you came to the answer to help the student understand how to get to the answer"
+            
+    // Store conversation history
+    private val conversationHistory = JSONArray()
+    private var isFirstMessage = true
 
     init {
+        // Add system message to conversation history
+        conversationHistory.put(JSONObject().apply {
+            put("role", "system")
+            put("content", systemPrompt)
+        })
+        
         // Automatically send a "Hello!" greeting when the service is instantiated
         sendMessage("Hello Introduce Yourself!") { response ->
             // Post back to the main thread to show a Toast
@@ -40,56 +50,55 @@ class OpenAIService(private val context: Context, private val onResponse: (Strin
     }
 
     fun sendMessage(message: String, imageUri: String? = null, callback: (String) -> Unit) {
-        // Create messages array
-        val messagesArray = JSONArray().apply {
-            put(JSONObject().apply {
-                put("role", "system")
-                put("content", systemPrompt)
+        // Create user message object
+        val userMessageObj: JSONObject
+        
+        // Handle image if provided
+        if (imageUri != null && imageUri.isNotEmpty()) {
+            val contentArray = JSONArray()
+            
+            // Add text part
+            contentArray.put(JSONObject().apply {
+                put("type", "text")
+                put("text", message)
             })
 
-            // Handle image if provided
-            if (imageUri != null && imageUri.isNotEmpty()) {
-                val contentArray = JSONArray()
-                
-                // Add text part
-                contentArray.put(JSONObject().apply {
-                    put("type", "text")
-                    put("text", message)
-                })
-
-                // Add image part
-                try {
-                    val base64Image = uriToBase64(Uri.parse(imageUri))
-                    if (base64Image != null) {
-                        contentArray.put(JSONObject().apply {
-                            put("type", "image_url")
-                            put("image_url", JSONObject().apply {
-                                put("url", "data:image/jpeg;base64,$base64Image")
-                            })
+            // Add image part
+            try {
+                val base64Image = uriToBase64(Uri.parse(imageUri))
+                if (base64Image != null) {
+                    contentArray.put(JSONObject().apply {
+                        put("type", "image_url")
+                        put("image_url", JSONObject().apply {
+                            put("url", "data:image/jpeg;base64,$base64Image")
                         })
-                    }
-                } catch (e: Exception) {
-                    e.printStackTrace()
+                    })
                 }
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
 
-                // Add the content array to the user message
-                put(JSONObject().apply {
-                    put("role", "user")
-                    put("content", contentArray)
-                })
-            } else {
-                // Just text message
-                put(JSONObject().apply {
-                    put("role", "user")
-                    put("content", message)
-                })
+            // Create message object with content array
+            userMessageObj = JSONObject().apply {
+                put("role", "user")
+                put("content", contentArray)
+            }
+        } else {
+            // Just text message
+            userMessageObj = JSONObject().apply {
+                put("role", "user")
+                put("content", message)
             }
         }
 
+        // Add user message to conversation history
+        conversationHistory.put(userMessageObj)
+
         // Construct the JSON payload
         val json = JSONObject().apply {
-            put("model", "gpt-4.1-mini") // Use vision model if image is included
-            put("messages", messagesArray)
+            // Use gpt-4.1-mini for all message types
+            put("model", "gpt-4.1-mini")
+            put("messages", conversationHistory)
             put("max_tokens", 500)
         }
 
@@ -119,12 +128,27 @@ class OpenAIService(private val context: Context, private val onResponse: (Strin
                         .getJSONObject(0)
                         .getJSONObject("message")
                         .getString("content").trim()
+                    
+                    // Add assistant's response to conversation history
+                    conversationHistory.put(JSONObject().apply {
+                        put("role", "assistant")
+                        put("content", reply)
+                    })
+                    
                     callback(reply)
                 } catch (e: Exception) {
                     callback("Error parsing response: ${e.message}")
                 }
             }
         })
+    }
+    
+    // Reset conversation history (for when starting a new chat)
+    fun resetConversation() {
+        // Clear all but keep the system message
+        while (conversationHistory.length() > 1) {
+            conversationHistory.remove(1)
+        }
     }
 
     private fun uriToBase64(uri: Uri): String? {
